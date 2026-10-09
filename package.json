@@ -1,0 +1,18 @@
+{
+  "name": "babelem",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sistema Babelém para Foundry VTT",
+  "type": "module",
+  "scripts": {
+    "build": "npm run validate && npm run build:packs",
+    "build:packs": "node tools/build-packs.mjs",
+    "validate": "node tools/validate-data.mjs",
+    "package": "node tools/package.mjs"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.3",
+    "handlebars": "^4.7.8",
+    "js-yaml": "^4.1.0"
+  }
+}

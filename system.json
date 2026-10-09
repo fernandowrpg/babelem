@@ -1,0 +1,291 @@
+{
+  "id": "babelem",
+  "title": "Babelém",
+  "description": "Sistema para o RPG de fantasia urbana Babelém: fichas de Protagonista e Ameaça, testes com Acertos, Aura, Trama, Dado do Eco e Pilha Comum, e compêndios em português e inglês. / System for the Babelém urban fantasy RPG.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Equipe Babelém"
+    }
+  ],
+  "esmodules": [
+    "module/babelem.mjs"
+  ],
+  "styles": [
+    "styles/babelem.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": [
+          "background",
+          "inventory",
+          "notes"
+        ]
+      },
+      "threat": {
+        "htmlFields": [
+          "special",
+          "tactics",
+          "power",
+          "weakness",
+          "notes"
+        ]
+      }
+    },
+    "Item": {
+      "essence": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "trait": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "technique": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "spell": {
+        "htmlFields": [
+          "description",
+          "extraRelease"
+        ]
+      },
+      "style": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "interaction": {
+        "htmlFields": [
+          "description"
+        ]
+      }
+    }
+  },
+  "packs": [
+    {
+      "name": "rules-pt",
+      "label": "Regras de Babelém",
+      "path": "packs/rules-pt",
+      "type": "JournalEntry",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "essences-pt",
+      "label": "Essências",
+      "path": "packs/essences-pt",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "traits-pt",
+      "label": "Traços",
+      "path": "packs/traits-pt",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "techniques-pt",
+      "label": "Técnicas",
+      "path": "packs/techniques-pt",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells-pt",
+      "label": "Feitiços",
+      "path": "packs/spells-pt",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "styles-pt",
+      "label": "Propriedades de Estilo de Combate",
+      "path": "packs/styles-pt",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "threats-pt",
+      "label": "Ameaças",
+      "path": "packs/threats-pt",
+      "type": "Actor",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "rules-en",
+      "label": "Babelém Rules",
+      "path": "packs/rules-en",
+      "type": "JournalEntry",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "essences-en",
+      "label": "Essences",
+      "path": "packs/essences-en",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "traits-en",
+      "label": "Traits",
+      "path": "packs/traits-en",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "techniques-en",
+      "label": "Techniques",
+      "path": "packs/techniques-en",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells-en",
+      "label": "Spells",
+      "path": "packs/spells-en",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "styles-en",
+      "label": "Combat Style Properties",
+      "path": "packs/styles-en",
+      "type": "Item",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "threats-en",
+      "label": "Threats",
+      "path": "packs/threats-en",
+      "type": "Actor",
+      "system": "babelem",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Babelém (Português)",
+      "sorting": "m",
+      "color": "#0f3b3a",
+      "packs": [
+        "rules-pt",
+        "essences-pt",
+        "traits-pt",
+        "techniques-pt",
+        "spells-pt",
+        "styles-pt",
+        "threats-pt"
+      ]
+    },
+    {
+      "name": "Babelém (English)",
+      "sorting": "m",
+      "color": "#3a2a5c",
+      "packs": [
+        "rules-en",
+        "essences-en",
+        "traits-en",
+        "techniques-en",
+        "spells-en",
+        "styles-en",
+        "threats-en"
+      ]
+    }
+  ],
+  "socket": true,
+  "initiative": "@initiative",
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
+  "primaryTokenAttribute": "guard",
+  "secondaryTokenAttribute": "aura",
+  "url": "https://github.com/fernandowrpg/babelem",
+  "manifest": "https://github.com/fernandowrpg/babelem/releases/latest/download/system.json",
+  "download": "https://github.com/fernandowrpg/babelem/releases/download/v0.1.0/babelem.zip",
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "bugs": "https://github.com/fernandowrpg/babelem/issues"
+}
