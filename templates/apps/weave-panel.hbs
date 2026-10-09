@@ -1,0 +1,26 @@
+<header class="bab-panel-head">
+  <a data-action="collapse" data-tooltip="BABELEM.Weave.collapse"><i class="fa-solid {{#if collapsed}}fa-chevron-down{{else}}fa-chevron-up{{/if}}"></i></a>
+  <span class="bab-panel-title">{{localize "BABELEM.Weave.panel"}}</span>
+</header>
+<div class="bab-panel-row" data-tooltip="BABELEM.Weave.hint">
+  <span class="bab-panel-label"><i class="fa-solid fa-spider"></i> {{localize "BABELEM.Weave.label"}}</span>
+  {{#if isGM}}<a data-action="weave" data-delta="-1"><i class="fa-solid fa-minus"></i></a>{{/if}}
+  <span class="bab-panel-value">{{weave}}</span>
+  {{#if isGM}}<a data-action="weave" data-delta="1"><i class="fa-solid fa-plus"></i></a>{{/if}}
+</div>
+{{#unless collapsed}}
+<div class="bab-panel-row" data-tooltip="BABELEM.Pool.hint">
+  <span class="bab-panel-label"><i class="fa-solid fa-cubes-stacked"></i> {{localize "BABELEM.Pool.label"}}</span>
+  {{#if canAdjustPool}}<a data-action="pool" data-delta="-1"><i class="fa-solid fa-minus"></i></a>{{/if}}
+  <span class="bab-panel-value">+{{pool}}d</span>
+  {{#if canAdjustPool}}<a data-action="pool" data-delta="1"><i class="fa-solid fa-plus"></i></a>{{/if}}
+</div>
+<div class="bab-panel-buttons">
+  <button type="button" data-action="echo" data-tooltip="BABELEM.EchoDie.hint"><i class="fa-solid fa-dice-d8"></i> {{localize "BABELEM.EchoDie.title"}}</button>
+  {{#if isGM}}
+  <button type="button" data-action="clearPool"><i class="fa-solid fa-broom"></i> {{localize "BABELEM.Pool.clear"}}</button>
+  <button type="button" data-action="endScene" data-tooltip="BABELEM.Weave.endSceneHint"><i class="fa-solid fa-clapperboard"></i> {{localize "BABELEM.Weave.endScene"}}</button>
+  <button type="button" data-action="startSession" data-tooltip="BABELEM.Weave.startSessionHint"><i class="fa-solid fa-flag"></i> {{localize "BABELEM.Weave.startSession"}}</button>
+  {{/if}}
+</div>
+{{/unless}}

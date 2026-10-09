@@ -1,0 +1,1257 @@
+pack: threats
+type: Actor
+label:
+  pt: Ameaças
+  en: Threats
+folders:
+  - key: litura
+    name:
+      pt: Ecos de Litura
+      en: Echoes of Litura
+  - key: oblivo
+    name:
+      pt: Ecos de Oblivo
+      en: Echoes of Oblivo
+  - key: babelem
+    name:
+      pt: Ameaças de Babelém
+      en: Threats of Babelém
+entries:
+  - key: pesadelo
+    folder: litura
+    origin: litura
+    grade: 1
+    guard: 12
+    danger: 3
+    defense: 1
+    resistances: [void]
+    name:
+      pt: Pesadelo
+      en: Nightmare
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque, Induzir Pesadelo (Feitiço / Custa 1 TRAMA)."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack, Induce Nightmare (Spell / Costs 1 WEAVE)."
+    power:
+      pt: >-
+        O Pesadelo atiça os maiores medos de seu alvo. Sempre que causar dano a alguém ou sofrer com o dano de alguém, o
+        Pesadelo rouba uma memória do alvo, relacionada ao seu maior medo. O alvo perde 1 de MEMÓRIA.
+      en: >-
+        The Nightmare stokes its target's greatest fears. Whenever it deals damage to someone or suffers damage from
+        someone, the Nightmare steals a memory from the target, related to their greatest fear. The target loses 1 MEMORY.
+    weakness:
+      pt: >-
+        Sua fome pode ser sua sina. Atrair um pesadelo usando o medo de alguém é tão fácil quanto oferecer comida a um
+        cão.
+      en: >-
+        Its hunger can be its undoing. Luring a nightmare using someone's fear is as easy as offering food to a
+        dog.
+    interactions:
+      - key: drenar
+        kind: action
+        attack: brabo
+        range: long
+        cost: { value: 1, resource: danger }
+        damage: "1d6 + @danger"
+        damageType: void
+        name:
+          pt: Drenar
+          en: Drain
+        description:
+          pt: >-
+            Dano: 1d6 + PERIGO de dano Vazio, negado por BRABO. O alvo perde 1 de DEFESA. Recupera pontos de Guarda
+            equivalentes à Memória faltando do alvo.
+          en: >-
+            Damage: 1d6 + DANGER void damage, negated by FIERCE. The target loses 1 DEFENSE. Recovers Guard points
+            equal to the target's missing Memory.
+      - key: atropelar
+        kind: action
+        attack: ligeiro
+        range: short
+        damage: "1 + @danger"
+        damageType: kinetic
+        name:
+          pt: Atropelar
+          en: Run Over
+        description:
+          pt: >-
+            Dano: 1 + PERIGO atual de dano cinético, negado por LIGEIRO. +1 de dano AD. O alvo fica desequilibrado caso
+            tenha apenas dois Acertos ou menos ao defender-se.
+          en: >-
+            Damage: 1 + current DANGER kinetic damage, negated by SWIFT. +1 PD damage. The target is left off-balance if
+            they have only two Hits or fewer when defending.
+      - key: amedrontar
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Amedrontar
+          en: Terrify
+        description:
+          pt: Todos os oponentes sofrem 2 de dano vazio AD ou devem mover-se para longe do Pesadelo, ficando exaustos.
+          en: All opponents suffer 2 void PD damage or must move away from the Nightmare, becoming exhausted.
+
+  - key: candeeiro
+    folder: litura
+    origin: litura
+    grade: 1
+    guard: 12
+    danger: 3
+    defense: 1
+    resistances: [energy]
+    name:
+      pt: Candeeiro
+      en: Lantern (Candeeiro)
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Canalizar. Reação disponível: contra-ataque, Clarão Solar (Feitiço, Custa 1 TRAMA)."
+      en: "Favorite maneuvers: Move, Raise Guard, Channel. Available reaction: counterattack, Solar Flash (Spell, Costs 1 WEAVE)."
+    power:
+      pt: >-
+        O Candeeiro queima e encanta, chama pra dançar. Sempre que dança, no entanto, deixa suas brasas escaparem,
+        iniciando um incêndio que pode espalhar-se rapidamente.
+      en: >-
+        The Lantern burns and enchants, beckoning you to dance. Whenever it dances, however, it lets its embers escape,
+        starting a fire that can spread quickly.
+    weakness:
+      pt: >-
+        O Candeeiro só existe enquanto puder queimar. Caso consigam privá-lo de combustível, ele relegará-se ao estado de
+        meras cinzas, calmo e dócil.
+      en: >-
+        The Lantern only exists as long as it can burn. If it is deprived of fuel, it will be reduced to a state of
+        mere ashes, calm and docile.
+    interactions:
+      - key: flecha-flamejante
+        kind: action
+        attack: brabo
+        range: long
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Flecha Flamejante (Feitiço)
+          en: Flaming Arrow (Spell)
+        description:
+          pt: Custa 1 TRAMA ou Canalização.
+          en: Costs 1 WEAVE or Channeling.
+      - key: erupcao
+        kind: action
+        name:
+          pt: Erupção (Feitiço)
+          en: Eruption (Spell)
+        description:
+          pt: A Tecelã paga TRAMA no lugar de Aura para os efeitos deste feitiço.
+          en: The Weaver pays WEAVE in place of Aura for the effects of this spell.
+      - key: queimar
+        kind: action
+        cost: { value: 2, resource: weave }
+        name:
+          pt: Queimar (Feitiço)
+          en: Burn (Spell)
+        description:
+          pt: Requer 2 TRAMA.
+          en: Requires 2 WEAVE.
+      - key: hipnose-ignea
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: danger }
+        name:
+          pt: Hipnose Ígnea
+          en: Fiery Hypnosis
+        description:
+          pt: >-
+            Um alvo no alcance aproxima-se do Candeeiro, sofrendo 2 de dano energético AD caso já estivesse próximo, ou
+            fica impedido de mover-se até o final de seu próximo turno.
+          en: >-
+            A target within range moves toward the Lantern, suffering 2 energy PD damage if it was already close, or
+            is impeded from moving until the end of its next turn.
+
+  - key: sombra
+    folder: litura
+    origin: litura
+    grade: 1
+    guard: 12
+    danger: 3
+    defense: 1
+    name:
+      pt: Sombra
+      en: Shadow
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    special:
+      pt: >-
+        GUARDA e PERIGO iguais aos do Anteparo. Quando uma Sombra surgir em cena, ela deriva a partir da sombra de um
+        alvo, chamado de Anteparo. Escolha um outro personagem em cena (pode ser aliado, inimigo ou independente). A sombra
+        assume uma forma similar ao alvo, como se fosse uma imagem em tons de cinza do mesmo. Caso o Anteparo tenha 3 ou
+        mais de BRABO, receba um Acerto em todo ataque brabo realizado. Caso o Anteparo tenha 3 ou mais de LIGEIRO,
+        receba +2d em todo ataque ligeiro realizado.
+      en: >-
+        GUARD and DANGER equal to those of the Screen. When a Shadow appears in a scene, it derives from the shadow of a
+        target, called the Screen. Choose another character in the scene (an ally, enemy or independent). The shadow
+        takes on a form similar to the target, as if it were a grayscale image of them. If the Screen has 3 or more
+        FIERCE, receive a Hit on every FIERCE attack made. If the Screen has 3 or more SWIFT, receive +2d on every
+        SWIFT attack made.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Atrapalhar, Plágio. Reação disponível: contra-ataque, bloquear, Cópia (Feitiço, Custa 1 TRAMA)."
+      en: "Favorite maneuvers: Move, Hinder, Plagiarize. Available reaction: counterattack, block, Copy (Spell, Costs 1 WEAVE)."
+    power:
+      pt: >-
+        A Sombra imita seu alvo muito bem até ser revelada, podendo enganar até a si mesma, tomando o lugar de seu
+        Anteparo até que tenha sua natureza revelada ou escolha outro alvo.
+      en: >-
+        The Shadow imitates its target very well until revealed, able to fool even itself, taking the place of its
+        Screen until its nature is revealed or it chooses another target.
+    weakness:
+      pt: >-
+        A ligação da Sombra ao Anteparo é efêmera caso sua natureza seja revelada. Caso o anteparo seja derrotado ou seja
+        removido de cena por algum motivo, a Sombra tentará recuar da forma mais imediata possível.
+      en: >-
+        The Shadow's bond to the Screen is fleeting if its nature is revealed. If the screen is defeated or is
+        removed from the scene for any reason, the Shadow will try to retreat as immediately as possible.
+    interactions:
+      - key: assumir-brabo
+        kind: action
+        attack: brabo
+        range: wide
+        damage: "3 + @danger"
+        damageType: void
+        name:
+          pt: Assumir (ataque brabo)
+          en: Assume (FIERCE attack)
+        description:
+          pt: >-
+            Dano: 3 + PERIGO de dano Vazio, negado por SAFO, e o alvo perde 1 de Defesa caso tenha apenas um Acerto ou
+            menos ao defender-se. Causa +1d6 de dano caso o alvo seja o Anteparo.
+          en: >-
+            Damage: 3 + DANGER void damage, negated by SAVVY, and the target loses 1 Defense if they have only one Hit or
+            fewer when defending. Deals +1d6 damage if the target is the Screen.
+      - key: assumir-ligeiro
+        kind: action
+        attack: ligeiro
+        range: wide
+        damage: "1d6"
+        damageType: void
+        name:
+          pt: Assumir (ataque ligeiro)
+          en: Assume (SWIFT attack)
+        description:
+          pt: >-
+            Dano: 1d6 de dano Vazio, negado por SAFO, +1 de dano AD caso tenha apenas um Acerto ou menos ao defender-se.
+            Causa +1d6 de dano caso o alvo seja o Anteparo.
+          en: >-
+            Damage: 1d6 void damage, negated by SAVVY, +1 PD damage if they have only one Hit or fewer when defending.
+            Deals +1d6 damage if the target is the Screen.
+      - key: plagio
+        kind: maneuver
+        range: wide
+        name:
+          pt: Plágio
+          en: Plagiarize
+        description:
+          pt: Copia um traço, feitiço ou técnica do Anteparo.
+          en: Copies a trait, spell or technique of the Screen.
+
+  - key: fantasma
+    folder: litura
+    origin: litura
+    grade: 1
+    guard: 12
+    danger: 3
+    defense: 1
+    resistances: [kinetic, void, energy]
+    name:
+      pt: Fantasma
+      en: Ghost
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    special:
+      pt: >-
+        Um fantasma tem resistência a qualquer dano. Caso seu nome real seja evocado em voz alta ao custo de uma manobra,
+        essa resistência é desativada até o final do próximo turno de quem evocou o nome.
+      en: >-
+        A ghost has Resistance to all damage. If its real name is called aloud at the cost of a maneuver,
+        that Resistance is deactivated until the end of the next turn of whoever called the name.
+    power:
+      pt: >-
+        Um fantasma se apega ao mundo a partir de suas memórias remanescentes. Sempre que for derrotado, ele se formará
+        novamente em questão de pouco tempo a não ser que seja exorcizado.
+      en: >-
+        A ghost clings to the world through its remaining memories. Whenever it is defeated, it will form
+        again in a short time unless it is exorcised.
+    weakness:
+      pt: Um fantasma pode ser exorcizado a partir de um ritual envolvendo seus restos mortais ou itens importantes para ele em vida.
+      en: A ghost can be exorcised through a ritual involving its mortal remains or items that were important to it in life.
+    interactions:
+      - key: possessao-momentanea
+        kind: action
+        attack: safo
+        range: short
+        cost: { value: 1, resource: danger }
+        name:
+          pt: Possessão Momentânea
+          en: Momentary Possession
+        description:
+          pt: O alvo escolhe entre consumir SAFO para resistir ou realizar um ataque contra outro alvo em cena à escolha do fantasma.
+          en: The target chooses between spending SAVVY to resist or making an attack against another target in the scene of the ghost's choice.
+      - key: toque-funebre
+        kind: action
+        attack: brabo
+        range: short
+        damage: "3 + @danger"
+        damageType: void
+        name:
+          pt: Toque Fúnebre
+          en: Funereal Touch
+        description:
+          pt: >-
+            Dano: 3 + PERIGO atual de dano vazio, negado por BRABO. O alvo perde 1 de Defesa caso tenha apenas um Acerto
+            ou menos ao defender-se. Recupera 1 de PERIGO caso provoque dano à Guarda.
+          en: >-
+            Damage: 3 + current DANGER void damage, negated by FIERCE. The target loses 1 Defense if they have only one Hit
+            or fewer when defending. Recovers 1 DANGER if it deals damage to Guard.
+      - key: desmaterializar
+        kind: maneuver
+        name:
+          pt: Desmaterializar
+          en: Dematerialize
+        description:
+          pt: >-
+            O fantasma some momentaneamente da cena, desmaterializando sua forma espectral. Enquanto desmaterializado, o
+            fantasma não poderá realizar nenhum tipo de ataque. Ele pode ser encontrado por um uso da manobra Perceber,
+            porém só poderá ser alvo de danos do tipo energético até que seja materializado novamente.
+          en: >-
+            The ghost momentarily vanishes from the scene, dematerializing its spectral form. While dematerialized, the
+            ghost cannot make any kind of attack. It can be found by a use of the Perceive maneuver,
+            but it can only be targeted by energy damage until it is materialized again.
+      - key: materializar
+        kind: maneuver
+        name:
+          pt: Materializar
+          en: Materialize
+        description:
+          pt: >-
+            O fantasma materializa-se novamente atrás de um alvo à sua escolha na cena. O próximo ataque do fantasma
+            contra o alvo neste mesmo turno causa -1d ao teste de defesa.
+          en: >-
+            The ghost materializes again behind a target of its choice in the scene. The ghost's next attack
+            against that target in this same turn imposes -1d on the defense roll.
+
+  - key: catalisador
+    folder: litura
+    origin: litura
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 1
+    name:
+      pt: Catalisador
+      en: Catalyst
+    interactionsPerTurn:
+      pt: Uma Ação ao final do turno de seu aliado aderido.
+      en: One Action at the end of the turn of its attached ally.
+    special:
+      pt: >-
+        Um catalisador é uma forma de espírito simbiótico cristalizado, que se adere a um aliado e amplifica seus poderes.
+        Sempre que o alvo mover-se, o catalisador move-se junto. Some o PERIGO do catalisador ao dano de todo ataque do
+        alvo aliado.
+      en: >-
+        A catalyst is a form of crystallized symbiotic spirit that attaches to an ally and amplifies their powers.
+        Whenever the target moves, the catalyst moves along with it. Add the catalyst's DANGER to the damage of every attack
+        by the allied target.
+    power:
+      pt: >-
+        Um catalisador é como uma rêmora em um tubarão. Eles são alvos fáceis quando sós, porém junto de um bom aliado, o
+        transformarão em uma ameaça formidável. Caso o aliado aderido seja derrotado, o catalisador desaparecerá até
+        encontrar outro aliado para se nutrir.
+      en: >-
+        A catalyst is like a remora on a shark. They are easy targets when alone, but alongside a good ally, they
+        will turn it into a formidable threat. If the attached ally is defeated, the catalyst will disappear until
+        it finds another ally to feed on.
+    weakness:
+      pt: >-
+        O catalisador não possui ataques ou qualquer outro tipo de ação que ameace outros seres, podendo apenas se nutrir
+        de seu aliado aderido.
+      en: >-
+        The catalyst has no attacks or any other kind of action that threatens other beings, and can only feed
+        on its attached ally.
+    interactions:
+      - key: catalisar
+        kind: action
+        range: short
+        cost: { value: 2, resource: weave }
+        name:
+          pt: Catalisar
+          en: Catalyze
+        description:
+          pt: O aliado aderido ao catalisador recebe uma ação imediatamente, que pode ser utilizada para SUPERAR.
+          en: The ally attached to the catalyst immediately receives an action, which can be used to OVERCOME.
+      - key: prover
+        kind: action
+        range: short
+        cost: { value: 1, resource: danger }
+        name:
+          pt: Prover
+          en: Provide
+        description:
+          pt: O catalisador consome 1 de PERIGO para que o seu alvo aliado recupere 1 de BRABO.
+          en: The catalyst spends 1 DANGER so that its allied target recovers 1 FIERCE.
+      - key: aceleracao
+        kind: action
+        range: short
+        name:
+          pt: Aceleração
+          en: Acceleration
+        description:
+          pt: O aliado aderido ao catalisador recebe uma manobra imediatamente, que pode ser usada para Levantar a Guarda.
+          en: The ally attached to the catalyst immediately receives a maneuver, which can be used to Raise Guard.
+
+  - key: besta-mitica
+    folder: litura
+    origin: litura
+    grade: 2
+    guard: 11
+    danger: 3
+    defense: 4
+    brabo: 2
+    resistances: [energy]
+    name:
+      pt: Besta Mítica
+      en: Mythic Beast
+    interactionsPerTurn:
+      pt: Duas ações e uma Manobra durante seu turno.
+      en: Two actions and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda. Reação disponível: contra-ataque, bloquear."
+      en: "Favorite maneuvers: Move, Raise Guard. Available reaction: counterattack, block."
+    power:
+      pt: >-
+        Sua força é tamanha, que ao demonstrá-la irá automaticamente desmaiar qualquer criatura mundana. Qualquer outra
+        criatura de grau 1 fica amedrontada, impedida de realizar qualquer manobra a não ser que consiga superar este
+        efeito.
+      en: >-
+        Its strength is so great that displaying it will automatically knock out any mundane creature. Any other
+        grade 1 creature becomes frightened, barred from performing any maneuver unless it manages to overcome this
+        effect.
+    weakness:
+      pt: Uma antiga ferida pode ser explorada, reaberta, contanto que saibam a história por trás do que a feriu em primeiro lugar.
+      en: An old wound can be exploited, reopened, as long as they know the story behind what injured it in the first place.
+    interactions:
+      - key: esmagar
+        kind: action
+        attack: brabo
+        range: short
+        cost: { value: 1, resource: danger }
+        damage: "2d6 + @danger"
+        damageType: kinetic
+        name:
+          pt: Esmagar
+          en: Crush
+        description:
+          pt: >-
+            Dano: 2d6 + PERIGO atual de dano cinético em um alvo, ou 2d6 de dano cinético a todos dentro do alcance,
+            negado por LIGEIRO. Alvos desse ataque perdem 1 de Defesa. Um alvo é desequilibrado ou arremessado para longe.
+          en: >-
+            Damage: 2d6 + current DANGER kinetic damage to one target, or 2d6 kinetic damage to everyone within range,
+            negated by SWIFT. Targets of this attack lose 1 Defense. One target is knocked off-balance or hurled away.
+      - key: recuperar-se
+        kind: action
+        name:
+          pt: Recuperar-se
+          en: Recover
+        description:
+          pt: Teste PERIGO. Recupera 1 PERIGO para cada Acerto.
+          en: Test DANGER. Recovers 1 DANGER for each Hit.
+      - key: destruicao
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: danger }
+        name:
+          pt: Destruição
+          en: Destruction
+        description:
+          pt: Cada alvo escolhe entre gastar 1 LIGEIRO ou sofrer 1d6 de dano energético AD.
+          en: Each target chooses between spending 1 SWIFT or suffering 1d6 energy PD damage.
+
+  - key: morto-de-pe
+    folder: oblivo
+    origin: oblivo
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 3
+    vulnerabilities: [energy]
+    name:
+      pt: Morto de Pé
+      en: Walking Dead
+    interactionsPerTurn:
+      pt: Uma Ação ou Manobra durante seu turno.
+      en: One Action or Maneuver during its turn.
+    tactics:
+      pt: "Reação disponível: contra-ataque, Perder Pedaço."
+      en: "Available reaction: counterattack, Lose a Piece."
+    power:
+      pt: Um morto de pé sozinho não é muito perigoso para um desperto, porém ele pode criar outros mortos de pé ao matar uma vítima.
+      en: A lone walking dead is not very dangerous to an Awakened, but it can create other walking dead by killing a victim.
+    weakness:
+      pt: Sua lentidão é sua maior fraqueza.
+      en: Its slowness is its greatest weakness.
+    interactions:
+      - key: agarrar
+        kind: action
+        attack: ligeiro
+        range: short
+        cost: { value: 1, resource: danger }
+        damage: "1d6"
+        damageType: kinetic
+        name:
+          pt: Agarrar
+          en: Grab
+        description:
+          pt: >-
+            Dano: 1d6 de dano cinético, negado por LIGEIRO. O alvo sofre 1 de dano AD e fica impedido de mover-se caso
+            tenha apenas um Acerto ou menos ao defender-se.
+          en: >-
+            Damage: 1d6 kinetic damage, negated by SWIFT. The target suffers 1 PD damage and is impeded from moving if
+            they have only one Hit or fewer when defending.
+      - key: morder
+        kind: action
+        attack: brabo
+        range: short
+        damage: "2 + @danger"
+        damageType: kinetic
+        name:
+          pt: Morder
+          en: Bite
+        description:
+          pt: >-
+            Um alvo agarrado. Dano: 2 + PERIGO atual de dano cinético, negado por BRABO. O alvo perde 1 de Defesa caso
+            tenha apenas um Acerto ou menos ao defender-se. Recupere pontos de Guarda equivalentes à Memória faltando do
+            alvo.
+          en: >-
+            A grabbed target. Damage: 2 + current DANGER kinetic damage, negated by FIERCE. The target loses 1 Defense if
+            they have only one Hit or fewer when defending. Recover Guard points equal to the target's missing Memory.
+      - key: reerguer-se
+        kind: action
+        cost: { value: 1, resource: brabo }
+        name:
+          pt: Reerguer-se
+          en: Rise Again
+        description:
+          pt: >-
+            Custa 1 de BRABO, TRAMA ou PERIGO. O morto se levanta após ser derrotado. Não poderá usar caso esteja impedido
+            de juntar suas partes.
+          en: >-
+            Costs 1 FIERCE, WEAVE or DANGER. The dead rises after being defeated. Cannot be used if it is prevented
+            from gathering its parts.
+      - key: perder-pedaco
+        kind: reaction
+        cost: { value: 1, resource: danger }
+        name:
+          pt: Perder Pedaço
+          en: Lose a Piece
+        description:
+          pt: Consome 1 de PERIGO para evitar completamente um dano recebido, em troca de perder um pedaço de si.
+          en: Spends 1 DANGER to completely avoid damage received, in exchange for losing a piece of itself.
+
+  - key: mascara-maldita
+    folder: oblivo
+    origin: oblivo
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 3
+    resistances: [kinetic, void, energy]
+    name:
+      pt: Máscara Maldita
+      en: Cursed Mask
+    interactionsPerTurn:
+      pt: Uma Ação ou Manobra durante seu turno.
+      en: One Action or Maneuver during its turn.
+    special:
+      pt: >-
+        Uma máscara flutuante bizarra com tentáculos de energia sombria. Resistência a dano energético, cinético e vazio.
+        Sempre que gastar Perigo perde uma dessas resistências. Ela pode usar o corpo de suas vítimas, obtendo um bônus
+        para sua defesa e saúde igual ao do mesmo, e usando sua locomoção.
+      en: >-
+        A bizarre floating mask with tentacles of dark energy. Resistance to energy, kinetic and void damage.
+        Whenever it spends Danger, it loses one of these Resistances. It can use the bodies of its victims, gaining a bonus
+        to its defense and health equal to theirs, and using their locomotion.
+    tactics:
+      pt: "Manobras favoritas: Mau Olhado, Ligar Almas, Levantar a Guarda. Reação disponível: contra-ataque."
+      en: "Favorite maneuvers: Evil Eye, Bind Souls, Raise Guard. Available reaction: counterattack."
+    power:
+      pt: >-
+        A Máscara Maldita é o eco de um desperto que esqueceu a própria história, e, portanto, se alimenta das histórias
+        de suas vítimas. Caso a Máscara derrote um Desperto, ela o possuirá, fazendo-o vesti-la e usando-o para cumprir
+        seus objetivos.
+      en: >-
+        The Cursed Mask is the echo of an Awakened who forgot their own story, and therefore feeds on the stories
+        of its victims. If the Mask defeats an Awakened, it will possess them, making them wear it and using them to fulfill
+        its goals.
+    weakness:
+      pt: A máscara não consegue sustentar-se sozinha, necessitando de um receptáculo para mover-se.
+      en: The mask cannot sustain itself on its own, needing a vessel in order to move.
+    interactions:
+      - key: controle
+        kind: action
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Controle (Feitiço)
+          en: Control (Spell)
+        description:
+          pt: Custa 1 TRAMA ou PERIGO.
+          en: Costs 1 WEAVE or DANGER.
+      - key: testar-identidade
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Testar Identidade
+          en: Test Identity
+        description:
+          pt: Todos os seus inimigos em cena devem escolher entre sofrer 3 de dano vazio AD ou gastar 1 de SAFO.
+          en: All of its enemies in the scene must choose between suffering 3 void PD damage or spending 1 SAVVY.
+      - key: ligar-almas
+        kind: maneuver
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Ligar Almas (Feitiço)
+          en: Bind Souls (Spell)
+        description:
+          pt: Custa 1 TRAMA.
+          en: Costs 1 WEAVE.
+      - key: mau-olhado
+        kind: maneuver
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Mau Olhado (Feitiço)
+          en: Evil Eye (Spell)
+        description:
+          pt: Custa 1 TRAMA.
+          en: Costs 1 WEAVE.
+
+  - key: encosto-parasita
+    folder: oblivo
+    origin: oblivo
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 1
+    vulnerabilities: [kinetic, void, energy]
+    name:
+      pt: Encosto Parasita
+      en: Parasitic Haunt
+    interactionsPerTurn:
+      pt: Uma Ação no final da rodada.
+      en: One Action at the end of the round.
+    special:
+      pt: Enquanto estiver em um hospedeiro, todo dano dirigido ao Encosto é transferido ao hospedeiro.
+      en: While in a host, all damage directed at the Haunt is transferred to the host.
+    power:
+      pt: >-
+        O encosto não controla o hospedeiro, porém influencia seus pensamentos e decisões de forma sutil, passando
+        despercebido por longos períodos, se alimentando da energia do hospedeiro.
+      en: >-
+        The haunt does not control the host, but it subtly influences their thoughts and decisions, going
+        unnoticed for long periods, feeding on the host's energy.
+    weakness:
+      pt: >-
+        Como um parasita, o encosto precisa de um hospedeiro para sobreviver. Caso o hospedeiro seja morto ou consigam uma
+        forma de removê-lo do hospedeiro, o encosto não consegue manter forma física, retornando ao Oblivo até encontrar
+        outro hospedeiro.
+      en: >-
+        Like a parasite, the haunt needs a host to survive. If the host is killed or a way is found to
+        remove it from the host, the haunt cannot maintain a physical form, returning to Oblivo until it finds
+        another host.
+    interactions:
+      - key: atrair
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Atrair
+          en: Attract
+        description:
+          pt: Encosto atrai todo tipo de eco que possa existir nas redondezas. Adicione um eco de grau 1 à cena, ou três lacaios de grau 1.
+          en: The Haunt attracts every kind of echo that may exist nearby. Add one grade 1 echo to the scene, or three grade 1 minions.
+      - key: aterrorizar
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Aterrorizar
+          en: Terrorize
+        description:
+          pt: Todos os oponentes sofrem 2 de dano vazio AD ou devem mover-se para longe do hospedeiro, ficando exaustos.
+          en: All opponents suffer 2 void PD damage or must move away from the host, becoming exhausted.
+
+  - key: besouro-do-poco
+    folder: oblivo
+    origin: oblivo
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 2
+    resistances: [void]
+    name:
+      pt: Besouro do Poço
+      en: Well Beetle
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    special:
+      pt: Recebe +1d em todo teste enquanto estiver num ambiente escuro.
+      en: Receives +1d on every roll while in a dark environment.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque, bloqueio."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack, block."
+    weakness:
+      pt: >-
+        O besouro não tem um intelecto preciso, e pode ser facilmente provocado ou atraído com qualquer coisa que desperte
+        sua fome por mais medo e repulsa.
+      en: >-
+        The beetle has no sharp intellect, and can easily be provoked or lured with anything that awakens
+        its hunger for more fear and revulsion.
+    interactions:
+      - key: mordida
+        kind: action
+        attack: brabo
+        range: short
+        damage: "3 + @danger"
+        damageType: kinetic
+        name:
+          pt: Mordida
+          en: Bite
+        description:
+          pt: >-
+            Dano: 3 + PERIGO atual de dano cinético, negado por LIGEIRO. O alvo perde 1 de Defesa caso tenha apenas dois
+            Acertos ou menos ao defender-se.
+          en: >-
+            Damage: 3 + current DANGER kinetic damage, negated by SWIFT. The target loses 1 Defense if they have only two
+            Hits or fewer when defending.
+      - key: encontrao
+        kind: action
+        attack: ligeiro
+        range: short
+        damage: "4"
+        damageType: kinetic
+        name:
+          pt: Encontrão
+          en: Ram
+        description:
+          pt: >-
+            Dano: 4 de dano cinético, negado por LIGEIRO. O alvo sofre 1 de dano AD e fica desequilibrado caso tenha
+            apenas um Acerto ou menos ao defender-se.
+          en: >-
+            Damage: 4 kinetic damage, negated by SWIFT. The target suffers 1 PD damage and is left off-balance if they have
+            only one Hit or fewer when defending.
+      - key: chamar-reforcos
+        kind: action
+        cost: { value: 2, resource: weave }
+        name:
+          pt: Chamar Reforços
+          en: Call Reinforcements
+        description:
+          pt: Outro Besouro do Poço ou outros três Besouros do Poço LACAIOS se juntam à cena.
+          en: Another Well Beetle or three other Well Beetle MINIONS join the scene.
+      - key: levantar-voo
+        kind: maneuver
+        name:
+          pt: Levantar Voo
+          en: Take Flight
+        description:
+          pt: >-
+            O besouro voa para o alto, ficando fora da briga e inalcançável para qualquer um sem ataques à distância. Ele
+            pode carregar um alvo à sua escolha para o alto consigo.
+          en: >-
+            The beetle flies upward, getting out of the Brawl and becoming unreachable to anyone without ranged attacks. It
+            can carry a target of its choice up with it.
+      - key: descida-abrupta
+        kind: maneuver
+        cost: { value: 2, resource: weave }
+        name:
+          pt: Descida Abrupta
+          en: Abrupt Descent
+        description:
+          pt: >-
+            O besouro desce com tudo na direção do chão. Caso estivesse segurando um alvo quando levantou voo, o alvo sofre
+            dano AD cinético igual à TRAMA atual. Logo após uma descida abrupta, o besouro tem +1d ao tentar um ENCONTRÃO
+            no mesmo turno (ou -1d ao teste para defender-se).
+          en: >-
+            The beetle dives full force toward the ground. If it was holding a target when it took flight, the target suffers
+            kinetic PD damage equal to the current WEAVE. Right after an abrupt descent, the beetle has +1d when attempting a RAM
+            in the same turn (or -1d on the roll to defend itself).
+
+  - key: afogador
+    folder: oblivo
+    origin: oblivo
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 2
+    resistances: [void]
+    vulnerabilities: [energy]
+    name:
+      pt: Afogador
+      en: Drowner
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque, bloquear."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack, block."
+    power:
+      pt: >-
+        O Afogador é uma criatura anfíbia, habitante do rio do esquecimento. Caso esteja em um ambiente totalmente
+        aquático, recebe uma ação a mais em seus turnos. Caso esteja em terra firme, ainda assim consegue nadar no chão,
+        como se criasse um caminho aquoso.
+      en: >-
+        The Drowner is an amphibious creature, a dweller of the River of Oblivion. If it is in a fully
+        aquatic environment, it gets one extra action on its turns. If it is on dry land, it can still swim along the ground,
+        as if creating a watery path.
+    weakness:
+      pt: Caso esteja em terra firme, fica impossibilitado de usar seu caminho aquoso se o ambiente estiver bem iluminado ou quente.
+      en: If it is on dry land, it is unable to use its watery path if the environment is well lit or hot.
+    interactions:
+      - key: garras
+        kind: action
+        attack: ligeiro
+        range: short
+        damage: "1d6"
+        damageType: kinetic
+        name:
+          pt: Garras
+          en: Claws
+        description:
+          pt: >-
+            Dano: 1d6 de dano cinético, negado por LIGEIRO com -1d. O alvo sofre 1 de dano AD. Caso tenha menos que dois
+            Acertos ao defender-se, o alvo é agarrado, ficando impedido de mover-se.
+          en: >-
+            Damage: 1d6 kinetic damage, negated by SWIFT with -1d. The target suffers 1 PD damage. If they have fewer than two
+            Hits when defending, the target is grabbed, becoming impeded from moving.
+      - key: afogar
+        kind: action
+        attack: brabo
+        range: short
+        damage: "1d6 + @danger"
+        damageType: void
+        name:
+          pt: Afogar
+          en: Drown
+        description:
+          pt: >-
+            Um alvo agarrado. Dano: 1d6 + PERIGO atual de dano vazio, negado por BRABO com -1d. O alvo perde 1 de Defesa.
+            Caso tenha menos que dois Acertos ao defender-se, o alvo fica desequilibrado.
+          en: >-
+            A grabbed target. Damage: 1d6 + current DANGER void damage, negated by FIERCE with -1d. The target loses 1 Defense.
+            If they have fewer than two Hits when defending, the target is left off-balance.
+      - key: canto-hipnotico
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 2, resource: weave }
+        name:
+          pt: Canto Hipnótico
+          en: Hypnotic Song
+        description:
+          pt: >-
+            Todos os oponentes em cena fazem uma disputa de SAFO contra o afogador. Aqueles que perderem sofrem PERIGO de
+            dano vazio AD ou devem mover-se para perto do Afogador, ficando exaustos.
+          en: >-
+            All opponents in the scene make a SAVVY contest against the drowner. Those who lose suffer DANGER
+            void PD damage or must move closer to the Drowner, becoming exhausted.
+      - key: caminho-aquoso
+        kind: maneuver
+        name:
+          pt: Caminho Aquoso
+          en: Watery Path
+        description:
+          pt: Move-se para ficar imediatamente adjacente a um alvo, independente se este estava dentro ou fora da briga.
+          en: Moves to become immediately adjacent to a target, regardless of whether it was in or out of the Brawl.
+
+  - key: guardia-esquecida
+    folder: oblivo
+    origin: oblivo
+    grade: 2
+    guard: 9
+    danger: 3
+    defense: 5
+    brabo: 2
+    resistances: [kinetic]
+    name:
+      pt: Guardiã Esquecida
+      en: Forgotten Guardian
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda. Reação disponível: contra-ataque, bloquear."
+      en: "Favorite maneuvers: Move, Raise Guard. Available reaction: counterattack, block."
+    power:
+      pt: Até que se mova, a Guardiã é indistinguível de uma estátua.
+      en: Until she moves, the Guardian is indistinguishable from a statue.
+    weakness:
+      pt: A história esquecida pela própria guardiã pode ser a chave para trazê-la a si, possibilitando diálogo.
+      en: The story forgotten by the guardian herself may be the key to bringing her back to herself, making dialogue possible.
+    interactions:
+      - key: esmagar
+        kind: action
+        attack: brabo
+        range: short
+        damage: "2d6 + @danger"
+        damageType: kinetic
+        name:
+          pt: Esmagar
+          en: Crush
+        description:
+          pt: >-
+            Dano: 2d6 + PERIGO de dano cinético. Alvo perde 1 de Defesa e é desequilibrado ou arremessado para longe caso
+            tenha 2 Acertos ou menos ao defender-se.
+          en: >-
+            Damage: 2d6 + DANGER kinetic damage. The target loses 1 Defense and is knocked off-balance or hurled away if
+            they have 2 Hits or fewer when defending.
+      - key: petrificar
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 2, resource: weave }
+        name:
+          pt: Petrificar
+          en: Petrify
+        description:
+          pt: >-
+            Faça uma disputa de SAFO com um alvo. Caso perca a disputa, o alvo escolhe entre gastar 1 LIGEIRO ou ser
+            transformado em uma estátua de pedra.
+          en: >-
+            Make a SAVVY contest against a target. If they lose the contest, the target chooses between spending 1 SWIFT or being
+            turned into a stone statue.
+
+  - key: policial
+    folder: babelem
+    origin: babelem
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 1
+    name:
+      pt: Policial
+      en: Cop
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack."
+    power:
+      pt: Um policial geralmente anda em dupla, e no menor dos desaforos consegue chamar reforços.
+      en: A cop usually walks in a pair, and at the slightest provocation can call for reinforcements.
+    weakness:
+      pt: >-
+        A vivência de um policial deixa pouco espaço para acreditar em ameaças sobrenaturais, sendo despreparado pra esses
+        tipos de situações.
+      en: >-
+        A cop's life experience leaves little room for believing in supernatural threats, leaving them unprepared for these
+        kinds of situations.
+    interactions:
+      - key: cacetete
+        kind: action
+        attack: brabo
+        range: short
+        damage: "2 + @danger"
+        damageType: kinetic
+        name:
+          pt: Cacetete
+          en: Baton
+        description:
+          pt: >-
+            Dano: 2 + PERIGO atual de dano cinético, negado por LIGEIRO. O alvo perde 1 de Defesa caso tenha apenas um
+            Acerto ou menos ao defender-se.
+          en: >-
+            Damage: 2 + current DANGER kinetic damage, negated by SWIFT. The target loses 1 Defense if they have only one
+            Hit or fewer when defending.
+      - key: atirar-pra-matar
+        kind: action
+        attack: ligeiro
+        range: wide
+        damage: "1d6"
+        damageType: energy
+        name:
+          pt: Atirar pra Matar
+          en: Shoot to Kill
+        description:
+          pt: "Dano: 1d6 de dano energético, negado por LIGEIRO. +1 de dano AD."
+          en: "Damage: 1d6 energy damage, negated by SWIFT. +1 PD damage."
+      - key: render
+        kind: action
+        attack: safo
+        range: short
+        cost: { value: 3, resource: weave }
+        name:
+          pt: Render
+          en: Subdue
+        description:
+          pt: Faça uma disputa de SAFO contra um alvo. O alvo fica desequilibrado ou impedido de fugir ou atacar.
+          en: Make a SAVVY contest against a target. The target is left off-balance or impeded from fleeing or attacking.
+
+  - key: bandido
+    folder: babelem
+    origin: babelem
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 1
+    name:
+      pt: Bandido
+      en: Bandit
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack."
+    power:
+      pt: Agir fora da lei permite táticas sujas, como colocar pessoas que você se importa em perigo.
+      en: Acting outside the law allows dirty tactics, such as putting people you care about in danger.
+    weakness:
+      pt: Seus interesses deixam margem para negociação.
+      en: Their interests leave room for negotiation.
+    interactions:
+      - key: cacetete
+        kind: action
+        attack: brabo
+        range: short
+        damage: "2 + @danger"
+        damageType: kinetic
+        name:
+          pt: Cacetete
+          en: Cudgel
+        description:
+          pt: >-
+            Dano: 2 + PERIGO atual de dano cinético, negado por LIGEIRO. O alvo perde 1 de Defesa caso tenha apenas um
+            Acerto ou menos ao defender-se.
+          en: >-
+            Damage: 2 + current DANGER kinetic damage, negated by SWIFT. The target loses 1 Defense if they have only one
+            Hit or fewer when defending.
+      - key: atirar-pra-matar
+        kind: action
+        attack: ligeiro
+        range: wide
+        damage: "1d6"
+        damageType: energy
+        name:
+          pt: Atirar pra Matar
+          en: Shoot to Kill
+        description:
+          pt: "Dano: 1d6 de dano energético, negado por LIGEIRO. +1 de dano AD caso tenha apenas um Acerto ou menos ao defender-se."
+          en: "Damage: 1d6 energy damage, negated by SWIFT. +1 PD damage if they have only one Hit or fewer when defending."
+      - key: despistar
+        kind: action
+        attack: safo
+        range: wide
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Despistar
+          en: Throw Off
+        description:
+          pt: Os oponentes gastam uma reserva cada ou permitem que o bandido escape.
+          en: Each opponent spends one reserve or lets the bandit escape.
+
+  - key: brigao
+    folder: babelem
+    origin: babelem
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 2
+    name:
+      pt: Brigão
+      en: Brawler
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque, Ainda de Pé."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack, Still Standing."
+    power:
+      pt: Um brigão fica mais forte conforme a briga avança, ganhando +1 PERIGO para cada ponto de BRABO que perder.
+      en: A brawler grows stronger as the fight goes on, gaining +1 DANGER for every point of FIERCE they lose.
+    weakness:
+      pt: Sua conversa se dá através de punhos e pontapés. Derrotá-lo em seu próprio território pode lhe render um amigo.
+      en: Their conversation happens through fists and kicks. Defeating them on their own turf may earn you a friend.
+    interactions:
+      - key: porrada
+        kind: action
+        attack: brabo
+        range: short
+        damage: "1d6 + @danger"
+        damageType: kinetic
+        name:
+          pt: Porrada
+          en: Pounding
+        description:
+          pt: >-
+            Dano: 1d6 + PERIGO atual de dano cinético, negado por LIGEIRO. Causa um estado menor caso o alvo tenha apenas
+            um Acerto ou menos ao defender-se.
+          en: >-
+            Damage: 1d6 + current DANGER kinetic damage, negated by SWIFT. Inflicts a minor condition if the target has only
+            one Hit or fewer when defending.
+      - key: ainda-de-pe
+        kind: reaction
+        cost: { value: 1, resource: danger }
+        name:
+          pt: Ainda de Pé (Técnica)
+          en: Still Standing (Technique)
+        description:
+          pt: >-
+            Gaste PERIGO ou TRAMA para Recuperar o Fôlego como uma reação ou ação livre em vez de uma manobra. Você pode
+            fazer isso como uma Reação fora de seu turno ao receber dano.
+          en: >-
+            Spend DANGER or WEAVE to Catch Your Breath as a reaction or free action instead of a maneuver. You can
+            do this as a Reaction outside your turn when you take damage.
+
+  - key: assecla
+    folder: babelem
+    origin: babelem
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 3
+    name:
+      pt: Assecla
+      en: Henchman
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque, Sacrifício."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack, Sacrifice."
+    power:
+      pt: Um Assecla está disposto a fazer qualquer coisa em nome de seu líder.
+      en: A Henchman is willing to do anything in the name of their leader.
+    weakness:
+      pt: Sua fé pode cegá-lo.
+      en: Their faith can blind them.
+    interactions:
+      - key: golpe-de-fe
+        kind: action
+        attack: brabo
+        range: wide
+        damage: "2 + @danger"
+        damageType: void
+        name:
+          pt: Golpe de Fé
+          en: Strike of Faith
+        description:
+          pt: >-
+            Dano: 2 + PERIGO atual de dano Vazio ou Energético, negado por LIGEIRO. -1 de Defesa caso o alvo tenha apenas
+            um Acerto ou menos ao defender-se.
+          en: >-
+            Damage: 2 + current DANGER void or energy damage, negated by SWIFT. -1 Defense if the target has only
+            one Hit or fewer when defending.
+      - key: territorio
+        kind: action
+        name:
+          pt: Território (Feitiço)
+          en: Territory (Spell)
+        description:
+          pt: A Tecelã paga TRAMA no lugar de Aura para os efeitos deste feitiço.
+          en: The Weaver pays WEAVE in place of Aura for the effects of this spell.
+      - key: sacrificio
+        kind: reaction
+        cost: { value: 1, resource: weave }
+        name:
+          pt: Sacrifício
+          en: Sacrifice
+        description:
+          pt: Requer 1 TRAMA. O Assecla gasta 1 BRABO para que um alvo Recupere o Fôlego imediatamente.
+          en: Requires 1 WEAVE. The Henchman spends 1 FIERCE so that a target Catches Their Breath immediately.
+
+  - key: desperto
+    folder: babelem
+    origin: babelem
+    grade: 1
+    guard: 12
+    danger: 1
+    defense: 3
+    brabo: 2
+    name:
+      pt: Desperto
+      en: Awakened
+    interactionsPerTurn:
+      pt: Uma Ação e uma Manobra durante seu turno.
+      en: One Action and one Maneuver during its turn.
+    special:
+      pt: Selecione até 3 TÉCNICAS ou FEITIÇOS (arraste-os para esta ficha). Qualquer custo pode ser pago com TRAMA ou PERIGO.
+      en: Select up to 3 TECHNIQUES or SPELLS (drag them onto this sheet). Any cost can be paid with WEAVE or DANGER.
+    tactics:
+      pt: "Manobras favoritas: Mover-se, Levantar a Guarda, Atrapalhar. Reação disponível: contra-ataque."
+      en: "Favorite maneuvers: Move, Raise Guard, Hinder. Available reaction: counterattack."
+    power:
+      pt: Um Desperto tem especialidades de acordo com suas técnicas e feitiços selecionados.
+      en: An Awakened has specialties according to their selected techniques and spells.
+    weakness:
+      pt: Despertos comuns não possuem Traços, portanto os poderes conferidos por eles podem surpreendê-los.
+      en: Common Awakened have no Traits, so the powers those Traits confer may take them by surprise.
+    interactions:
+      - key: violencia-brabo
+        kind: action
+        attack: brabo
+        range: wide
+        damage: "1d6 + @danger"
+        damageType: kinetic
+        name:
+          pt: Violência (ataque brabo)
+          en: Violence (FIERCE attack)
+        description:
+          pt: >-
+            Dano: 1d6 + PERIGO atual de dano cinético, negado por LIGEIRO. -1 de Defesa caso o alvo tenha apenas dois
+            Acertos ou menos ao defender-se.
+          en: >-
+            Damage: 1d6 + current DANGER kinetic damage, negated by SWIFT. -1 Defense if the target has only two
+            Hits or fewer when defending.
+      - key: violencia-ligeiro
+        kind: action
+        attack: ligeiro
+        range: long
+        damage: "1 + @danger"
+        damageType: kinetic
+        name:
+          pt: Violência (ataque ligeiro)
+          en: Violence (SWIFT attack)
+        description:
+          pt: >-
+            Dano: 1 + PERIGO de dano cinético, negado por BRABO. +1 de dano AD caso o alvo tenha apenas dois Acertos ou
+            menos ao defender-se.
+          en: >-
+            Damage: 1 + DANGER kinetic damage, negated by FIERCE. +1 PD damage if the target has only two Hits or
+            fewer when defending.
+      - key: estrategia
+        kind: action
+        attack: safo
+        range: wide
+        name:
+          pt: Estratégia
+          en: Strategy
+        description:
+          pt: Faça uma disputa de SAFO contra um alvo. Caso perca a disputa, o alvo consome 1 de uma Reserva à escolha do Desperto.
+          en: Make a SAVVY contest against a target. If they lose the contest, the target spends 1 from a Reserve of the Awakened's choice.

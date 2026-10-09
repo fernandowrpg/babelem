@@ -4,6 +4,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), 
 
 ## [Não lançado]
 
+## [0.1.1]
+
+### Corrigido
+- Ícones do cabeçalho da janela (configurar, token, fechar) quebrados pelo estilo de botões da ficha.
+- Contraste dos rótulos no cabeçalho das fichas e dos textos de apoio.
+- Pacote de instalação: zip com caminhos POSIX e URLs do repositório no system.json.
+
 ## [0.1.0]
 
 ### Adicionado

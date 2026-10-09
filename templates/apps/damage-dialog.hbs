@@ -1,0 +1,21 @@
+<div class="babelem bab-dialog">
+  <div class="form-group">
+    <label>{{localize "BABELEM.Damage.amount"}}</label>
+    <input type="number" name="amount" value="{{amount}}" min="0" autofocus>
+  </div>
+  <div class="form-group">
+    <label>{{localize "BABELEM.Damage.type"}}</label>
+    <select name="damageType">
+      {{#each damageTypes}}<option value="{{key}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Damage.pierceHint">{{localize "BABELEM.Damage.pierce"}}</label>
+    <input type="checkbox" name="pierce" {{#if pierce}}checked{{/if}}>
+  </div>
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Damage.ignoreResistanceHint">{{localize "BABELEM.Damage.ignoreResistance"}}</label>
+    <input type="checkbox" name="ignoreResistance">
+  </div>
+  <p class="bab-hint">{{localize "BABELEM.Damage.dialogHint"}}</p>
+</div>

@@ -2,7 +2,7 @@
   "id": "babelem",
   "title": "Babelém",
   "description": "Sistema para o RPG de fantasia urbana Babelém: fichas de Protagonista e Ameaça, testes com Acertos, Aura, Trama, Dado do Eco e Pilha Comum, e compêndios em português e inglês. / System for the Babelém urban fantasy RPG.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -284,7 +284,7 @@
   "secondaryTokenAttribute": "aura",
   "url": "https://github.com/fernandowrpg/babelem",
   "manifest": "https://github.com/fernandowrpg/babelem/releases/latest/download/system.json",
-  "download": "https://github.com/fernandowrpg/babelem/releases/download/v0.1.0/babelem.zip",
+  "download": "https://github.com/fernandowrpg/babelem/releases/download/v0.1.1/babelem.zip",
   "readme": "README.md",
   "changelog": "CHANGELOG.md",
   "bugs": "https://github.com/fernandowrpg/babelem/issues"

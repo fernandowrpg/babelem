@@ -1,0 +1,106 @@
+<div class="bab-sheet">
+  <header class="bab-header">
+    <img class="bab-portrait" src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage" data-tooltip="BABELEM.Sheet.editImage">
+    <div class="bab-identity">
+      <h1 class="bab-banner">{{localize "BABELEM.Threat.title"}}</h1>
+      <div class="bab-field wide">
+        <label>{{localize "BABELEM.Sheet.name"}}</label>
+        <input type="text" name="name" value="{{actor.name}}">
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field">
+          <label>{{localize "BABELEM.Threat.origin"}}</label>
+          <select name="system.origin">{{selectOptions origins selected=system.origin}}</select>
+        </div>
+        <div class="bab-field">
+          <label>{{localize "BABELEM.Threat.grade"}}</label>
+          <select name="system.grade" data-dtype="Number">{{selectOptions grades selected=system.grade}}</select>
+        </div>
+        <div class="bab-field">
+          <label>{{localize "BABELEM.Threat.archetype"}}</label>
+          <select name="system.archetype">{{selectOptions archetypes selected=system.archetype}}</select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet-body">
+    <section class="bab-box">
+      <h2 class="bab-banner">{{localize "BABELEM.Threat.stats"}}</h2>
+      <div class="bab-threat-stats">
+        <div class="bab-stat-head"><span></span><span>{{localize "BABELEM.Sheet.current"}}</span><span>{{localize "BABELEM.Sheet.max"}}</span></div>
+        <div class="bab-stat"><span>{{localize "BABELEM.Integrity.guard"}}</span><input type="number" name="system.guard.value" value="{{system.guard.value}}"><input type="number" name="system.guard.max" value="{{system.guard.max}}"></div>
+        <div class="bab-stat"><a data-action="testDanger" data-tooltip="BABELEM.Threat.testDangerHint">{{localize "BABELEM.Threat.danger"}} <i class="fa-solid fa-dice"></i></a><input type="number" name="system.danger.value" value="{{system.danger.value}}"><input type="number" name="system.danger.max" value="{{system.danger.max}}"></div>
+        <div class="bab-stat"><span>{{localize "BABELEM.Threat.defense"}}</span><input type="number" name="system.defense.value" value="{{system.defense.value}}"><input type="number" name="system.defense.max" value="{{system.defense.max}}"></div>
+        <div class="bab-stat"><span>{{localize "BABELEM.Attribute.brabo"}}</span><input type="number" name="system.brabo.value" value="{{system.brabo.value}}"><input type="number" name="system.brabo.max" value="{{system.brabo.max}}"></div>
+        <div class="bab-stat"><span>{{localize "BABELEM.Integrity.barrier"}}</span><input type="number" name="system.barrier" value="{{system.barrier}}"><span></span></div>
+      </div>
+      <div class="bab-buttons">
+        {{#if isGM}}<button type="button" data-action="applyTable" data-tooltip="BABELEM.Threat.applyTableHint"><i class="fa-solid fa-table"></i> {{localize "BABELEM.Threat.applyTable"}}</button>{{/if}}
+      </div>
+      <p class="bab-hint">{{localize "BABELEM.Threat.attackHitsHint" hits=attackHits}}</p>
+      <div class="bab-buttons">
+        <button type="button" data-action="basicAttack" data-attack="brabo"><i class="fa-solid fa-hand-fist"></i> {{localize "BABELEM.Attack.brabo"}}</button>
+        <button type="button" data-action="basicAttack" data-attack="ligeiro"><i class="fa-solid fa-bolt"></i> {{localize "BABELEM.Attack.ligeiro"}}</button>
+        <button type="button" data-action="basicAttack" data-attack="safo"><i class="fa-solid fa-brain"></i> {{localize "BABELEM.Attack.safo"}}</button>
+      </div>
+    </section>
+
+    <section class="bab-box">
+      <h2 class="bab-banner">{{localize "BABELEM.Threat.interactions"}}</h2>
+      <div class="bab-field wide"><label>{{localize "BABELEM.Threat.perTurn"}}</label><input type="text" name="system.interactionsPerTurn" value="{{system.interactionsPerTurn}}"></div>
+      {{#each interactionGroups}}
+      <h3 class="bab-subhead">{{label}}</h3>
+      <ul class="bab-items">{{#each items as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{/each}}</ul>
+      {{/each}}
+      {{#if editable}}<div class="bab-buttons"><button type="button" data-action="itemCreate" data-type="interaction"><i class="fa-solid fa-plus"></i> {{localize "TYPES.Item.interaction"}}</button></div>{{/if}}
+      {{#if abilities.length}}
+      <h3 class="bab-subhead">{{localize "BABELEM.Ability.title"}}</h3>
+      <ul class="bab-items">{{#each abilities as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{/each}}</ul>
+      {{/if}}
+      {{#if traits.length}}
+      <h3 class="bab-subhead">{{localize "BABELEM.Trait.title"}}</h3>
+      <ul class="bab-items">{{#each traits as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{/each}}</ul>
+      {{/if}}
+    </section>
+
+    <section class="bab-box">
+      <h2 class="bab-banner">{{localize "BABELEM.Threat.nature"}}</h2>
+      <h3 class="bab-subhead">{{localize "BABELEM.Threat.special"}}</h3>
+      <div class="bab-editor">{{formInput fields.special name="system.special" value=source.special enriched=enriched.special toggled=true}}</div>
+      <h3 class="bab-subhead">{{localize "BABELEM.Threat.tactics"}}</h3>
+      <div class="bab-editor">{{formInput fields.tactics name="system.tactics" value=source.tactics enriched=enriched.tactics toggled=true}}</div>
+      <h3 class="bab-subhead">{{localize "BABELEM.Threat.power"}}</h3>
+      <div class="bab-editor">{{formInput fields.power name="system.power" value=source.power enriched=enriched.power toggled=true}}</div>
+      <h3 class="bab-subhead">{{localize "BABELEM.Threat.weakness"}}</h3>
+      <div class="bab-editor">{{formInput fields.weakness name="system.weakness" value=source.weakness enriched=enriched.weakness toggled=true}}</div>
+    </section>
+
+    <section class="bab-box">
+      <h2 class="bab-banner">{{localize "BABELEM.Damage.affinities"}}</h2>
+      <table class="bab-affinities">
+        <thead><tr><th></th><th>{{localize "BABELEM.Damage.resistance"}}</th><th>{{localize "BABELEM.Damage.vulnerability"}}</th></tr></thead>
+        <tbody>
+          {{#each damageFlags}}
+          <tr>
+            <td>{{label}}</td>
+            <td><input type="checkbox" name="system.resistances.{{key}}" {{checked resistance}}></td>
+            <td><input type="checkbox" name="system.vulnerabilities.{{key}}" {{checked vulnerability}}></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <h3 class="bab-subhead">{{localize "BABELEM.Status.title"}}</h3>
+      <div class="bab-statuses">
+        {{#each statuses}}
+        <a class="bab-status {{#if active}}active{{/if}}" data-action="toggleStatus" data-status="{{id}}" data-tooltip="{{label}}"><img src="{{img}}" alt="{{label}}"></a>
+        {{/each}}
+      </div>
+    </section>
+
+    <section class="bab-box">
+      <h2 class="bab-banner">{{localize "BABELEM.Sheet.notes"}}</h2>
+      <div class="bab-editor">{{formInput fields.notes name="system.notes" value=source.notes enriched=enriched.notes toggled=true}}</div>
+    </section>
+  </div>
+</div>

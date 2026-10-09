@@ -1,0 +1,29 @@
+<li class="bab-item draggable" data-item-id="{{item.id}}" draggable="true">
+  <div class="bab-item-row">
+    <img class="bab-item-img" src="{{item.img}}" alt="" data-action="itemUse" data-tooltip="BABELEM.Item.use">
+    <a class="bab-item-name" data-action="itemToggle">{{item.name}}</a>
+    {{#if item.system.d66}}<span class="bab-tag d66" data-tooltip="d66">{{item.system.d66}}</span>{{/if}}
+    {{#if item.cost}}<span class="bab-tag cost">{{item.cost}}</span>{{/if}}
+    {{#if (bab-eq item.type "technique")}}<span class="bab-tag">{{localize (concat "BABELEM.Technique.short." item.system.techType)}}</span>{{/if}}
+    {{#if (bab-eq item.type "spell")}}<span class="bab-tag plane-{{item.system.plane}}">{{localize (concat "BABELEM.Plane." item.system.plane)}}</span>{{/if}}
+    {{#if (bab-eq item.type "gear")}}<span class="bab-tag">×{{item.system.quantity}}</span>{{/if}}
+    {{#if item.system.restriction}}{{#unless (bab-eq item.system.restriction.type "none")}}<span class="bab-tag restriction" data-tooltip="{{item.system.restriction.text}}"><i class="fa-solid fa-link"></i></span>{{/unless}}{{/if}}
+    {{#if item.system.tracker.enabled}}
+    <span class="bab-tracker">
+      <a data-action="trackerStep" data-delta="-1"><i class="fa-solid fa-minus"></i></a>
+      <span>{{item.system.tracker.label}}: {{item.system.tracker.value}}{{#if item.system.tracker.max}}/{{item.system.tracker.max}}{{/if}}</span>
+      <a data-action="trackerStep" data-delta="1"><i class="fa-solid fa-plus"></i></a>
+    </span>
+    {{/if}}
+    <span class="bab-item-controls">
+      <a data-action="itemChat" data-tooltip="BABELEM.Item.toChat"><i class="fa-solid fa-comment"></i></a>
+      {{#if @root.editable}}
+      <a data-action="itemEdit" data-tooltip="BABELEM.Item.edit"><i class="fa-solid fa-pen-to-square"></i></a>
+      <a data-action="itemDelete" data-tooltip="BABELEM.Item.delete"><i class="fa-solid fa-trash"></i></a>
+      {{/if}}
+    </span>
+  </div>
+  {{#if item.expanded}}
+  <div class="bab-item-description">{{{item.description}}}</div>
+  {{/if}}
+</li>

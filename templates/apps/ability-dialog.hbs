@@ -1,0 +1,27 @@
+<div class="babelem bab-dialog">
+  {{#if cost}}<p><strong>{{localize "BABELEM.Cost.label"}}:</strong> {{cost}}</p>{{/if}}
+  {{#if special}}
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Ability.investHint">{{localize "BABELEM.Ability.invest"}}</label>
+    <input type="number" name="invest" value="1" min="0">
+  </div>
+  {{/if}}
+  {{#if extraCost}}
+  <div class="form-group">
+    <label>{{localize "BABELEM.Spell.extraRelease"}} (+{{extraCost}})</label>
+    <input type="checkbox" name="extra">
+  </div>
+  {{#if extraRelease}}<div class="bab-hint">{{{extraRelease}}}</div>{{/if}}
+  {{/if}}
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Rite.motorHint">{{localize "BABELEM.Rite.motor"}}</label>
+    <input type="checkbox" name="motorRite">
+  </div>
+  {{#if auraCost}}
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Rite.sonicHint">{{localize "BABELEM.Rite.sonic"}}</label>
+    <input type="checkbox" name="sonicRite">
+  </div>
+  {{/if}}
+  <p class="bab-hint">{{localize "BABELEM.Rite.weaveNote"}}</p>
+</div>

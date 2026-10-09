@@ -1,0 +1,829 @@
+pack: spells
+type: Item
+label:
+  pt: Feitiços
+  en: Spells
+folders:
+  - key: oblivo
+    name:
+      pt: Feitiçaria do Oblivo
+      en: Oblivo Sorcery
+  - key: litura
+    name:
+      pt: Feitiçaria de Litura
+      en: Litura Sorcery
+entries:
+  - key: amplificacao-purpura
+    itemType: spell
+    plane: oblivo
+    d66: "1/1"
+    activation: action
+    cost: { value: 1, resource: safo }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Amplificação Púrpura
+      en: Purple Amplification
+    description:
+      pt: >-
+        Conjure este feitiço ao mesmo tempo que lança outro feitiço: uma aura púrpura remodela e aprimora-o. Se o feitiço
+        exigir que você jogue dados, ganhe um Acerto. Se o feitiço causar algum tipo de dano, cause o dano novamente mas
+        mudando o tipo de dano para outro, a menos que seja cinético, que se repete como cinético mesmo.
+      en: >-
+        Conjure this spell at the same time as you cast another spell: a purple aura reshapes and enhances it. If the
+        spell requires you to roll dice, gain a Hit. If the spell deals any kind of damage, deal the damage again but
+        changing the damage type to another one, unless it is kinetic, which repeats as kinetic.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar este feitiço como uma ação livre.
+      en: +1 SWIFT to cast this spell as a free action.
+
+  - key: animar-cadaver
+    itemType: spell
+    plane: oblivo
+    d66: "1/2"
+    activation: action
+    cost: { value: 1, resource: brabo }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Animar Cadáver
+      en: Animate Corpse
+    description:
+      pt: >-
+        Erga um cadáver, tornando-o capaz de agir e responder perguntas suas até o final da cena (um número máximo de
+        perguntas igual a sua Aura máxima). Durante seus turnos seguintes, ele pode mover-se ou atacar, testando 3d e
+        causando 1 de dano por Acerto. O cadáver defende-se com 3d e tem Guarda 3, deixando de ser útil se ferido.
+      en: >-
+        Raise a corpse, making it able to act and answer your questions until the end of the scene (a maximum number of
+        questions equal to your maximum Aura). During your following turns, it can move or attack, testing 3d and
+        dealing 1 damage per Hit. The corpse defends with 3d and has Guard 3, ceasing to be useful if wounded.
+    extraRelease:
+      pt: +1 AURA para dar BARREIRA 3 ao cadáver.
+      en: +1 AURA to give the corpse BARRIER 3.
+
+  - key: congelar
+    itemType: spell
+    plane: oblivo
+    d66: "1/3"
+    activation: action
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Congelar
+      en: Freeze
+    description:
+      pt: >-
+        Cause 3 de dano vazio em um alvo em alcance amplo, cobrindo-o de gelo. Até que o alvo tenha superado o gelo, usar
+        esse feitiço novamente irá deixá-lo impedido de mover-se. Caso o alvo já esteja imobilizado, você o deixará
+        atordoado.
+      en: >-
+        Deal 3 void damage to a target within wide range, covering it in ice. Until the target has overcome the ice,
+        using this spell again will leave it impeded from moving. If the target is already immobilized, you will leave it
+        stunned.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar esse feitiço como ação livre.
+      en: +1 SWIFT to cast this spell as a free action.
+
+  - key: controle
+    itemType: spell
+    plane: oblivo
+    d66: "1/4"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Controle
+      en: Control
+    description:
+      pt: >-
+        Escolha um alvo em alcance amplo. Persuada a mente do alvo, pedindo que ele faça algo para você. Se o alvo
+        aceitar, ele recupera 1 em uma reserva (ou concede 1 ponto de TRAMA caso seja uma Ameaça) como prêmio, ou sofre
+        dano vazio AD igual a seu valor de SAFO se recusar. Para toda conjuração consecutiva deste feitiço durante a mesma
+        cena, aumente o custo, prêmio e dano causado em 1.
+      en: >-
+        Choose a target within wide range. Persuade the target's mind, asking them to do something for you. If the target
+        accepts, they recover 1 in a Reserve (or grant 1 WEAVE point if they are a Threat) as a reward, or take void PD
+        damage equal to your SAVVY value if they refuse. For every consecutive casting of this spell during the same
+        scene, increase the cost, reward and damage dealt by 1.
+    extraRelease:
+      pt: +1 AURA para aumentar o custo, prêmio e dano em 1.
+      en: +1 AURA to increase the cost, reward and damage by 1.
+
+  - key: corrosao
+    itemType: spell
+    plane: oblivo
+    d66: "1/5"
+    activation: action
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Corrosão
+      en: Corrosion
+    description:
+      pt: >-
+        Cause dano vazio igual ao seu valor de SAFO a todos em alcance curto. Os próximos danos causados pelos alvos são
+        diminuídos em 1 até que esse efeito seja superado.
+      en: >-
+        Deal void damage equal to your SAVVY value to everyone within short range. The next damage dealt by the targets
+        is reduced by 1 until this effect is overcome.
+    extraRelease:
+      pt: +1 AURA para o feitiço esquecer de alvejar seus aliados.
+      en: +1 AURA for the spell to forget to target your allies.
+
+  - key: dedo-podre
+    itemType: spell
+    plane: oblivo
+    d66: "1/6"
+    activation: action
+    cost: { value: 1, resource: brabo }
+    extraCost: { value: 1, resource: aura }
+    test: { attack: brabo, attribute: brabo, alt: safo, damageType: void }
+    name:
+      pt: Dedo Podre
+      en: Rotten Finger
+    description:
+      pt: >-
+        Faça um ataque brabo de alcance amplo usando BRABO ou SAFO. O ataque causa o número de Acertos + BRABO/SAFO de
+        dano vazio. Se o alvo sofrer um ferimento, recupere Guarda igual ao dano causado.
+      en: >-
+        Make a wide range FIERCE attack using FIERCE or SAVVY. The attack deals the number of Hits + FIERCE/SAVVY in void
+        damage. If the target suffers a Wound, recover Guard equal to the damage dealt.
+    extraRelease:
+      pt: +1 AURA para forçar o alvo a gastar 1 BRABO.
+      en: +1 AURA to force the target to spend 1 FIERCE.
+
+  - key: escudo-termico
+    itemType: spell
+    plane: oblivo
+    d66: "2/1"
+    activation: reaction
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Escudo Térmico
+      en: Thermal Shield
+    description:
+      pt: >-
+        Ganhe resistência a dano vazio ou energético ao ser alvo de um desses tipos de dano até o começo do seu próximo
+        turno. Você ainda pode defender-se como parte desta mesma reação.
+      en: >-
+        Gain resistance to void or energy damage when you are the target of one of those damage types, until the start of
+        your next turn. You can still defend yourself as part of this same reaction.
+    extraRelease:
+      pt: +1 AURA para proteger também todos os aliados próximos da mesma fonte de dano.
+      en: +1 AURA to also protect all nearby allies from the same source of damage.
+
+  - key: ilimitacao
+    itemType: spell
+    plane: oblivo
+    d66: "2/2"
+    activation: action
+    cost: { value: 3, resource: aura }
+    extraCost: { value: 1, resource: brabo }
+    name:
+      pt: Ilimitação
+      en: Unbinding
+    description:
+      pt: >-
+        Negue uma única regra para todos que estiverem em alcance amplo. Diga qual é a regra. Seja a necessidade de
+        respirar, andar apenas em superfícies sólidas, gravidade, som ou qualquer coisa com a qual o entendimento comum
+        concorde, cada alvo se tornará ilimitado pela regra até que este feitiço termine. O efeito termina no final do seu
+        próximo turno, a menos que você comece a canalizar.
+      en: >-
+        Deny a single rule for everyone within wide range. Say what the rule is. Whether it is the need to breathe,
+        walking only on solid surfaces, gravity, sound or anything that common understanding agrees upon, each target
+        will become unbound by the rule until this spell ends. The effect ends at the end of your next turn, unless you
+        start channeling.
+    extraRelease:
+      pt: +1 BRABO para focar o feitiço em um único alvo.
+      en: +1 FIERCE to focus the spell on a single target.
+
+  - key: induzir-pesadelo
+    itemType: spell
+    plane: oblivo
+    d66: "2/3"
+    activation: reaction
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Induzir Pesadelo
+      en: Induce Nightmare
+    description:
+      pt: Quando for o alvo de um ataque, cause no atacante dano vazio AD igual ao seu valor de SAFO.
+      en: When you are the target of an attack, deal void PD damage to the attacker equal to your SAVVY value.
+    extraRelease:
+      pt: +1 AURA para lançar este feitiço como parte de um ataque safo.
+      en: +1 AURA to cast this spell as part of a SAVVY attack.
+
+  - key: manto
+    itemType: spell
+    plane: oblivo
+    d66: "2/4"
+    activation: freeAction
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Manto
+      en: Cloak
+    description:
+      pt: >-
+        Torne um alvo imperceptível, fazendo com que todos ao seu redor ignorem sua presença. O alvo passa despercebido
+        até quebrar este feitiço, falando, atacando ou causando dano a alguém.
+      en: >-
+        Make a target imperceptible, causing everyone around them to ignore their presence. The target goes unnoticed
+        until they break this spell by speaking, attacking or dealing damage to someone.
+    extraRelease:
+      pt: +1 AURA para adicionar um novo alvo ao feitiço.
+      en: +1 AURA to add a new target to the spell.
+
+  - key: nevoeiro
+    itemType: spell
+    plane: oblivo
+    d66: "2/5"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Nevoeiro
+      en: Fog
+    description:
+      pt: >-
+        Uma névoa densa emana de você e cega os sentidos de todos em alcance curto. Você pode canalizar para manter esse
+        efeito.
+      en: >-
+        A dense mist emanates from you and blinds the senses of everyone within short range. You can channel to maintain
+        this effect.
+    extraRelease:
+      pt: +1 AURA para atingir alvos em alcance amplo ou focar a névoa em um alvo em alcance longo.
+      en: +1 AURA to affect targets within wide range or to focus the mist on a target within long range.
+
+  - key: passo-vazio
+    itemType: spell
+    plane: oblivo
+    d66: "2/6"
+    activation: freeAction
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Passo Vazio
+      en: Void Step
+    description:
+      pt: >-
+        Dê um passo no vazio e reapareça em qualquer lugar dentro de um alcance amplo. Esse movimento conta como teleporte,
+        e portanto não pode ser acompanhado.
+      en: >-
+        Take a step into the void and reappear anywhere within wide range. This movement counts as teleportation, and
+        therefore cannot be followed.
+    extraRelease:
+      pt: +1 AURA para levar alguém consigo.
+      en: +1 AURA to take someone with you.
+
+  - key: pe-frio
+    itemType: spell
+    plane: oblivo
+    d66: "3/1"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 2, resource: aura }
+    name:
+      pt: Pé Frio
+      en: Cold Feet
+    description:
+      pt: >-
+        Congele a superfície abaixo dos pés de um alvo em alcance amplo. Até o final do seu próximo turno, o alvo terá de
+        usar uma ação a mais para mover-se, sem ficar desequilibrado ao final da movimentação. Caso o alvo não se mova até
+        o final do próximo turno dele, ele sofrerá dano vazio AD igual ao seu valor de SAFO.
+      en: >-
+        Freeze the surface beneath the feet of a target within wide range. Until the end of your next turn, the target
+        must use an extra action to move, without becoming off-balance at the end of the movement. If the target does not
+        move by the end of their next turn, they will take void PD damage equal to your SAVVY value.
+    extraRelease:
+      pt: +2 AURA para ter como alvo todos menos você dentro de um alcance amplo.
+      en: +2 AURA to target everyone but you within wide range.
+
+  - key: raio-vazio
+    itemType: spell
+    plane: oblivo
+    d66: "3/2"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    test: { attack: ligeiro, attribute: ligeiro, alt: safo, bonus: 1, damageType: void }
+    name:
+      pt: Raio Vazio
+      en: Void Ray
+    description:
+      pt: >-
+        Faça um ataque ligeiro de amplo alcance usando LIGEIRO ou SAFO, com +1d. O ataque causa dano vazio igual ao número
+        de Acertos.
+      en: >-
+        Make a wide range SWIFT attack using SWIFT or SAVVY, with +1d. The attack deals void damage equal to the number of
+        Hits.
+    extraRelease:
+      pt: +1 AURA para receber +1d adicional.
+      en: +1 AURA to receive an additional +1d.
+
+  - key: reverter-ferimento
+    itemType: spell
+    plane: oblivo
+    d66: "3/3"
+    activation: reaction
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Reverter Ferimento
+      en: Revert Wound
+    description:
+      pt: Negue um dano que tenha acabado de ser causado a você.
+      en: Negate damage that has just been dealt to you.
+    extraRelease:
+      pt: +1 AURA para reverter um dano causado a um alvo em alcance amplo.
+      en: +1 AURA to revert damage dealt to a target within wide range.
+
+  - key: trancar
+    itemType: spell
+    plane: oblivo
+    d66: "3/4"
+    activation: action
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Trancar
+      en: Lock
+    description:
+      pt: >-
+        Tranque uma técnica ou feitiçaria de um alvo em alcance curto que tenha acabado de presenciar, deixando-a
+        indisponível para o alvo até que este feitiço se quebre: para mantê-lo, CANALIZE ou gaste 1 AURA no início de cada
+        um de seus turnos seguintes. Você também pode trancar memórias de alvos voluntários com este feitiço.
+      en: >-
+        Lock a technique or sorcery of a target within short range that you have just witnessed, making it unavailable to
+        the target until this spell breaks: to maintain it, CHANNEL or spend 1 AURA at the start of each of your
+        following turns. You can also lock memories of willing targets with this spell.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar como REAÇÃO ao presenciar a técnica ou feitiço.
+      en: +1 SWIFT to cast as a REACTION upon witnessing the technique or spell.
+
+  - key: vampirismo
+    itemType: spell
+    plane: oblivo
+    d66: "3/5"
+    activation: action
+    cost: { value: 1, resource: brabo }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Vampirismo
+      en: Vampirism
+    description:
+      pt: >-
+        Pelo restante da cena, toda vez que você atacar, recupere Guarda pelo mesmo número de dano que ultrapassar a
+        Defesa do alvo.
+      en: >-
+        For the rest of the scene, every time you attack, recover Guard equal to the amount of damage that exceeds the
+        target's Defense.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar este feitiço como uma ação livre.
+      en: +1 SWIFT to cast this spell as a free action.
+
+  - key: vermelho
+    itemType: spell
+    plane: oblivo
+    d66: "3/6"
+    activation: action
+    cost: { value: 1, resource: brabo }
+    extraCost: { value: 1, resource: brabo }
+    name:
+      pt: Vermelho
+      en: Red
+    description:
+      pt: >-
+        Todos dentro de um alcance curto devem dar algo vermelho ao Oblivo. Aqueles que não o fizerem perderão parte de
+        seu próprio sangue, marcando um Ferimento.
+      en: >-
+        Everyone within short range must give something red to the Oblivo. Those who do not will lose some of their own
+        blood, marking a Wound.
+    extraRelease:
+      pt: +1 BRABO para aumentar o alcance para amplo.
+      en: +1 FIERCE to increase the range to wide.
+
+  - key: arma-lendaria
+    itemType: spell
+    plane: litura
+    d66: "4/1"
+    activation: action
+    cost: { value: 0, resource: special }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Arma Lendária
+      en: Legendary Weapon
+    description:
+      pt: >-
+        Invoque uma réplica de uma arma lendária. Descreva-a, conte a lenda que você ouviu sobre ela. Escolha de 1 a 3
+        propriedades de acordo com o número de Aura que você investir, aplicando-as sobre o estilo de combate de quem usará
+        a arma. A Aura investida só pode ser reabastecida após dispensar este feitiço voluntariamente, ou esperando seu fim
+        espontâneo ao término da cena.
+      en: >-
+        Summon a replica of a legendary weapon. Describe it, tell the legend you heard about it. Choose 1 to 3 properties
+        according to the amount of Aura you invest, applying them to the Combat Style of whoever will wield the weapon.
+        The invested Aura can only be replenished after you voluntarily dismiss this spell, or by waiting for its
+        spontaneous end at the close of the scene.
+    extraRelease:
+      pt: +1 LIGEIRO para usar como ação livre.
+      en: +1 SWIFT to use as a free action.
+
+  - key: clarao-solar
+    itemType: spell
+    plane: litura
+    d66: "4/2"
+    activation: reaction
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Clarão Solar
+      en: Solar Flash
+    description:
+      pt: >-
+        Uma luz brilhante aparece, forçando o alvo a rolar novamente um ataque contra você ou deixando-o rolar novamente
+        um teste de defesa. O lado atacante fica atordoado a não ser que consuma 1 de LIGEIRO para fechar os olhos como
+        uma reação.
+      en: >-
+        A bright light appears, forcing the target to reroll an attack against you or letting them reroll a defense Test.
+        The attacking side is stunned unless they consume 1 SWIFT to close their eyes as a reaction.
+    extraRelease:
+      pt: +1 AURA para deixar o alvo cego até o final de seu próximo turno.
+      en: +1 AURA to leave the target blinded until the end of their next turn.
+
+  - key: copia
+    itemType: spell
+    plane: litura
+    d66: "4/3"
+    activation: reaction
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Cópia
+      en: Copy
+    description:
+      pt: >-
+        Use uma REAÇÃO para copiar um feitiço ou técnica no momento em que for usado por um alvo em alcance curto. Você
+        pode então usar a cópia uma vez, pagando os mesmos custos de ativação do feitiço ou técnica original. Você só pode
+        ter uma cópia por vez, substituindo a cópia se você conjurar este feitiço novamente antes de liberá-la.
+      en: >-
+        Use a REACTION to copy a spell or technique at the moment it is used by a target within short range. You can then
+        use the copy once, paying the same activation costs as the original spell or technique. You can only have one
+        copy at a time, replacing the copy if you cast this spell again before releasing it.
+    extraRelease:
+      pt: +1 AURA para usar a habilidade copiada imediatamente como parte dessa mesma reação, se for possível pagar seus custos de ativação.
+      en: >-
+        +1 AURA to use the copied Ability immediately as part of this same reaction, if you are able to pay its
+        activation costs.
+
+  - key: crescimento
+    itemType: spell
+    plane: litura
+    d66: "4/4"
+    activation: action
+    cost: { value: 0, resource: special }
+    extraCost: { value: 1, resource: brabo }
+    name:
+      pt: Crescimento
+      en: Growth
+    description:
+      pt: >-
+        Aponte para uma criatura viva ou a vegetação de um lugar. O alvo ganha barreira igual a quanto de Aura foi
+        investido na conjuração, até o máximo de 3. Se atingir vegetação, ela cresce e assume a forma de um muro ou de um
+        arbusto denso sobre o solo, dificultando a passagem. Se tiver como alvo uma criatura, ela dobra de tamanho e ganha
+        +d em testes de BRABO igual ao número atual da barreira. A Aura investida só pode ser reabastecida após dispensar
+        esse feitiço, ou esperando seu fim espontâneo ao término da cena.
+      en: >-
+        Point at a living creature or the vegetation of a place. The target gains barrier equal to the amount of Aura
+        invested in the casting, up to a maximum of 3. If it affects vegetation, it grows and takes the form of a wall or
+        a dense bush over the ground, hindering passage. If it targets a creature, it doubles in size and gains +d on
+        FIERCE Tests equal to the current barrier number. The invested Aura can only be replenished after you dismiss
+        this spell, or by waiting for its spontaneous end at the close of the scene.
+    extraRelease:
+      pt: +1 de BRABO para prender alvos até que eles superem o efeito da vegetação, deixando-os impedidos de mover-se.
+      en: >-
+        +1 FIERCE to trap targets until they overcome the effect of the vegetation, leaving them impeded from moving.
+
+  - key: desfibrilar
+    itemType: spell
+    plane: litura
+    d66: "4/5"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Desfibrilar
+      en: Defibrillate
+    description:
+      pt: >-
+        Escolha um alvo próximo com um ferimento Mortal. O alvo desmarca um ferimento e recupera Guarda igual ao seu valor
+        de SAFO. Um alvo desse feitiço só pode ser afetado por ele novamente após um período de descanso considerável.
+      en: >-
+        Choose a nearby target with a Mortal Wound. The target unmarks a Wound and recovers Guard equal to your SAVVY
+        value. A target of this spell can only be affected by it again after a considerable period of rest.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar como uma ação livre.
+      en: +1 SWIFT to cast as a free action.
+
+  - key: erupcao
+    itemType: spell
+    plane: litura
+    d66: "4/6"
+    activation: action
+    cost: { value: 0, resource: special }
+    extraCost: { value: 1, resource: safo }
+    name:
+      pt: Erupção
+      en: Eruption
+    description:
+      pt: >-
+        Gaste toda a sua Aura e exploda, causando dano energético AD igual ao dobro da Aura gasta a todos próximos e
+        empurrando-os para longe de si. Fique atordoado.
+      en: >-
+        Spend all of your Aura and explode, dealing energy PD damage equal to double the Aura spent to everyone nearby
+        and pushing them away from you. Become stunned.
+    extraRelease:
+      pt: +1 de SAFO para proteger os aliados das chamas.
+      en: +1 SAVVY to protect allies from the flames.
+
+  - key: espirito-guardiao
+    itemType: spell
+    plane: litura
+    d66: "5/1"
+    activation: action
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Espírito Guardião
+      en: Guardian Spirit
+    description:
+      pt: >-
+        Invoque um espírito aliado para lutar por você. O espírito ignora danos direcionados a ele, mas pode interpor-se
+        para lhe proteger de algum ataque até duas vezes, desaparecendo na segunda. Se você estiver canalizando poderá
+        ordená-lo a atacar, usando seu SAFO +2d como atributo. Escolha um tipo para o espírito entre BRABO, LIGEIRO ou
+        SAFO, permitindo-o utilizar ataques de acordo com o tipo escolhido. A Aura investida só pode ser reabastecida após
+        dispensar esse feitiço voluntariamente, ou ao término da cena.
+      en: >-
+        Summon an allied spirit to fight for you. The spirit ignores damage directed at it, but can step in to protect
+        you from an attack up to twice, vanishing on the second time. If you are channeling, you can order it to attack,
+        using your SAVVY +2d as the Attribute. Choose a type for the spirit among FIERCE, SWIFT or SAVVY, allowing it to
+        use attacks according to the chosen type. The invested Aura can only be replenished after you voluntarily dismiss
+        this spell, or at the end of the scene.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar como uma ação livre.
+      en: +1 SWIFT to cast as a free action.
+
+  - key: flecha-flamejante
+    itemType: spell
+    plane: litura
+    d66: "5/2"
+    activation: action
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    test: { attack: brabo, attribute: safo, bonus: 1, damageType: energy }
+    name:
+      pt: Flecha Flamejante
+      en: Flaming Arrow
+    description:
+      pt: >-
+        Faça um ataque brabo testando SAFO +1d contra um alvo em longo alcance. O ataque causa dano energético por cada
+        Acerto + SAFO.
+      en: >-
+        Make a FIERCE attack testing SAVVY +1d against a target within long range. The attack deals energy damage for
+        each Hit + SAVVY.
+    extraRelease:
+      pt: +1 AURA ao lançar para ganhar +1d.
+      en: +1 AURA when casting to gain +1d.
+
+  - key: ligar-almas
+    itemType: spell
+    plane: litura
+    d66: "5/3"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: brabo }
+    name:
+      pt: Ligar Almas
+      en: Bind Souls
+    description:
+      pt: >-
+        Deixe a alma de outro ser em alcance amplo tocar a sua alma. Ao fazer isso, revele ao alvo qualquer boa ou má
+        intenção, qualquer sentimento de hostilidade ou enganação se você estiver escondendo um segredo ou guardando algo
+        contra o alvo. A revelação ocorre nos dois sentidos, revelando os sentimentos do alvo em relação a você.
+      en: >-
+        Let the soul of another being within wide range touch your soul. In doing so, reveal to the target any good or bad
+        intention, any feeling of hostility or deception if you are hiding a secret or holding something against the
+        target. The revelation goes both ways, revealing the target's feelings toward you.
+    extraRelease:
+      pt: +1 BRABO e todo dano AD sofrido por você será sofrido pelo alvo, e vice-versa.
+      en: +1 FIERCE and all PD damage taken by you will be taken by the target, and vice versa.
+
+  - key: mau-olhado
+    itemType: spell
+    plane: litura
+    d66: "5/4"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Mau Olhado
+      en: Evil Eye
+    description:
+      pt: >-
+        Escolha um alvo em alcance amplo para amaldiçoar. Enquanto esse efeito não for superado, o alvo rola um dado a
+        menos em todo teste que for fazer, e concede +1d em todo teste para Superar ou se defender de um efeito causado
+        por ele.
+      en: >-
+        Choose a target within wide range to curse. While this effect is not overcome, the target rolls one die fewer on
+        every Test they make, and grants +1d on every Test to Overcome or defend against an effect caused by them.
+    extraRelease:
+      pt: +1 AURA para lançar como reação a um teste ou defesa provocado pelo alvo.
+      en: +1 AURA to cast as a reaction to a Test or defense prompted by the target.
+
+  - key: melancolia-azul
+    itemType: spell
+    plane: litura
+    d66: "5/5"
+    activation: actionChannel
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Melancolia Azul
+      en: Blue Melancholy
+    description:
+      pt: >-
+        Uma música triste começa a tocar nos corações de todos na cena como uma ação sua, cobrindo o cenário em tons de
+        azul. Cada um afetado pela música deve cantar um verso da música que toca para si em seu próximo turno, usando uma
+        ação. Este efeito dura até que você não esteja mais canalizando.
+      en: >-
+        A sad song begins to play in the hearts of everyone in the scene as an action of yours, covering the setting in
+        shades of blue. Each one affected by the song must sing a verse of the song playing for them on their next turn,
+        using an action. This effect lasts until you are no longer channeling.
+    extraRelease:
+      pt: +1 LIGEIRO para que alvos aliados possam cantar como uma reação em vez de uma ação.
+      en: +1 SWIFT so that allied targets can sing as a reaction instead of an action.
+
+  - key: memento-mori
+    itemType: spell
+    plane: litura
+    d66: "5/6"
+    activation: action
+    cost: { value: 3, resource: aura }
+    extraCost: { value: 1, resource: brabo }
+    name:
+      pt: Memento Mori
+      en: Memento Mori
+    description:
+      pt: >-
+        Traga alguém de volta dos mortos, desde que você tenha conseguido presenciar seus momentos finais antes de morrer,
+        ou tenha acesso a esses momentos de algum outro modo. Ele voltará próximo a você, vestindo o que você lembra de
+        vê-lo vestindo por último, e tanto você quanto o alvo da ressurreição perderão uma letra de seu nome para o
+        Oblivo. Pequenos detalhes diferentes são esperados.
+      en: >-
+        Bring someone back from the dead, as long as you managed to witness their final moments before they died, or have
+        access to those moments in some other way. They will return near you, wearing what you remember seeing them wear
+        last, and both you and the target of the resurrection will lose a letter of your names to the Oblivo. Small
+        differing details are to be expected.
+    extraRelease:
+      pt: +1 BRABO para lançar como uma ação livre.
+      en: +1 FIERCE to cast as a free action.
+
+  - key: queimar
+    itemType: spell
+    plane: litura
+    d66: "6/1"
+    activation: action
+    cost: { value: 2, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Queimar
+      en: Burn
+    description:
+      pt: >-
+        Cause dano energético igual a SAFO a um alvo em alcance curto. Em seguida, cause +1 de dano energético AD. Nos
+        turnos seguintes, até que o alvo supere as chamas, você pode usar uma ação livre para causar 1 de dano energético
+        AD ao alvo.
+      en: >-
+        Deal energy damage equal to SAVVY to a target within short range. Then, deal +1 energy PD damage. On the
+        following turns, until the target overcomes the flames, you can use a free action to deal 1 energy PD damage to
+        the target.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar este feitiço como uma ação livre como parte de um ataque ligeiro ou brabo.
+      en: +1 SWIFT to cast this spell as a free action as part of a SWIFT or FIERCE attack.
+
+  - key: reacao-eletrica
+    itemType: spell
+    plane: litura
+    d66: "6/2"
+    activation: reaction
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Reação Elétrica
+      en: Electric Reaction
+    description:
+      pt: >-
+        Quando um oponente lhe causar dano corpo a corpo, cause dano energético AD igual a SAFO de volta. Ele também perde
+        a REAÇÃO até seu próximo turno.
+      en: >-
+        When an opponent deals melee damage to you, deal energy PD damage equal to SAVVY back. They also lose their
+        REACTION until their next turn.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar este feitiço como uma ação livre como parte de um ataque corpo a corpo ligeiro ou brabo.
+      en: +1 SWIFT to cast this spell as a free action as part of a SWIFT or FIERCE melee attack.
+
+  - key: relampago
+    itemType: spell
+    plane: litura
+    d66: "6/3"
+    activation: action
+    cost: { value: 3, resource: aura }
+    extraCost: { value: 1, resource: ligeiro }
+    name:
+      pt: Relâmpago
+      en: Lightning
+    description:
+      pt: >-
+        Você se transforma em um raio. Escolha de um a três alvos em alcance amplo. Mova-se de um a outro, ignorando
+        quaisquer restrições de movimento, e então cause 2 de dano energético AD em cada alvo.
+      en: >-
+        You turn into a bolt of lightning. Choose one to three targets within wide range. Move from one to another,
+        ignoring any movement restrictions, and then deal 2 energy PD damage to each target.
+    extraRelease:
+      pt: +1 LIGEIRO para lançar como uma ação livre apenas.
+      en: +1 SWIFT to cast as a free action only.
+
+  - key: terceiro-olho
+    itemType: spell
+    plane: litura
+    d66: "6/4"
+    activation: freeAction
+    cost: { value: 1, resource: aura, perTurn: true }
+    name:
+      pt: Terceiro Olho
+      en: Third Eye
+    description:
+      pt: >-
+        Veja o invisível. Durante o resto da cena, você tem a capacidade de ver o invisível e alcançar a fronteira de
+        outros planos. Com uma ação livre uma vez por turno, você pode perguntar o que diz a aura de um alvo ao alcance
+        amplo, entendendo as intenções imediatas do mesmo. Até o começo de seu próximo turno, você tem +1d em testes contra
+        o alvo escolhido.
+      en: >-
+        See the invisible. For the rest of the scene, you have the ability to see the invisible and reach the border of
+        other planes. With a free action once per turn, you can ask what the aura of a target within wide range says,
+        understanding their immediate intentions. Until the start of your next turn, you have +1d on Tests against the
+        chosen target.
+
+  - key: territorio
+    itemType: spell
+    plane: litura
+    d66: "6/5"
+    activation: action
+    cost: { value: 1, resource: aura }
+    extraCost: { value: 1, resource: aura }
+    name:
+      pt: Território
+      en: Territory
+    description:
+      pt: >-
+        Erga uma barreira entre o mundo material e o suprarreal para proteger as redondezas, prendendo aliados e
+        oponentes. Por dentro, uma versão alternativa da realidade é mostrada, por baixo de um céu escuro e sem estrelas.
+        Por dentro ou por fora, o feitiço ganha BARREIRA igual à quantidade de Aura usada para lançar o feitiço, e
+        removê-la encerra-o. Caso contrário, o feitiço termina quando a cena terminar.
+      en: >-
+        Raise a barrier between the material world and the suprareal to protect the surroundings, trapping allies and
+        opponents. Inside, an alternate version of reality is shown, beneath a dark, starless sky. From inside or outside,
+        the spell gains BARRIER equal to the amount of Aura used to cast the spell, and removing it ends the spell.
+        Otherwise, the spell ends when the scene ends.
+    extraRelease:
+      pt: >-
+        +1 AURA por oponente. Defina uma regra junto à Tecelã, que faça sentido para o seu conceito de personagem.
+        Enquanto respeitar a condição estabelecida, seus feitiços e técnicas não consomem AURA, e qualquer um infringindo
+        essa regra receberá -1d em todo teste até que o Território seja desfeito. O Território é desfeito automaticamente
+        caso a regra não seja seguida pelo conjurador ou caso o conjurador chegue a 0 de Guarda.
+      en: >-
+        +1 AURA per opponent. Define a rule together with the Weaver that makes sense for your character concept. As long
+        as the established condition is respected, your spells and techniques do not consume AURA, and anyone breaking
+        this rule will receive -1d on every Test until the Territory is undone. The Territory is automatically undone if
+        the rule is not followed by the caster or if the caster reaches 0 Guard.
+
+  - key: trovao-de-jupiter
+    itemType: spell
+    plane: litura
+    d66: "6/6"
+    activation: action
+    cost: { value: 3, resource: aura }
+    extraCost: { value: 1, resource: brabo }
+    test: { attack: brabo, attribute: safo, damageType: energy }
+    name:
+      pt: Trovão de Júpiter
+      en: Jupiter's Thunder
+    description:
+      pt: >-
+        Faça um ataque brabo usando SAFO, tendo como alvos qualquer número de personagens na cena à sua escolha, causando
+        dano energético por cada Acerto + SAFO, e deixando-os impedidos de moverem-se até o final de seu próximo turno.
+      en: >-
+        Make a FIERCE attack using SAVVY, targeting any number of characters in the scene of your choice, dealing energy
+        damage for each Hit + SAVVY, and leaving them impeded from moving until the end of their next turn.
+    extraRelease:
+      pt: +1 BRABO para aumentar o dano causado para 2 de dano por cada Acerto.
+      en: +1 FIERCE to increase the damage dealt to 2 damage per Hit.

@@ -1,0 +1,78 @@
+pack: styles
+type: Item
+label:
+  pt: Propriedades de Estilo de Combate
+  en: Combat Style Properties
+intro:
+  pt: >-
+    Defina seu estilo de combate em uma frase, e então escolha seu alcance ideal (perto ou longe) e uma propriedade a
+    seguir para usar enquanto estiver nele. Enquanto estiver atacando em seu alcance ideal, receba +1d.
+  en: >-
+    Define your combat style in one sentence, and then choose your ideal range (close or far) and one of the following
+    Properties to use while you're in it. While you're attacking at your ideal range, receive +1d.
+entries:
+  - key: agarrao
+    itemType: style
+    d66: "1"
+    name:
+      pt: Agarrão
+      en: Grapple
+    description:
+      pt: Descarte um Acerto de um ataque para deixar você e o alvo imóveis até que você o solte ou o alvo supere o efeito.
+      en: >-
+        Discard a Hit from an attack to leave you and the target immobile until you let go or the target overcomes the
+        effect.
+
+  - key: bruto
+    itemType: style
+    d66: "2"
+    name:
+      pt: Bruto
+      en: Brute
+    description:
+      pt: >-
+        Descarte um Acerto de um ataque para empurrar o alvo para longe de você. O alvo sofre 1 de dano como parte do
+        ataque caso acerte um objeto.
+      en: >-
+        Discard a Hit from an attack to push the target away from you. The target takes 1 damage as part of the attack
+        if it hits an object.
+
+  - key: defensivo
+    itemType: style
+    d66: "3"
+    name:
+      pt: Defensivo
+      en: Defensive
+    description:
+      pt: Descarte um Acerto em um ataque para ganhar +1d no seu próximo teste de defesa.
+      en: Discard a Hit from an attack to gain +1d on your next defense test.
+
+  - key: investigativo
+    itemType: style
+    d66: "4"
+    name:
+      pt: Investigativo
+      en: Investigative
+    description:
+      pt: Descarte um Acerto de um ataque para fazer uma pergunta sobre o alvo.
+      en: Discard a Hit from an attack to ask a question about the target.
+
+  - key: ofensivo
+    itemType: style
+    d66: "5"
+    name:
+      pt: Ofensivo
+      en: Offensive
+    description:
+      pt: Descarte um Acerto de um ataque ligeiro ou brabo para causar +1 de dano AD.
+      en: Discard a Hit from a SWIFT or FIERCE attack to deal +1 PD damage.
+
+  - key: responsivo
+    itemType: style
+    d66: "6"
+    name:
+      pt: Responsivo
+      en: Responsive
+    description:
+      pt: Ganhe +1d e +1 de dano para todo contra-ataque realizado em seu alcance ideal.
+      en: Gain +1d and +1 damage on every Counterattack made at your ideal range.

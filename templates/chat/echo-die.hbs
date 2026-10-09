@@ -1,0 +1,14 @@
+<div class="babelem chat-card echo-card {{#if complication}}complication{{/if}}">
+  <header class="card-header">
+    <h3><i class="fa-solid fa-dice-d8"></i> {{localize "BABELEM.EchoDie.title"}}</h3>
+    {{#if reason}}<span class="card-sub">{{reason}}</span>{{/if}}
+  </header>
+  <div class="bab-echo">
+    <span class="bab-echo-value">{{result}}</span>
+    <span class="bab-echo-detail">{{localize "BABELEM.EchoDie.detail" natural=natural bonus=bonus weave=weave}}</span>
+  </div>
+  <p class="bab-outcome {{#if complication}}warn{{/if}}">
+    {{#if complication}}{{localize "BABELEM.EchoDie.complication"}}{{else}}{{localize "BABELEM.EchoDie.safe"}}{{/if}}
+  </p>
+  {{#if fromPool}}{{#if complication}}<p class="bab-hint">{{localize "BABELEM.Pool.removed"}}</p>{{/if}}{{/if}}
+</div>

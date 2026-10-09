@@ -1,0 +1,28 @@
+<div class="babelem bab-dialog">
+  {{#if showAttributes}}
+  <div class="form-group">
+    <label>{{localize "BABELEM.Test.attribute"}}</label>
+    <select name="attribute">
+      {{#each attributes}}<option value="{{key}}" {{#if selected}}selected{{/if}}>{{label}} ({{value}})</option>{{/each}}
+    </select>
+  </div>
+  {{else}}
+  {{#each attributes}}<input type="hidden" name="attribute" value="{{key}}">{{/each}}
+  {{/if}}
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Test.bonusHint">{{localize "BABELEM.Test.bonus"}}</label>
+    <input type="number" name="bonus" value="{{bonus}}" step="1">
+  </div>
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Pool.hint">{{localize "BABELEM.Pool.useDice"}} ({{localize "BABELEM.Pool.available" dice=pool}})</label>
+    <input type="number" name="pool" value="0" min="0" max="{{pool}}" {{#unless pool}}disabled{{/unless}}>
+  </div>
+  {{#if showBackground}}
+  <div class="form-group">
+    <label data-tooltip="BABELEM.Background.hintShort">{{localize "BABELEM.Background.use" dice=backgroundDice}}</label>
+    <input type="checkbox" name="background">
+  </div>
+  {{/if}}
+  {{#if guardRaised}}<p class="bab-hint">{{localize "BABELEM.Defense.guardRaisedBonus"}}</p>{{/if}}
+  <p class="bab-hint">{{localize "BABELEM.Test.diceLimit"}}</p>
+</div>

@@ -1,0 +1,414 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Protagonista",
+      "threat": "Ameaça"
+    },
+    "Item": {
+      "essence": "Essência",
+      "trait": "Traço",
+      "technique": "Técnica",
+      "spell": "Feitiço",
+      "style": "Propriedade de Estilo",
+      "gear": "Equipamento",
+      "interaction": "Interação"
+    }
+  },
+  "BABELEM": {
+    "Sheet": {
+      "characterTitle": "Ficha de Protagonista",
+      "characterLabel": "Ficha de Protagonista (Babelém)",
+      "threatLabel": "Ficha de Ameaça (Babelém)",
+      "itemLabel": "Ficha de Item (Babelém)",
+      "name": "Nome",
+      "level": "Nível",
+      "grade": "Grau",
+      "gradeHint": "Grau de Ameaça do Desperto. Começa em 1 e sobe a cada 3 avanços.",
+      "advances": "Avanços",
+      "advancesHint": "A cada fim de trama, grande mudança ou mistério desvendado: +1 Guarda, +1 Memória ou +1 Aura máxima.",
+      "editImage": "Alterar imagem",
+      "openCompendium": "Abrir compêndio",
+      "notes": "Anotações",
+      "current": "Atual",
+      "max": "Máx."
+    },
+    "Aura": {
+      "label": "Aura",
+      "hint": "Valor inicial: 3. Queime Aura para transformar 1s em Acertos e pague técnicas e feitiços."
+    },
+    "Attribute": {
+      "title": "Atributos / Reservas",
+      "hint": "Distribua 4, 3 e 2, ou deixe todos em 3. Use o valor do atributo (máximo) nos testes.",
+      "reserve": "Reserva",
+      "attribute": "Atributo",
+      "brabo": "BRABO",
+      "ligeiro": "LIGEIRO",
+      "safo": "SAFO"
+    },
+    "Resource": {
+      "none": "Nenhum",
+      "aura": "AURA",
+      "special": "Especial"
+    },
+    "Integrity": {
+      "title": "Integridade",
+      "guard": "Guarda",
+      "memory": "Memória",
+      "barrier": "Barreira",
+      "guardFormula": "Guarda = BRABO × 2 + LIGEIRO (+ bônus de avanço)",
+      "memoryFormula": "Memória = SAFO + 1 (+ bônus de avanço)",
+      "bonusHint": "Bônus de avanços",
+      "barrierHint": "Subtraia a Barreira de todo dano antes da Guarda e reduza-a em 1. Dano AD ignora barreiras."
+    },
+    "Wounds": {
+      "temporary": "Ferimento Temporário",
+      "serious": "Ferimento Grave",
+      "mortal": "Ferimento Mortal",
+      "marked": "{name} marca um {wound} e volta a Guarda ao máximo.",
+      "defeatCheck": "Dado do Eco contra derrota: cai derrotado com resultado ≤ {count}",
+      "defeated": "{name} cai derrotado!",
+      "noneLeft": "{name} não tem mais caixas de ferimento: derrotado ou morto."
+    },
+    "Essence": {
+      "title": "Essência e Aparência",
+      "recoverWhen": "Recupere Aura quando:",
+      "events": "Eventos (desmarque para recuperar 3 de Aura):",
+      "dropHint": "Arraste uma Essência do compêndio para cá.",
+      "auraRecovered": "{name} age conforme sua Essência e recupera 3 de Aura."
+    },
+    "Appearance": {
+      "title": "Aparência",
+      "clothes": "Roupas",
+      "age": "Idade",
+      "height": "Altura",
+      "weight": "Peso",
+      "eyes": "Olhos",
+      "hair": "Cabelos",
+      "favoriteColor": "Cor favorita"
+    },
+    "Background": {
+      "title": "Passado e Inventário",
+      "hint": "Gere um ponto de Trama para ganhar +{dice}d em um teste relacionado ao seu Passado ou Inventário.",
+      "hintShort": "Gera 1 ponto de Trama para a Tecelã.",
+      "stereotype": "Qual estereótipo você cumpre?",
+      "use": "Passado/Inventário (+{dice}d, gera 1 Trama)",
+      "used": "Passado/Inventário",
+      "invoked": "{name} recorre ao Passado/Inventário (+{dice}d) e gera 1 Trama."
+    },
+    "Inventory": {
+      "title": "Inventário",
+      "pockets": "O que há em seus bolsos?"
+    },
+    "Trait": {
+      "title": "Traços",
+      "hint": "Selecione dois traços distintos.",
+      "dropHint": "Arraste Traços do compêndio para cá.",
+      "tracker": "Contador",
+      "trackerEnabled": "Usar contador",
+      "trackerLabel": "Rótulo",
+      "trackerMaxHint": "0 = sem limite",
+      "grantsResistance": "Concede resistência a"
+    },
+    "Style": {
+      "title": "Estilo de Combate",
+      "hint": "Escolha uma propriedade e dê um nome ao seu estilo. Se portar uma arma pactuada, descreva-a.",
+      "name": "Nome / descrição do estilo",
+      "idealRange": "Alcance ideal",
+      "idealRangeHint": "Enquanto estiver atacando em seu alcance ideal, receba +1d.",
+      "close": "De perto",
+      "far": "De longe",
+      "pactWeapon": "Arma pactuada",
+      "properties": "Propriedades",
+      "dropHint": "Arraste uma Propriedade de Estilo para cá."
+    },
+    "Ability": {
+      "title": "Técnicas e Feitiços",
+      "count": "Habilidades",
+      "countHint": "Na criação, escolha um número de habilidades igual à sua Memória.",
+      "use": "Usar",
+      "paid": "Custo pago",
+      "invest": "Aura investida",
+      "investHint": "Feitiços de custo especial: quanto de Aura investir."
+    },
+    "Technique": {
+      "title": "Técnicas",
+      "type": "Tipo",
+      "atq": "Ataque (ATQ)",
+      "sup": "Suporte (SUP)",
+      "reac": "Reação (REAC)",
+      "short": {
+        "atq": "ATQ",
+        "sup": "SUP",
+        "reac": "REAC"
+      },
+      "dropHint": "Arraste Técnicas do compêndio para cá."
+    },
+    "Spell": {
+      "title": "Feitiços",
+      "extraRelease": "Liberação Extra",
+      "dropHint": "Arraste Feitiços do compêndio para cá."
+    },
+    "Plane": {
+      "label": "Plano",
+      "oblivo": "Oblivo",
+      "litura": "Litura"
+    },
+    "Activation": {
+      "label": "Ativação",
+      "action": "Ação",
+      "reaction": "Reação",
+      "freeAction": "Ação livre",
+      "actionChannel": "Ação + Canalização",
+      "special": "Especial",
+      "maneuver": "Manobra"
+    },
+    "Cost": {
+      "label": "Custo",
+      "value": "Custo",
+      "resource": "Recurso",
+      "channel": "Requer canalização",
+      "perTurn": "Por turno",
+      "extraValue": "Custo extra",
+      "extraResource": "Recurso extra"
+    },
+    "Restriction": {
+      "title": "Pacto de Restrição",
+      "hint": "Restrições Maiores dão Benefícios Maiores; Menores dão Menores. Máximo de restrições = Aura máxima. Estabelecer um pacto gera 1 Trama.",
+      "type": "Restrição",
+      "none": "Nenhuma",
+      "minor": "Menor",
+      "major": "Maior",
+      "text": "Restrição imposta",
+      "benefit": "Benefício recebido",
+      "count": "Restrições",
+      "countHint": "Número máximo de restrições = Aura máxima."
+    },
+    "Rite": {
+      "motor": "Rito Motor (+1 ação, +1 dano por Acerto)",
+      "motorHint": "Movimentos, danças, selos de mão: +1 de dano por Acerto (ou +1 em dano AD). Custa +1 ação.",
+      "sonic": "Rito Sonoro (−1 Aura, mín. 1)",
+      "sonicHint": "Encantamentos e gritos: reduz em 1 o custo de Aura (mínimo 1). Requer ter canalizado no turno anterior.",
+      "weaveNote": "Cada rito executado gera 1 ponto de Trama.",
+      "motorUsed": "Rito Motor executado (+1 Trama).",
+      "sonicUsed": "Rito Sonoro executado (+1 Trama)."
+    },
+    "Attack": {
+      "none": "—",
+      "brabo": "Ataque Brabo",
+      "ligeiro": "Ataque Ligeiro",
+      "safo": "Ataque Safo",
+      "payPrice": "Nenhum Acerto no ataque brabo: pague um preço.",
+      "safoResult": "Disputa de SAFO: quem vencer escolhe um preço a ser pago pelo perdedor."
+    },
+    "Defense": {
+      "dodge": "Esquivar",
+      "block": "Bloquear",
+      "dodgeResult": "Esquiva: se {hits} Acertos superar os Acertos do atacante, nenhum dano é sofrido.",
+      "blockResult": "Bloqueio: negue {hits} de dano.",
+      "guardRaisedBonus": "Guarda levantada: +1d neste teste de defesa."
+    },
+    "Action": {
+      "title": "Ações",
+      "createAdvantage": "Criar Vantagem",
+      "notice": "Notar (LIGEIRO): descreva algo que acabou de notar ou faça uma pergunta à Tecelã baseada nos sentidos. +1 dado na Pilha Comum.",
+      "recall": "Recordar (SAFO): descreva uma lembrança ou segredo pertinente, ou pergunte à Tecelã sobre conhecimentos e histórias. +1 dado na Pilha Comum.",
+      "channel": "Canalizar",
+      "channelHint": "Recupere 1 de Aura e entre em estado de canalização até o começo do seu próximo turno.",
+      "raiseGuard": "Levantar a Guarda",
+      "raiseGuardHint": "+1d em testes de defesa até usar uma ação. Shift+clique: gaste 1 BRABO para recuperar toda a Guarda."
+    },
+    "Status": {
+      "title": "Estados",
+      "impeded": "Impedido",
+      "compelled": "Compelido",
+      "stunned": "Atordoado",
+      "offBalance": "Desequilibrado",
+      "favored": "Favorecido",
+      "disfavored": "Desfavorecido",
+      "hidden": "Escondido",
+      "channeling": "Canalizando",
+      "guardRaised": "Guarda Levantada",
+      "exhausted": "Exausto",
+      "poisoned": "Envenenado",
+      "blinded": "Cego",
+      "exposed": "Exposta",
+      "defeated": "Derrotado"
+    },
+    "Damage": {
+      "kinetic": "Cinético",
+      "void": "Vazio",
+      "energy": "Energético",
+      "type": "Tipo de dano",
+      "amount": "Dano",
+      "formula": "Fórmula de dano",
+      "formulaHint": "Ex.: 1d6 + @danger, 2 + @danger, 3. Variáveis: @danger, @defense, @grade, @guard, @brabo.",
+      "pierce": "Atravessa Defesa (AD)",
+      "pierceShort": "AD",
+      "pierceHint": "Dano AD ignora barreiras e testes de defesa.",
+      "ignoreResistance": "Ignorar resistência",
+      "ignoreResistanceHint": "Ex.: técnica Imbuir Aura.",
+      "apply": "Aplicar dano",
+      "applyAmount": "Aplicar {amount} ({type})",
+      "dialogHint": "Aplicado aos alvos selecionados (T). Ajuste o valor após defesas (bloqueio etc.).",
+      "rolled": "Dano: {amount} {type} ({formula})",
+      "taken": "{name} sofre {damage} de dano {type}{pierce}.",
+      "resisted": "resistência (metade)",
+      "vulnerable": "vulnerabilidade (dobro)",
+      "barrierAbsorbed": "barreira absorveu {barrier}",
+      "affinities": "Resistências e Vulnerabilidades",
+      "resistance": "Resistência",
+      "vulnerability": "Vulnerabilidade",
+      "fromTrait": "Concedida por um Traço"
+    },
+    "Range": {
+      "label": "Alcance",
+      "none": "—",
+      "short": "Curto",
+      "long": "Longo",
+      "wide": "Amplo"
+    },
+    "Test": {
+      "title": "Teste",
+      "of": "Teste de {attribute}",
+      "roll": "Rolar",
+      "rollHint": "Clique para testar. Shift+clique rola sem perguntar.",
+      "attribute": "Atributo",
+      "bonus": "Vantagem / desvantagem (±d)",
+      "bonusHint": "Some +1 por vantagem e −1 por desvantagem.",
+      "diceLimit": "Máximo de 9 dados e mínimo de 1.",
+      "hits": "Acertos",
+      "effort": "Esforço",
+      "effortButton": "Esforço (−1 reserva, +1 Acerto)",
+      "burn": "Queimar Aura (1 → Acerto)",
+      "burned": "Aura queimada",
+      "finalize": "Confirmar",
+      "onesResolved": "{ones} × 1 restante(s): +{ones} Trama para a Tecelã.",
+      "config": "Teste da habilidade",
+      "configHint": "Opcional. Se preenchido, usar a habilidade já rola o teste e calcula o dano.",
+      "attack": "Tipo de ataque",
+      "alt": "Atributo alternativo"
+    },
+    "Pool": {
+      "label": "Pilha Comum",
+      "hint": "Dados extras da cena (+Δd). Usá-los faz a Tecelã rolar o Dado do Eco; em complicação, a pilha perde um dado.",
+      "useDice": "Dados da Pilha Comum",
+      "available": "{dice} disponíveis",
+      "used": "+{dice}d da Pilha Comum",
+      "removed": "Complicação: um dado sai da Pilha Comum.",
+      "clear": "Esvaziar Pilha"
+    },
+    "Weave": {
+      "label": "Trama",
+      "panel": "Babelém",
+      "weaver": "Tecelã",
+      "hint": "Pontos de Trama da Tecelã: gerados por 1s nas rolagens, ritos e pactos; gastos em complicações e poderes das Ameaças.",
+      "collapse": "Recolher/expandir",
+      "endScene": "Fim de Cena",
+      "endSceneHint": "Protagonistas recuperam 1 em cada reserva, desmarcam ferimento temporário, voltam a Guarda ao máximo e recuperam metade da Memória. A Tecelã recebe 1 Trama.",
+      "endSceneSummary": "{count} protagonista(s) recuperaram reservas e Guarda. +1 Trama.",
+      "startSession": "Início de Sessão",
+      "startSessionHint": "Zera a Trama e dá 1 ponto por jogador conectado.",
+      "startSessionSummary": "A Trama começa a sessão em {weave}."
+    },
+    "EchoDie": {
+      "title": "Dado do Eco",
+      "speaker": "Dado do Eco",
+      "hint": "1d8: complicação com 1 ou resultado menor que a Trama atual. Shift+clique para somar Acertos gastos.",
+      "bonus": "Bônus (Acertos gastos)",
+      "detail": "d8 {natural} + {bonus} · Trama {weave}",
+      "complication": "Complicação! Algo não sai como planejado.",
+      "safe": "Sem complicação.",
+      "poolReason": "Dados da Pilha Comum usados"
+    },
+    "Rest": {
+      "title": "Descansar",
+      "confirm": "Descansar restaura reservas, Guarda e Memória e remove os ferimentos Temporário e Grave. Ferimento Mortal exige cuidados médicos ou cura sobrenatural. Continuar?",
+      "done": "{name} descansa: reservas, Guarda e Memória restauradas.",
+      "mortalWarning": "Ferimento Mortal sem tratamento durante o descanso significa a morte!"
+    },
+    "Threat": {
+      "title": "Ameaça",
+      "stats": "Grau, Guarda, Perigo e Defesa",
+      "origin": "Origem",
+      "originBabelem": "Babelém",
+      "originOther": "Outra",
+      "grade": "Grau",
+      "grade0": "Mundano (Grau 0)",
+      "grade1": "Dissonante (Grau 1)",
+      "grade2": "Ressoante (Grau 2)",
+      "grade3": "Harmônico (Grau 3)",
+      "grade4": "Grau Especial",
+      "archetype": "Arquétipo",
+      "archetypeNormal": "Normal",
+      "archetypeBoss": "Chefe",
+      "archetypeMinion": "Lacaio",
+      "danger": "PERIGO",
+      "defense": "DEFESA",
+      "testDanger": "Teste de PERIGO",
+      "testDangerHint": "Rola PERIGO d6; 1, 5 e 6 são Acertos.",
+      "applyTable": "Aplicar tabela de Grau",
+      "applyTableHint": "Define Guarda, Perigo e Defesa pela tabela de improviso (Lacaio: Guarda 1, Defesa 0).",
+      "attackHitsHint": "Ataques consideram {hits} Acertos (GRAU + PERIGO atual) para a defesa dos protagonistas.",
+      "attackHits": "Acertos do ataque: {hits}",
+      "basicAttack": "Ataque básico",
+      "basicAttackText": {
+        "brabo": "Dano igual a [GRAU]d6k1 + PERIGO atual.",
+        "ligeiro": "Dano igual a GRAU + PERIGO. Causa +1 de dano AD caso o alvo tenha obtido um Acerto ou menos ao defender-se.",
+        "safo": "Disputa de SAFO: o lado que vencer escolhe um preço a ser pago pelo perdedor."
+      },
+      "interactions": "Interações",
+      "perTurn": "Por turno",
+      "nature": "Poder e Fraqueza",
+      "special": "Especial",
+      "tactics": "Táticas",
+      "power": "Poder",
+      "weakness": "Fraqueza",
+      "defeated": "{name} é derrotada!",
+      "exposedNow": "{name} gasta {defense} de DEFESA, recupera {guard} de Guarda e fica exposta."
+    },
+    "Item": {
+      "use": "Usar / rolar",
+      "toChat": "Enviar ao chat",
+      "edit": "Editar",
+      "delete": "Excluir",
+      "deleteConfirm": "Excluir {name}?",
+      "new": "Novo(a) {type}",
+      "description": "Descrição",
+      "quantity": "Quantidade",
+      "d66Hint": "Posição na tabela aleatória (d66 / d6)."
+    },
+    "Settings": {
+      "onesGrantAura": {
+        "name": "1s concedem Aura",
+        "hint": "Conforme o REDUX: cada 1 que permanecer na rolagem dá Trama à Tecelã e Aura ao Protagonista. Desligue para só gerar Trama."
+      },
+      "backgroundBonusDice": {
+        "name": "Dados de Passado/Inventário",
+        "hint": "Quantos dados o Passado/Inventário concede ao gerar 1 Trama (a ficha oficial diz +1d; a de exemplo, +2d)."
+      },
+      "playersAdjustPool": {
+        "name": "Jogadores alteram a Pilha Comum",
+        "hint": "Permite que jogadores adicionem dados à Pilha Comum (Criar Vantagem)."
+      },
+      "showWeavePanel": {
+        "name": "Mostrar painel de Trama",
+        "hint": "Exibe o painel com Trama, Pilha Comum e Dado do Eco."
+      }
+    },
+    "Notify": {
+      "noGM": "Nenhuma Tecelã (GM) conectada para registrar a alteração.",
+      "poolGMOnly": "Somente a Tecelã pode adicionar dados à Pilha Comum.",
+      "noAura": "Aura insuficiente.",
+      "noReserve": "Reserva insuficiente.",
+      "notEnough": "Recurso insuficiente: {resource}.",
+      "noTargets": "Selecione um ou mais alvos (tecla T) antes de aplicar dano.",
+      "requiresChannel": "Esta habilidade requer estar canalizando.",
+      "badFormula": "Fórmula de dano inválida: {formula}",
+      "itemNotAllowed": "{type} não pode ser adicionado a {actor}.",
+      "alreadyHas": "{name} já está na ficha.",
+      "traitsLimit": "Protagonistas normalmente escolhem dois Traços.",
+      "abilitiesLimit": "Mais habilidades que a Memória ({max}). Confirme com a Tecelã.",
+      "itemMissing": "Item não encontrado."
+    }
+  }
+}

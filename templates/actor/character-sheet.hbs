@@ -1,0 +1,237 @@
+<div class="bab-sheet">
+  <header class="bab-header">
+    <img class="bab-portrait" src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage" data-tooltip="BABELEM.Sheet.editImage">
+    <div class="bab-identity">
+      <h1 class="bab-banner">{{localize "BABELEM.Sheet.characterTitle"}}</h1>
+      <div class="bab-field wide">
+        <label>{{localize "BABELEM.Sheet.name"}}</label>
+        <input type="text" name="name" value="{{actor.name}}">
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field">
+          <label>{{localize "BABELEM.Sheet.level"}}</label>
+          <input type="number" name="system.level" value="{{system.level}}" min="0">
+        </div>
+        <div class="bab-field">
+          <label data-tooltip="BABELEM.Sheet.gradeHint">{{localize "BABELEM.Sheet.grade"}}</label>
+          <input type="number" name="system.grade" value="{{system.grade}}" min="0">
+        </div>
+        <div class="bab-field">
+          <label data-tooltip="BABELEM.Sheet.advancesHint">{{localize "BABELEM.Sheet.advances"}}</label>
+          <input type="number" name="system.advances" value="{{system.advances}}" min="0">
+        </div>
+        <div class="bab-field aura">
+          <label data-tooltip="BABELEM.Aura.hint">{{localize "BABELEM.Aura.label"}}</label>
+          <div class="bab-pair">
+            <input type="number" name="system.aura.value" value="{{system.aura.value}}" min="0">
+            <span>/</span>
+            <input type="number" name="system.aura.max" value="{{system.aura.max}}" min="0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet-body">
+    <div class="bab-columns">
+      <div class="bab-column">
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Essence.title"}}</h2>
+          <div class="bab-box-head">
+            <span class="bab-label">{{localize "TYPES.Item.essence"}}</span>
+            <a class="bab-link" data-action="openCompendium" data-pack="essences" data-tooltip="BABELEM.Sheet.openCompendium"><i class="fa-solid fa-book-open"></i></a>
+          </div>
+          {{#if essence}}
+          <ul class="bab-items">{{> "systems/babelem/templates/parts/item-row.hbs" item=essence}}</ul>
+          <p class="bab-hint">{{localize "BABELEM.Essence.recoverWhen"}}</p>
+          <ul class="bab-triggers">
+            {{#each essence.system.triggers}}{{#if this}}<li>{{this}}</li>{{/if}}{{/each}}
+          </ul>
+          {{else}}
+          <p class="bab-drop-hint">{{localize "BABELEM.Essence.dropHint"}}</p>
+          {{/if}}
+          <p class="bab-hint">{{localize "BABELEM.Essence.events"}}</p>
+          <div class="bab-events">
+            {{#each events}}
+            <a class="bab-check {{#if marked}}checked{{/if}}" data-action="toggleEvent" data-event="{{key}}"><i class="fa-regular {{#if marked}}fa-square-check{{else}}fa-square{{/if}}"></i></a>
+            {{/each}}
+          </div>
+        </section>
+
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Appearance.title"}}</h2>
+          <div class="bab-field wide"><label>{{localize "BABELEM.Appearance.clothes"}}</label><input type="text" name="system.appearance.clothes" value="{{system.appearance.clothes}}"></div>
+          <div class="bab-inline">
+            <div class="bab-field"><label>{{localize "BABELEM.Appearance.age"}}</label><input type="text" name="system.appearance.age" value="{{system.appearance.age}}"></div>
+            <div class="bab-field"><label>{{localize "BABELEM.Appearance.height"}}</label><input type="text" name="system.appearance.height" value="{{system.appearance.height}}"></div>
+            <div class="bab-field"><label>{{localize "BABELEM.Appearance.weight"}}</label><input type="text" name="system.appearance.weight" value="{{system.appearance.weight}}"></div>
+          </div>
+          <div class="bab-inline">
+            <div class="bab-field"><label>{{localize "BABELEM.Appearance.eyes"}}</label><input type="text" name="system.appearance.eyes" value="{{system.appearance.eyes}}"></div>
+            <div class="bab-field"><label>{{localize "BABELEM.Appearance.hair"}}</label><input type="text" name="system.appearance.hair" value="{{system.appearance.hair}}"></div>
+            <div class="bab-field"><label>{{localize "BABELEM.Appearance.favoriteColor"}}</label><input type="text" name="system.appearance.favoriteColor" value="{{system.appearance.favoriteColor}}"></div>
+          </div>
+        </section>
+
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Background.title"}}</h2>
+          <p class="bab-hint">{{localize "BABELEM.Background.hint" dice=backgroundDice}}</p>
+          <div class="bab-field wide"><label>{{localize "BABELEM.Background.stereotype"}}</label><input type="text" name="system.stereotype" value="{{system.stereotype}}"></div>
+          <div class="bab-editor">{{formInput fields.background name="system.background" value=source.background enriched=enriched.background toggled=true}}</div>
+          <h3 class="bab-subhead">{{localize "BABELEM.Inventory.title"}}</h3>
+          <div class="bab-field wide"><label>{{localize "BABELEM.Inventory.pockets"}}</label><input type="text" name="system.pockets" value="{{system.pockets}}"></div>
+          <div class="bab-editor">{{formInput fields.inventory name="system.inventory" value=source.inventory enriched=enriched.inventory toggled=true}}</div>
+          <div class="bab-box-head">
+            <span class="bab-label">{{localize "TYPES.Item.gear"}}</span>
+            {{#if editable}}<a class="bab-link" data-action="itemCreate" data-type="gear"><i class="fa-solid fa-plus"></i></a>{{/if}}
+          </div>
+          <ul class="bab-items">{{#each gear as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{/each}}</ul>
+        </section>
+      </div>
+
+      <div class="bab-column">
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Attribute.title"}}</h2>
+          <p class="bab-hint">{{localize "BABELEM.Attribute.hint"}}</p>
+          <div class="bab-attributes">
+            <div class="bab-attr-head"><span></span><span>{{localize "BABELEM.Attribute.reserve"}}</span><span>{{localize "BABELEM.Attribute.attribute"}}</span><span></span></div>
+            {{#each attributeRows as |attr|}}
+            <div class="bab-attr attr-{{attr.key}}">
+              <a class="bab-attr-name" data-action="rollAttribute" data-attribute="{{attr.key}}" data-tooltip="BABELEM.Test.rollHint">{{attr.label}}</a>
+              <input type="number" name="system.attributes.{{attr.key}}.value" value="{{attr.value}}" min="0">
+              <input type="number" name="system.attributes.{{attr.key}}.max" value="{{attr.max}}" min="0">
+              <span class="bab-attr-actions">
+                <a data-action="rollAttack" data-attack="{{attr.key}}" data-tooltip="{{localize (concat 'BABELEM.Attack.' attr.key)}}"><i class="fa-solid fa-hand-fist"></i></a>
+                {{#unless (bab-eq attr.key "brabo")}}
+                <a data-action="createAdvantage" data-attribute="{{attr.key}}" data-tooltip="BABELEM.Action.createAdvantage"><i class="fa-solid fa-plus-minus"></i></a>
+                {{/unless}}
+              </span>
+            </div>
+            {{/each}}
+          </div>
+        </section>
+
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Integrity.title"}}</h2>
+          <div class="bab-integrity">
+            <div class="bab-int-row">
+              <span class="bab-int-name" data-tooltip="BABELEM.Integrity.guardFormula">{{localize "BABELEM.Integrity.guard"}}</span>
+              <input type="number" name="system.guard.value" value="{{system.guard.value}}" min="0">
+              <span>/ {{system.guard.max}}</span>
+              <label class="bab-mini" data-tooltip="BABELEM.Integrity.bonusHint">+<input type="number" name="system.guard.bonus" value="{{system.guard.bonus}}"></label>
+            </div>
+            <div class="bab-int-row">
+              <span class="bab-int-name" data-tooltip="BABELEM.Integrity.memoryFormula">{{localize "BABELEM.Integrity.memory"}}</span>
+              <input type="number" name="system.memory.value" value="{{system.memory.value}}" min="0">
+              <span>/ {{system.memory.max}}</span>
+              <label class="bab-mini" data-tooltip="BABELEM.Integrity.bonusHint">+<input type="number" name="system.memory.bonus" value="{{system.memory.bonus}}"></label>
+            </div>
+            <div class="bab-int-row">
+              <span class="bab-int-name" data-tooltip="BABELEM.Integrity.barrierHint">{{localize "BABELEM.Integrity.barrier"}}</span>
+              <input type="number" name="system.barrier" value="{{system.barrier}}" min="0">
+            </div>
+          </div>
+          <div class="bab-wounds">
+            {{#each wounds}}
+            <a class="bab-wound {{#if marked}}marked{{/if}}" data-action="toggleWound" data-wound="{{key}}">
+              <i class="fa-regular {{#if marked}}fa-square-check{{else}}fa-square{{/if}}"></i> {{label}}
+            </a>
+            {{/each}}
+          </div>
+        </section>
+
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Action.title"}}</h2>
+          <div class="bab-buttons">
+            <button type="button" data-action="rollDefense" data-defense="dodge"><i class="fa-solid fa-person-running"></i> {{localize "BABELEM.Defense.dodge"}}</button>
+            <button type="button" data-action="rollDefense" data-defense="block"><i class="fa-solid fa-shield-halved"></i> {{localize "BABELEM.Defense.block"}}</button>
+            <button type="button" data-action="channel" data-tooltip="BABELEM.Action.channelHint"><i class="fa-solid fa-hurricane"></i> {{localize "BABELEM.Action.channel"}}</button>
+            <button type="button" data-action="raiseGuard" data-tooltip="BABELEM.Action.raiseGuardHint"><i class="fa-solid fa-shield"></i> {{localize "BABELEM.Action.raiseGuard"}}</button>
+            <button type="button" data-action="rest"><i class="fa-solid fa-bed"></i> {{localize "BABELEM.Rest.title"}}</button>
+          </div>
+          <h3 class="bab-subhead">{{localize "BABELEM.Status.title"}}</h3>
+          <div class="bab-statuses">
+            {{#each statuses}}
+            <a class="bab-status {{#if active}}active{{/if}}" data-action="toggleStatus" data-status="{{id}}" data-tooltip="{{label}}"><img src="{{img}}" alt="{{label}}"></a>
+            {{/each}}
+          </div>
+          <h3 class="bab-subhead">{{localize "BABELEM.Damage.affinities"}}</h3>
+          <table class="bab-affinities">
+            <thead><tr><th></th><th>{{localize "BABELEM.Damage.resistance"}}</th><th>{{localize "BABELEM.Damage.vulnerability"}}</th></tr></thead>
+            <tbody>
+              {{#each damageFlags}}
+              <tr>
+                <td>{{label}}</td>
+                <td><input type="checkbox" name="system.resistances.{{key}}" {{checked resistance}}>{{#if fromTrait}} <i class="fa-solid fa-star" data-tooltip="BABELEM.Damage.fromTrait"></i>{{/if}}</td>
+                <td><input type="checkbox" name="system.vulnerabilities.{{key}}" {{checked vulnerability}}></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <div class="bab-column">
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Trait.title"}}</h2>
+          <div class="bab-box-head">
+            <span class="bab-hint">{{localize "BABELEM.Trait.hint"}}</span>
+            <a class="bab-link" data-action="openCompendium" data-pack="traits" data-tooltip="BABELEM.Sheet.openCompendium"><i class="fa-solid fa-book-open"></i></a>
+          </div>
+          <ul class="bab-items">{{#each traits as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{else}}<li class="bab-drop-hint">{{localize "BABELEM.Trait.dropHint"}}</li>{{/each}}</ul>
+        </section>
+
+        <section class="bab-box">
+          <h2 class="bab-banner">{{localize "BABELEM.Style.title"}}</h2>
+          <p class="bab-hint">{{localize "BABELEM.Style.hint"}}</p>
+          <div class="bab-field wide"><label>{{localize "BABELEM.Style.name"}}</label><input type="text" name="system.style.name" value="{{system.style.name}}"></div>
+          <div class="bab-field wide">
+            <label data-tooltip="BABELEM.Style.idealRangeHint">{{localize "BABELEM.Style.idealRange"}}</label>
+            <select name="system.style.idealRange">{{selectOptions idealRanges selected=system.style.idealRange}}</select>
+          </div>
+          <div class="bab-field wide"><label>{{localize "BABELEM.Style.pactWeapon"}}</label><input type="text" name="system.style.pactWeapon" value="{{system.style.pactWeapon}}"></div>
+          <div class="bab-box-head">
+            <span class="bab-label">{{localize "BABELEM.Style.properties"}}</span>
+            <a class="bab-link" data-action="openCompendium" data-pack="styles" data-tooltip="BABELEM.Sheet.openCompendium"><i class="fa-solid fa-book-open"></i></a>
+          </div>
+          <ul class="bab-items">{{#each styles as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{else}}<li class="bab-drop-hint">{{localize "BABELEM.Style.dropHint"}}</li>{{/each}}</ul>
+        </section>
+      </div>
+    </div>
+
+    <section class="bab-box full">
+      <h2 class="bab-banner">{{localize "BABELEM.Ability.title"}}</h2>
+      <div class="bab-ability-meta">
+        <span data-tooltip="BABELEM.Ability.countHint">{{localize "BABELEM.Ability.count"}}: <strong>{{abilityCount}} / {{system.abilitiesMax}}</strong></span>
+        <span data-tooltip="BABELEM.Restriction.countHint">{{localize "BABELEM.Restriction.count"}}: <strong>{{restrictionCount}} / {{system.restrictionsMax}}</strong></span>
+      </div>
+      <div class="bab-abilities">
+        <div>
+          <div class="bab-box-head">
+            <h3 class="bab-subhead">{{localize "BABELEM.Technique.title"}}</h3>
+            <span>
+              <a class="bab-link" data-action="openCompendium" data-pack="techniques" data-tooltip="BABELEM.Sheet.openCompendium"><i class="fa-solid fa-book-open"></i></a>
+              {{#if editable}}<a class="bab-link" data-action="itemCreate" data-type="technique"><i class="fa-solid fa-plus"></i></a>{{/if}}
+            </span>
+          </div>
+          <ul class="bab-items">{{#each techniques as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{else}}<li class="bab-drop-hint">{{localize "BABELEM.Technique.dropHint"}}</li>{{/each}}</ul>
+        </div>
+        <div>
+          <div class="bab-box-head">
+            <h3 class="bab-subhead">{{localize "BABELEM.Spell.title"}}</h3>
+            <span>
+              <a class="bab-link" data-action="openCompendium" data-pack="spells" data-tooltip="BABELEM.Sheet.openCompendium"><i class="fa-solid fa-book-open"></i></a>
+              {{#if editable}}<a class="bab-link" data-action="itemCreate" data-type="spell"><i class="fa-solid fa-plus"></i></a>{{/if}}
+            </span>
+          </div>
+          <ul class="bab-items">{{#each spells as |item|}}{{> "systems/babelem/templates/parts/item-row.hbs" item=item}}{{else}}<li class="bab-drop-hint">{{localize "BABELEM.Spell.dropHint"}}</li>{{/each}}</ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bab-box full">
+      <h2 class="bab-banner">{{localize "BABELEM.Sheet.notes"}}</h2>
+      <div class="bab-editor">{{formInput fields.notes name="system.notes" value=source.notes enriched=enriched.notes toggled=true}}</div>
+    </section>
+  </div>
+</div>

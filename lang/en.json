@@ -1,0 +1,414 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Protagonist",
+      "threat": "Threat"
+    },
+    "Item": {
+      "essence": "Essence",
+      "trait": "Trait",
+      "technique": "Technique",
+      "spell": "Spell",
+      "style": "Style Property",
+      "gear": "Gear",
+      "interaction": "Interaction"
+    }
+  },
+  "BABELEM": {
+    "Sheet": {
+      "characterTitle": "Protagonist Sheet",
+      "characterLabel": "Protagonist Sheet (Babelém)",
+      "threatLabel": "Threat Sheet (Babelém)",
+      "itemLabel": "Item Sheet (Babelém)",
+      "name": "Name",
+      "level": "Level",
+      "grade": "Grade",
+      "gradeHint": "The Awakened's Threat Grade. Starts at 1 and rises every 3 advances.",
+      "advances": "Advances",
+      "advancesHint": "At the end of a plot, a great change or a solved mystery: +1 Guard, +1 Memory or +1 maximum Aura.",
+      "editImage": "Change image",
+      "openCompendium": "Open compendium",
+      "notes": "Notes",
+      "current": "Current",
+      "max": "Max"
+    },
+    "Aura": {
+      "label": "Aura",
+      "hint": "Starting value: 3. Burn Aura to turn 1s into Hits and to pay for techniques and spells."
+    },
+    "Attribute": {
+      "title": "Attributes / Reserves",
+      "hint": "Distribute 4, 3 and 2, or leave all at 3. Use the attribute (maximum) value for tests.",
+      "reserve": "Reserve",
+      "attribute": "Attribute",
+      "brabo": "FIERCE",
+      "ligeiro": "SWIFT",
+      "safo": "SAVVY"
+    },
+    "Resource": {
+      "none": "None",
+      "aura": "AURA",
+      "special": "Special"
+    },
+    "Integrity": {
+      "title": "Integrity",
+      "guard": "Guard",
+      "memory": "Memory",
+      "barrier": "Barrier",
+      "guardFormula": "Guard = FIERCE × 2 + SWIFT (+ advance bonus)",
+      "memoryFormula": "Memory = SAVVY + 1 (+ advance bonus)",
+      "bonusHint": "Advance bonus",
+      "barrierHint": "Subtract Barrier from all damage before Guard, then reduce it by 1. PD damage ignores barriers."
+    },
+    "Wounds": {
+      "temporary": "Temporary Wound",
+      "serious": "Serious Wound",
+      "mortal": "Mortal Wound",
+      "marked": "{name} marks a {wound} and resets Guard to maximum.",
+      "defeatCheck": "Echo Die against defeat: defeated on a result ≤ {count}",
+      "defeated": "{name} is defeated!",
+      "noneLeft": "{name} has no wound boxes left: defeated or dead."
+    },
+    "Essence": {
+      "title": "Essence and Appearance",
+      "recoverWhen": "Recover Aura when you:",
+      "events": "Events (uncheck to recover 3 Aura):",
+      "dropHint": "Drag an Essence from the compendium here.",
+      "auraRecovered": "{name} acts true to their Essence and recovers 3 Aura."
+    },
+    "Appearance": {
+      "title": "Appearance",
+      "clothes": "Clothes",
+      "age": "Age",
+      "height": "Height",
+      "weight": "Weight",
+      "eyes": "Eyes",
+      "hair": "Hair",
+      "favoriteColor": "Favorite color"
+    },
+    "Background": {
+      "title": "Background and Inventory",
+      "hint": "Generate a Weave Point to gain +{dice}d on a test related to your Background or Inventory.",
+      "hintShort": "Gives the Weaver 1 Weave Point.",
+      "stereotype": "Which stereotype do you fulfill?",
+      "use": "Background/Inventory (+{dice}d, generates 1 Weave)",
+      "used": "Background/Inventory",
+      "invoked": "{name} draws on their Background/Inventory (+{dice}d) and generates 1 Weave."
+    },
+    "Inventory": {
+      "title": "Inventory",
+      "pockets": "What's in your pockets?"
+    },
+    "Trait": {
+      "title": "Traits",
+      "hint": "Choose two different traits.",
+      "dropHint": "Drag Traits from the compendium here.",
+      "tracker": "Tracker",
+      "trackerEnabled": "Use tracker",
+      "trackerLabel": "Label",
+      "trackerMaxHint": "0 = no limit",
+      "grantsResistance": "Grants resistance to"
+    },
+    "Style": {
+      "title": "Combat Style",
+      "hint": "Choose a property and name your style. If you carry a pact weapon, describe it.",
+      "name": "Style name / description",
+      "idealRange": "Ideal range",
+      "idealRangeHint": "While attacking at your ideal range, receive +1d.",
+      "close": "Close",
+      "far": "Far",
+      "pactWeapon": "Pact weapon",
+      "properties": "Properties",
+      "dropHint": "Drag a Style Property here."
+    },
+    "Ability": {
+      "title": "Techniques and Spells",
+      "count": "Abilities",
+      "countHint": "At creation, choose a number of abilities equal to your Memory.",
+      "use": "Use",
+      "paid": "Cost paid",
+      "invest": "Aura invested",
+      "investHint": "Special-cost spells: how much Aura to invest."
+    },
+    "Technique": {
+      "title": "Techniques",
+      "type": "Type",
+      "atq": "Attack (ATK)",
+      "sup": "Support (SUP)",
+      "reac": "Reaction (REAC)",
+      "short": {
+        "atq": "ATK",
+        "sup": "SUP",
+        "reac": "REAC"
+      },
+      "dropHint": "Drag Techniques from the compendium here."
+    },
+    "Spell": {
+      "title": "Spells",
+      "extraRelease": "Extra Release",
+      "dropHint": "Drag Spells from the compendium here."
+    },
+    "Plane": {
+      "label": "Plane",
+      "oblivo": "Oblivo",
+      "litura": "Litura"
+    },
+    "Activation": {
+      "label": "Activation",
+      "action": "Action",
+      "reaction": "Reaction",
+      "freeAction": "Free action",
+      "actionChannel": "Action + Channeling",
+      "special": "Special",
+      "maneuver": "Maneuver"
+    },
+    "Cost": {
+      "label": "Cost",
+      "value": "Cost",
+      "resource": "Resource",
+      "channel": "Requires channeling",
+      "perTurn": "Per turn",
+      "extraValue": "Extra cost",
+      "extraResource": "Extra resource"
+    },
+    "Restriction": {
+      "title": "Restriction Pact",
+      "hint": "Major Restrictions give Major Benefits; Minor give Minor. Maximum restrictions = maximum Aura. Making a pact generates 1 Weave.",
+      "type": "Restriction",
+      "none": "None",
+      "minor": "Minor",
+      "major": "Major",
+      "text": "Restriction imposed",
+      "benefit": "Benefit received",
+      "count": "Restrictions",
+      "countHint": "Maximum number of restrictions = maximum Aura."
+    },
+    "Rite": {
+      "motor": "Motor Rite (+1 action, +1 damage per Hit)",
+      "motorHint": "Movements, dances, hand seals: +1 damage per Hit (or +1 to PD damage). Costs +1 action.",
+      "sonic": "Sonic Rite (−1 Aura, min. 1)",
+      "sonicHint": "Incantations and shouts: reduce the Aura cost by 1 (minimum 1). Requires having channeled the previous turn.",
+      "weaveNote": "Each rite performed generates 1 Weave Point.",
+      "motorUsed": "Motor Rite performed (+1 Weave).",
+      "sonicUsed": "Sonic Rite performed (+1 Weave)."
+    },
+    "Attack": {
+      "none": "—",
+      "brabo": "FIERCE Attack",
+      "ligeiro": "SWIFT Attack",
+      "safo": "SAVVY Attack",
+      "payPrice": "No Hits on the FIERCE attack: pay a price.",
+      "safoResult": "SAVVY contest: the winner chooses a price for the loser to pay."
+    },
+    "Defense": {
+      "dodge": "Dodge",
+      "block": "Block",
+      "dodgeResult": "Dodge: if {hits} Hits beat the attacker's Hits, you take no damage.",
+      "blockResult": "Block: negate {hits} damage.",
+      "guardRaisedBonus": "Guard raised: +1d on this defense test."
+    },
+    "Action": {
+      "title": "Actions",
+      "createAdvantage": "Create Advantage",
+      "notice": "Notice (SWIFT): describe something you just noticed or ask the Weaver a question based on your senses. +1 die in the Common Pool.",
+      "recall": "Recall (SAVVY): describe a relevant memory or secret, or ask the Weaver about knowledge and stories. +1 die in the Common Pool.",
+      "channel": "Channel",
+      "channelHint": "Recover 1 Aura and start channeling until the beginning of your next turn.",
+      "raiseGuard": "Raise Guard",
+      "raiseGuardHint": "+1d on defense tests until you use an action. Shift+click: spend 1 FIERCE to recover all your Guard."
+    },
+    "Status": {
+      "title": "Conditions",
+      "impeded": "Impeded",
+      "compelled": "Compelled",
+      "stunned": "Stunned",
+      "offBalance": "Off-balance",
+      "favored": "Favored",
+      "disfavored": "Disfavored",
+      "hidden": "Hidden",
+      "channeling": "Channeling",
+      "guardRaised": "Guard Raised",
+      "exhausted": "Exhausted",
+      "poisoned": "Poisoned",
+      "blinded": "Blinded",
+      "exposed": "Exposed",
+      "defeated": "Defeated"
+    },
+    "Damage": {
+      "kinetic": "Kinetic",
+      "void": "Void",
+      "energy": "Energy",
+      "type": "Damage type",
+      "amount": "Damage",
+      "formula": "Damage formula",
+      "formulaHint": "E.g.: 1d6 + @danger, 2 + @danger, 3. Variables: @danger, @defense, @grade, @guard, @brabo.",
+      "pierce": "Pierces Defense (PD)",
+      "pierceShort": "PD",
+      "pierceHint": "PD damage ignores barriers and defense tests.",
+      "ignoreResistance": "Ignore resistance",
+      "ignoreResistanceHint": "E.g.: the Imbue Aura technique.",
+      "apply": "Apply damage",
+      "applyAmount": "Apply {amount} ({type})",
+      "dialogHint": "Applied to the selected targets (T). Adjust the value after defenses (block etc.).",
+      "rolled": "Damage: {amount} {type} ({formula})",
+      "taken": "{name} takes {damage} {type} damage{pierce}.",
+      "resisted": "resistance (half)",
+      "vulnerable": "vulnerability (double)",
+      "barrierAbsorbed": "barrier absorbed {barrier}",
+      "affinities": "Resistances and Vulnerabilities",
+      "resistance": "Resistance",
+      "vulnerability": "Vulnerability",
+      "fromTrait": "Granted by a Trait"
+    },
+    "Range": {
+      "label": "Range",
+      "none": "—",
+      "short": "Short",
+      "long": "Long",
+      "wide": "Wide"
+    },
+    "Test": {
+      "title": "Test",
+      "of": "{attribute} Test",
+      "roll": "Roll",
+      "rollHint": "Click to test. Shift+click rolls without asking.",
+      "attribute": "Attribute",
+      "bonus": "Advantage / disadvantage (±d)",
+      "bonusHint": "Add +1 per advantage and −1 per disadvantage.",
+      "diceLimit": "Maximum 9 dice, minimum 1.",
+      "hits": "Hits",
+      "effort": "Effort",
+      "effortButton": "Effort (−1 reserve, +1 Hit)",
+      "burn": "Burn Aura (1 → Hit)",
+      "burned": "Aura burned",
+      "finalize": "Confirm",
+      "onesResolved": "{ones} × 1 left: +{ones} Weave for the Weaver.",
+      "config": "Ability test",
+      "configHint": "Optional. When set, using the ability rolls the test and computes damage.",
+      "attack": "Attack type",
+      "alt": "Alternative attribute"
+    },
+    "Pool": {
+      "label": "Common Pool",
+      "hint": "Extra dice for the scene (+Δd). Using them makes the Weaver roll the Echo Die; on a complication, the pool loses a die.",
+      "useDice": "Common Pool dice",
+      "available": "{dice} available",
+      "used": "+{dice}d from the Common Pool",
+      "removed": "Complication: one die leaves the Common Pool.",
+      "clear": "Clear Pool"
+    },
+    "Weave": {
+      "label": "Weave",
+      "panel": "Babelém",
+      "weaver": "Weaver",
+      "hint": "The Weaver's Weave Points: generated by 1s on rolls, rites and pacts; spent on complications and Threat powers.",
+      "collapse": "Collapse/expand",
+      "endScene": "End Scene",
+      "endSceneHint": "Protagonists recover 1 in each reserve, clear their temporary wound, reset Guard to maximum and recover half their Memory. The Weaver gains 1 Weave.",
+      "endSceneSummary": "{count} protagonist(s) recovered reserves and Guard. +1 Weave.",
+      "startSession": "Start Session",
+      "startSessionHint": "Resets the Weave and gives 1 point per connected player.",
+      "startSessionSummary": "The Weave starts the session at {weave}."
+    },
+    "EchoDie": {
+      "title": "Echo Die",
+      "speaker": "Echo Die",
+      "hint": "1d8: complication on a 1 or a result lower than the current Weave. Shift+click to add spent Hits.",
+      "bonus": "Bonus (spent Hits)",
+      "detail": "d8 {natural} + {bonus} · Weave {weave}",
+      "complication": "Complication! Something doesn't go as planned.",
+      "safe": "No complication.",
+      "poolReason": "Common Pool dice used"
+    },
+    "Rest": {
+      "title": "Rest",
+      "confirm": "Resting restores reserves, Guard and Memory and clears Temporary and Serious wounds. A Mortal Wound requires medical care or supernatural healing. Continue?",
+      "done": "{name} rests: reserves, Guard and Memory restored.",
+      "mortalWarning": "An untreated Mortal Wound during the rest means death!"
+    },
+    "Threat": {
+      "title": "Threat",
+      "stats": "Grade, Guard, Danger and Defense",
+      "origin": "Origin",
+      "originBabelem": "Babelém",
+      "originOther": "Other",
+      "grade": "Grade",
+      "grade0": "Mundane (Grade 0)",
+      "grade1": "Dissonant (Grade 1)",
+      "grade2": "Resonant (Grade 2)",
+      "grade3": "Harmonic (Grade 3)",
+      "grade4": "Special Grade",
+      "archetype": "Archetype",
+      "archetypeNormal": "Normal",
+      "archetypeBoss": "Boss",
+      "archetypeMinion": "Minion",
+      "danger": "DANGER",
+      "defense": "DEFENSE",
+      "testDanger": "DANGER Test",
+      "testDangerHint": "Rolls DANGER d6; 1, 5 and 6 are Hits.",
+      "applyTable": "Apply Grade table",
+      "applyTableHint": "Sets Guard, Danger and Defense from the improvisation table (Minion: Guard 1, Defense 0).",
+      "attackHitsHint": "Attacks count as {hits} Hits (GRADE + current DANGER) for the protagonists' defense.",
+      "attackHits": "Attack Hits: {hits}",
+      "basicAttack": "Basic attack",
+      "basicAttackText": {
+        "brabo": "Damage equal to [GRADE]d6k1 + current DANGER.",
+        "ligeiro": "Damage equal to GRADE + DANGER. Deals +1 PD damage if the target got one Hit or fewer when defending.",
+        "safo": "SAVVY contest: the winner chooses a price for the loser to pay."
+      },
+      "interactions": "Interactions",
+      "perTurn": "Per turn",
+      "nature": "Power and Weakness",
+      "special": "Special",
+      "tactics": "Tactics",
+      "power": "Power",
+      "weakness": "Weakness",
+      "defeated": "{name} is defeated!",
+      "exposedNow": "{name} spends {defense} DEFENSE, recovers {guard} Guard and becomes exposed."
+    },
+    "Item": {
+      "use": "Use / roll",
+      "toChat": "Send to chat",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Delete {name}?",
+      "new": "New {type}",
+      "description": "Description",
+      "quantity": "Quantity",
+      "d66Hint": "Position on the random table (d66 / d6)."
+    },
+    "Settings": {
+      "onesGrantAura": {
+        "name": "1s grant Aura",
+        "hint": "Per REDUX: each 1 left on a roll gives the Weaver Weave and the Protagonist Aura. Turn off to only generate Weave."
+      },
+      "backgroundBonusDice": {
+        "name": "Background/Inventory dice",
+        "hint": "How many dice Background/Inventory grants when generating 1 Weave (the official sheet says +1d; the sample sheet, +2d)."
+      },
+      "playersAdjustPool": {
+        "name": "Players adjust the Common Pool",
+        "hint": "Lets players add dice to the Common Pool (Create Advantage)."
+      },
+      "showWeavePanel": {
+        "name": "Show Weave panel",
+        "hint": "Displays the panel with Weave, Common Pool and Echo Die."
+      }
+    },
+    "Notify": {
+      "noGM": "No Weaver (GM) connected to record the change.",
+      "poolGMOnly": "Only the Weaver can add dice to the Common Pool.",
+      "noAura": "Not enough Aura.",
+      "noReserve": "Not enough reserve.",
+      "notEnough": "Not enough {resource}.",
+      "noTargets": "Select one or more targets (T key) before applying damage.",
+      "requiresChannel": "This ability requires channeling.",
+      "badFormula": "Invalid damage formula: {formula}",
+      "itemNotAllowed": "{type} cannot be added to a {actor}.",
+      "alreadyHas": "{name} is already on the sheet.",
+      "traitsLimit": "Protagonists usually choose two Traits.",
+      "abilitiesLimit": "More abilities than Memory ({max}). Check with the Weaver.",
+      "itemMissing": "Item not found."
+    }
+  }
+}

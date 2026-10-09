@@ -1,0 +1,881 @@
+.babelem {
+  --bab-ink: #1d2b2a;
+  --bab-ink-soft: #2f3d3b;
+  --bab-paper: #f7f5ef;
+  --bab-paper-2: #ffffff;
+  --bab-teal: #0f3b3a;
+  --bab-teal-2: #1d5c5a;
+  --bab-mint: #d9ead3;
+  --bab-mint-2: #eef6ea;
+  --bab-line: #7fa29d;
+  --bab-brabo: #8a2b1c;
+  --bab-ligeiro: #7a6a12;
+  --bab-safo: #2c3a7a;
+  --bab-oblivo: #4a2c6e;
+  --bab-litura: #a3561a;
+  --bab-danger: #8a1c1c;
+  --bab-hit: #1f7a4d;
+  --bab-font-title: "Modesto Condensed", "Signika", serif;
+  --bab-font: "Signika", "Roboto", sans-serif;
+}
+
+.babelem.sheet .window-content {
+  padding: 0;
+  background: var(--bab-paper);
+  color: var(--bab-ink);
+  font-family: var(--bab-font);
+}
+
+.babelem.sheet .window-content > form,
+.babelem.sheet form.window-content {
+  height: 100%;
+}
+
+.babelem .bab-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--bab-ink);
+}
+
+.babelem .sheet-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 10px 16px;
+}
+
+.babelem .bab-sheet input[type="text"],
+.babelem .bab-sheet input[type="number"],
+.babelem .bab-sheet select,
+.babelem.bab-dialog input[type="text"],
+.babelem.bab-dialog input[type="number"],
+.babelem.bab-dialog select {
+  background: var(--bab-paper-2);
+  color: var(--bab-ink);
+  border: 1px solid var(--bab-line);
+  border-radius: 3px;
+  height: 26px;
+  padding: 0 6px;
+  font-family: var(--bab-font);
+}
+
+.babelem .bab-sheet select option {
+  background: var(--bab-paper-2);
+  color: var(--bab-ink);
+}
+
+.babelem .bab-sheet input[type="number"],
+.babelem.bab-dialog input[type="number"] {
+  text-align: center;
+  width: 48px;
+}
+
+.babelem .bab-sheet input:disabled,
+.babelem .bab-sheet select:disabled {
+  opacity: 0.8;
+}
+
+.babelem .bab-sheet button,
+.babelem.chat-card button {
+  background: var(--bab-teal);
+  color: #f2f7f6;
+  border: 1px solid var(--bab-teal-2);
+  border-radius: 4px;
+  font-family: var(--bab-font);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.babelem .bab-sheet button:hover,
+.babelem.chat-card button:hover {
+  background: var(--bab-teal-2);
+  color: #ffffff;
+}
+
+.babelem .bab-sheet a {
+  color: inherit;
+  cursor: pointer;
+}
+
+.babelem .bab-sheet a:hover {
+  color: var(--bab-teal-2);
+  text-shadow: none;
+}
+
+.babelem .bab-header {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  background: var(--bab-teal);
+  color: #f2f7f6;
+}
+
+.babelem .bab-header .bab-field label,
+.babelem .bab-header span {
+  color: #e8f3f0;
+  font-weight: bold;
+}
+
+.babelem .bab-header a:hover {
+  color: var(--bab-mint);
+}
+
+.babelem .bab-portrait {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border: 2px solid var(--bab-mint);
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--bab-paper);
+}
+
+.babelem .bab-portrait.small {
+  width: 80px;
+  height: 80px;
+}
+
+.babelem .bab-identity {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.babelem .bab-banner {
+  margin: 0;
+  padding: 2px 8px;
+  background: var(--bab-mint);
+  color: var(--bab-teal);
+  font-family: var(--bab-font-title);
+  font-size: 1.45rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+}
+
+.babelem .bab-header .bab-banner {
+  font-size: 1.6rem;
+}
+
+.babelem .bab-subhead {
+  margin: 10px 0 4px;
+  padding: 0 0 2px;
+  font-family: var(--bab-font-title);
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--bab-teal);
+  border-bottom: 1px solid var(--bab-line);
+  text-transform: uppercase;
+}
+
+.babelem .bab-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.babelem .bab-field label {
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--bab-ink-soft);
+}
+
+.babelem .bab-field.wide {
+  width: 100%;
+}
+
+.babelem .bab-field.wide input {
+  width: 100%;
+}
+
+.babelem .bab-field.checkbox {
+  align-items: center;
+}
+
+.babelem .bab-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.babelem .bab-inline .bab-field {
+  flex: 1;
+}
+
+.babelem .bab-inline .bab-field input[type="text"] {
+  width: 100%;
+}
+
+.babelem .bab-pair {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.babelem .bab-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+.babelem .bab-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.babelem .bab-box {
+  background: var(--bab-paper-2);
+  border: 1px solid var(--bab-line);
+  border-radius: 4px;
+  padding: 0 8px 8px;
+  margin-bottom: 10px;
+}
+
+.babelem .bab-column .bab-box {
+  margin-bottom: 0;
+}
+
+.babelem .bab-box > .bab-banner {
+  margin: 0 -8px 8px;
+  border-radius: 3px 3px 0 0;
+}
+
+.babelem .bab-box.full {
+  margin-top: 10px;
+}
+
+.babelem .bab-box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 2px;
+}
+
+.babelem .bab-label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--bab-teal);
+}
+
+.babelem .bab-link {
+  color: var(--bab-teal-2);
+  padding: 0 3px;
+}
+
+.babelem .bab-hint {
+  margin: 4px 0;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--bab-ink-soft);
+}
+
+.babelem .bab-drop-hint {
+  list-style: none;
+  margin: 4px 0;
+  padding: 8px;
+  border: 1px dashed var(--bab-line);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--bab-ink-soft);
+  text-align: center;
+}
+
+.babelem .bab-triggers {
+  margin: 2px 0 6px;
+  padding-left: 18px;
+  font-size: 0.85rem;
+}
+
+.babelem .bab-events {
+  display: flex;
+  gap: 10px;
+  font-size: 1.3rem;
+  color: var(--bab-teal);
+}
+
+.babelem .bab-attributes {
+  display: grid;
+  gap: 4px;
+}
+
+.babelem .bab-attr-head,
+.babelem .bab-attr {
+  display: grid;
+  grid-template-columns: 1fr 56px 56px 52px;
+  align-items: center;
+  gap: 6px;
+}
+
+.babelem .bab-attr-head span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--bab-ink-soft);
+  text-align: center;
+}
+
+.babelem .bab-attr-name {
+  font-family: var(--bab-font-title);
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.babelem .attr-brabo .bab-attr-name { color: var(--bab-brabo); }
+.babelem .attr-ligeiro .bab-attr-name { color: var(--bab-ligeiro); }
+.babelem .attr-safo .bab-attr-name { color: var(--bab-safo); }
+
+.babelem .bab-attr-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  color: var(--bab-teal-2);
+}
+
+.babelem .bab-integrity {
+  display: grid;
+  gap: 6px;
+}
+
+.babelem .bab-int-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.babelem .bab-int-name {
+  flex: 1;
+  font-family: var(--bab-font-title);
+  font-size: 1.3rem;
+  color: var(--bab-teal);
+}
+
+.babelem .bab-mini {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  color: var(--bab-ink-soft);
+}
+
+.babelem .bab-mini input[type="number"] {
+  width: 38px;
+  height: 22px;
+}
+
+.babelem .bab-wounds {
+  display: grid;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.babelem .bab-wound {
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--bab-line);
+}
+
+.babelem .bab-wound.marked {
+  background: #f3dede;
+  border-color: var(--bab-danger);
+  color: var(--bab-danger);
+}
+
+.babelem .bab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.babelem .bab-buttons button {
+  flex: 1 1 auto;
+}
+
+.babelem .bab-statuses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+  gap: 4px;
+}
+
+.babelem .bab-status {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  opacity: 0.45;
+  background: var(--bab-teal);
+}
+
+.babelem .bab-status img {
+  width: 22px;
+  height: 22px;
+  border: none;
+}
+
+.babelem .bab-status.active {
+  opacity: 1;
+  border-color: var(--bab-mint);
+  box-shadow: 0 0 4px var(--bab-teal-2);
+}
+
+.babelem .bab-affinities {
+  width: 100%;
+  margin: 4px 0;
+  border-collapse: collapse;
+  background: transparent;
+  border: none;
+}
+
+.babelem .bab-affinities th,
+.babelem .bab-affinities td {
+  padding: 2px 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--bab-ink);
+}
+
+.babelem .bab-affinities thead {
+  background: var(--bab-mint-2);
+}
+
+.babelem .bab-affinities td:first-child {
+  text-align: left;
+}
+
+.babelem .bab-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.babelem .bab-item {
+  border-bottom: 1px solid var(--bab-mint);
+}
+
+.babelem .bab-item-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.babelem .bab-item-img {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border: 1px solid var(--bab-line);
+  border-radius: 3px;
+  background: var(--bab-teal);
+  cursor: pointer;
+}
+
+.babelem .bab-item-img:hover {
+  box-shadow: 0 0 6px var(--bab-teal-2);
+}
+
+.babelem .bab-item-name {
+  flex: 1;
+  font-weight: bold;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.babelem .bab-tag {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  border-radius: 8px;
+  background: var(--bab-mint-2);
+  border: 1px solid var(--bab-mint);
+  font-size: 0.7rem;
+  color: var(--bab-teal);
+  white-space: nowrap;
+}
+
+.babelem .bab-tag.cost {
+  background: var(--bab-teal);
+  color: #f2f7f6;
+}
+
+.babelem .bab-tag.plane-oblivo {
+  background: var(--bab-oblivo);
+  color: #f1e9fa;
+}
+
+.babelem .bab-tag.plane-litura {
+  background: var(--bab-litura);
+  color: #fff3e6;
+}
+
+.babelem .bab-tracker {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+}
+
+.babelem .bab-item-controls {
+  display: flex;
+  gap: 6px;
+  color: var(--bab-ink-soft);
+  font-size: 0.8rem;
+}
+
+.babelem .bab-item-description {
+  padding: 4px 6px 8px 34px;
+  font-size: 0.85rem;
+}
+
+.babelem .bab-item-description p {
+  margin: 0 0 4px;
+}
+
+.babelem .bab-ability-meta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.babelem .bab-abilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.babelem .bab-editor {
+  min-height: 80px;
+  margin: 4px 0;
+  border: 1px solid var(--bab-mint);
+  border-radius: 3px;
+  background: var(--bab-paper);
+}
+
+.babelem .bab-editor.tall {
+  min-height: 220px;
+}
+
+.babelem .bab-editor,
+.babelem .bab-editor .editor-content,
+.babelem .bab-editor prose-mirror {
+  color: var(--bab-ink);
+}
+
+.babelem .bab-editor prose-mirror {
+  min-height: 80px;
+  color: var(--bab-ink);
+}
+
+.babelem .bab-threat-stats {
+  display: grid;
+  gap: 4px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.babelem .bab-stat-head,
+.babelem .bab-stat {
+  display: grid;
+  grid-template-columns: 1fr 64px 64px;
+  align-items: center;
+  gap: 6px;
+}
+
+.babelem .bab-stat > span:first-child,
+.babelem .bab-stat > a {
+  font-family: var(--bab-font-title);
+  font-size: 1.25rem;
+  color: var(--bab-teal);
+}
+
+.babelem .bab-stat-head span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--bab-ink-soft);
+}
+
+.babelem .bab-stat input[type="number"] {
+  width: 100%;
+}
+
+.chat-message .babelem.chat-card {
+  font-family: var(--bab-font);
+  color: var(--bab-ink);
+  background: var(--bab-paper);
+  border: 1px solid var(--bab-line);
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.babelem.chat-card .card-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--bab-line);
+}
+
+.babelem.chat-card .card-header img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--bab-line);
+  background: var(--bab-teal);
+  border-radius: 3px;
+}
+
+.babelem.chat-card h3 {
+  margin: 0;
+  border: none;
+  font-family: var(--bab-font-title);
+  font-size: 1.3rem;
+  color: var(--bab-teal);
+}
+
+.babelem.chat-card .card-sub {
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--bab-ink-soft);
+}
+
+.babelem.chat-card.notice {
+  border-left: 4px solid var(--bab-teal-2);
+}
+
+.babelem.chat-card.danger {
+  border-left: 4px solid var(--bab-danger);
+}
+
+.babelem.chat-card .notes {
+  font-size: 0.75rem;
+  color: var(--bab-ink-soft);
+}
+
+.babelem .bab-dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 6px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.babelem .bab-die {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid var(--bab-line);
+  background: var(--bab-paper-2);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.babelem .bab-die.hit {
+  background: var(--bab-hit);
+  border-color: var(--bab-hit);
+  color: #fff;
+}
+
+.babelem .bab-die.one {
+  background: var(--bab-oblivo);
+  border-color: var(--bab-oblivo);
+  color: #fff;
+}
+
+.babelem .bab-die.burned {
+  background: var(--bab-litura);
+  border-color: var(--bab-litura);
+  color: #fff;
+}
+
+.babelem .bab-result {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 0.95rem;
+}
+
+.babelem .bab-result .hits strong {
+  font-size: 1.5rem;
+  color: var(--bab-hit);
+}
+
+.babelem .bab-result .ones {
+  color: var(--bab-oblivo);
+}
+
+.babelem .bab-outcome {
+  margin: 4px 0;
+  font-size: 0.85rem;
+}
+
+.babelem .bab-outcome.warn {
+  color: var(--bab-danger);
+  font-weight: bold;
+}
+
+.babelem .bab-outcome.weave {
+  color: var(--bab-oblivo);
+}
+
+.babelem .bab-paid {
+  margin: 2px 0;
+  font-size: 0.8rem;
+  color: var(--bab-teal-2);
+}
+
+.babelem.chat-card .card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.babelem.chat-card .card-buttons button {
+  flex: 1 1 auto;
+  font-size: 0.8rem;
+}
+
+.babelem.chat-card .card-extra {
+  margin-top: 4px;
+  padding: 4px;
+  background: var(--bab-mint-2);
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+.babelem.chat-card.test-card.finalized .bab-die.one {
+  opacity: 0.7;
+}
+
+.babelem .bab-echo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.babelem .bab-echo-value {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--bab-teal);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.babelem.echo-card.complication .bab-echo-value {
+  background: var(--bab-danger);
+}
+
+.babelem .bab-echo-detail {
+  font-size: 0.8rem;
+  color: var(--bab-ink-soft);
+}
+
+.babelem.bab-dialog .form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.babelem.bab-dialog .form-group label {
+  flex: 1;
+}
+
+#babelem-weave-panel {
+  position: fixed;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  min-width: 220px;
+  padding: 4px 8px 6px;
+  background: rgba(15, 59, 58, 0.92);
+  color: #eef6ea;
+  border: 1px solid var(--bab-mint);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  font-family: var(--bab-font);
+  pointer-events: auto;
+}
+
+#babelem-weave-panel .bab-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--bab-font-title);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#babelem-weave-panel .bab-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+#babelem-weave-panel .bab-panel-label {
+  flex: 1;
+}
+
+#babelem-weave-panel .bab-panel-value {
+  min-width: 34px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#babelem-weave-panel a {
+  color: var(--bab-mint);
+}
+
+#babelem-weave-panel .bab-panel-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+#babelem-weave-panel .bab-panel-buttons button {
+  border: 1px solid var(--bab-mint);
+  border-radius: 4px;
+  padding: 2px 6px;
+  line-height: 1.6;
+  font-family: var(--bab-font);
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--bab-mint);
+  color: var(--bab-teal);
+  border-color: var(--bab-mint);
+  font-size: 0.75rem;
+}
+
+#babelem-weave-panel.collapsed {
+  min-width: 160px;
+}

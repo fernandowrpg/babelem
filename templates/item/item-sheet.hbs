@@ -1,0 +1,140 @@
+<div class="bab-sheet bab-item-sheet">
+  <header class="bab-header">
+    <img class="bab-portrait small" src="{{item.img}}" alt="{{item.name}}" data-action="editImage" data-tooltip="BABELEM.Sheet.editImage">
+    <div class="bab-identity">
+      <h1 class="bab-banner">{{typeLabel}}</h1>
+      <div class="bab-field wide">
+        <label>{{localize "BABELEM.Sheet.name"}}</label>
+        <input type="text" name="name" value="{{item.name}}">
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field">
+          <label data-tooltip="BABELEM.Item.d66Hint">d66</label>
+          <input type="text" name="system.d66" value="{{system.d66}}">
+        </div>
+        {{#if item.actor}}
+        <div class="bab-field">
+          <label>&nbsp;</label>
+          <button type="button" data-action="useItem"><i class="fa-solid fa-dice-six"></i> {{localize "BABELEM.Item.use"}}</button>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet-body">
+    {{#if is.technique}}
+    <section class="bab-box">
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Technique.type"}}</label><select name="system.techType">{{selectOptions choices.techniqueTypes selected=system.techType}}</select></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.value"}}</label><input type="number" name="system.cost.value" value="{{system.cost.value}}" min="0"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.resource"}}</label><select name="system.cost.resource">{{selectOptions choices.resources selected=system.cost.resource}}</select></div>
+        <div class="bab-field checkbox"><label>{{localize "BABELEM.Cost.channel"}}</label><input type="checkbox" name="system.cost.channel" {{checked system.cost.channel}}></div>
+      </div>
+    </section>
+    {{/if}}
+
+    {{#if is.spell}}
+    <section class="bab-box">
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Plane.label"}}</label><select name="system.plane">{{selectOptions choices.planes selected=system.plane}}</select></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Activation.label"}}</label><select name="system.activation">{{selectOptions choices.activations selected=system.activation}}</select></div>
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.value"}}</label><input type="number" name="system.cost.value" value="{{system.cost.value}}" min="0"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.resource"}}</label><select name="system.cost.resource">{{selectOptions choices.resources selected=system.cost.resource}}</select></div>
+        <div class="bab-field checkbox"><label>{{localize "BABELEM.Cost.perTurn"}}</label><input type="checkbox" name="system.cost.perTurn" {{checked system.cost.perTurn}}></div>
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.extraValue"}}</label><input type="number" name="system.extraCost.value" value="{{system.extraCost.value}}" min="0"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.extraResource"}}</label><select name="system.extraCost.resource">{{selectOptions choices.resources selected=system.extraCost.resource}}</select></div>
+      </div>
+    </section>
+    {{/if}}
+
+    {{#if isAbility}}
+    <section class="bab-box">
+      <h3 class="bab-subhead" data-tooltip="BABELEM.Test.configHint">{{localize "BABELEM.Test.config"}}</h3>
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Test.attack"}}</label><select name="system.test.attack">{{selectOptions choices.attackTypes selected=system.test.attack}}</select></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Test.attribute"}}</label><select name="system.test.attribute">{{selectOptions choices.attributes selected=system.test.attribute}}</select></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Test.alt"}}</label><select name="system.test.alt">{{selectOptions choices.attributes selected=system.test.alt}}</select></div>
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Test.bonus"}}</label><input type="number" name="system.test.bonus" value="{{system.test.bonus}}"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Damage.type"}}</label><select name="system.test.damageType">{{selectOptions choices.damageTypes selected=system.test.damageType}}</select></div>
+      </div>
+      <h3 class="bab-subhead" data-tooltip="BABELEM.Restriction.hint">{{localize "BABELEM.Restriction.title"}}</h3>
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Restriction.type"}}</label><select name="system.restriction.type">{{selectOptions choices.restrictionTypes selected=system.restriction.type}}</select></div>
+      </div>
+      <div class="bab-field wide"><label>{{localize "BABELEM.Restriction.text"}}</label><input type="text" name="system.restriction.text" value="{{system.restriction.text}}"></div>
+      <div class="bab-field wide"><label>{{localize "BABELEM.Restriction.benefit"}}</label><input type="text" name="system.restriction.benefit" value="{{system.restriction.benefit}}"></div>
+    </section>
+    {{/if}}
+
+    {{#if is.trait}}
+    <section class="bab-box">
+      <h3 class="bab-subhead">{{localize "BABELEM.Trait.tracker"}}</h3>
+      <div class="bab-inline">
+        <div class="bab-field checkbox"><label>{{localize "BABELEM.Trait.trackerEnabled"}}</label><input type="checkbox" name="system.tracker.enabled" {{checked system.tracker.enabled}}></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Trait.trackerLabel"}}</label><input type="text" name="system.tracker.label" value="{{system.tracker.label}}"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Sheet.current"}}</label><input type="number" name="system.tracker.value" value="{{system.tracker.value}}" min="0"></div>
+        <div class="bab-field"><label data-tooltip="BABELEM.Trait.trackerMaxHint">{{localize "BABELEM.Sheet.max"}}</label><input type="number" name="system.tracker.max" value="{{system.tracker.max}}" min="0"></div>
+      </div>
+      <h3 class="bab-subhead">{{localize "BABELEM.Trait.grantsResistance"}}</h3>
+      <div class="bab-inline">
+        {{#each damageFlags}}
+        <div class="bab-field checkbox"><label>{{label}}</label><input type="checkbox" name="system.resistances.{{key}}" {{checked checked}}></div>
+        {{/each}}
+      </div>
+    </section>
+    {{/if}}
+
+    {{#if is.gear}}
+    <section class="bab-box">
+      <div class="bab-field"><label>{{localize "BABELEM.Item.quantity"}}</label><input type="number" name="system.quantity" value="{{system.quantity}}" min="0"></div>
+    </section>
+    {{/if}}
+
+    {{#if is.interaction}}
+    <section class="bab-box">
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Activation.label"}}</label><select name="system.kind">{{selectOptions choices.interactionKinds selected=system.kind}}</select></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Test.attack"}}</label><select name="system.attack">{{selectOptions choices.attackTypes selected=system.attack}}</select></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Range.label"}}</label><select name="system.range">{{selectOptions choices.ranges selected=system.range}}</select></div>
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.value"}}</label><input type="number" name="system.cost.value" value="{{system.cost.value}}" min="0"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Cost.resource"}}</label><select name="system.cost.resource">{{selectOptions choices.threatResources selected=system.cost.resource}}</select></div>
+      </div>
+      <div class="bab-inline">
+        <div class="bab-field"><label data-tooltip="BABELEM.Damage.formulaHint">{{localize "BABELEM.Damage.formula"}}</label><input type="text" name="system.damage" value="{{system.damage}}" placeholder="1d6 + @danger"></div>
+        <div class="bab-field"><label>{{localize "BABELEM.Damage.type"}}</label><select name="system.damageType">{{selectOptions choices.damageTypes selected=system.damageType}}</select></div>
+        <div class="bab-field checkbox"><label>{{localize "BABELEM.Damage.pierce"}}</label><input type="checkbox" name="system.pierce" {{checked system.pierce}}></div>
+      </div>
+    </section>
+    {{/if}}
+
+    {{#if is.essence}}
+    <section class="bab-box">
+      <h3 class="bab-subhead">{{localize "BABELEM.Essence.recoverWhen"}}</h3>
+      {{#each system.triggers}}
+      <div class="bab-field wide"><input type="text" name="system.triggers.{{@index}}" value="{{this}}"></div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    <section class="bab-box">
+      <h3 class="bab-subhead">{{localize "BABELEM.Item.description"}}</h3>
+      <div class="bab-editor tall">{{formInput fields.description name="system.description" value=source.description enriched=enriched.description toggled=true}}</div>
+    </section>
+
+    {{#if is.spell}}
+    <section class="bab-box">
+      <h3 class="bab-subhead">{{localize "BABELEM.Spell.extraRelease"}}</h3>
+      <div class="bab-editor">{{formInput fields.extraRelease name="system.extraRelease" value=source.extraRelease enriched=enriched.extraRelease toggled=true}}</div>
+    </section>
+    {{/if}}
+  </div>
+</div>

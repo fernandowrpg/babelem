@@ -1,0 +1,593 @@
+pack: techniques
+type: Item
+label:
+  pt: Técnicas
+  en: Techniques
+intro:
+  pt: >-
+    As técnicas permitem que Despertos possam canalizar o poder da sua Aura de maneira intuitiva, fortificando seus
+    corpos e mentes para lidar com os mistérios do mundo material e do suprarreal. Através de treinamento, foco e
+    talento, é possível aprender quaisquer das técnicas dentre as apresentadas neste livro (e outras podem ser criadas,
+    sempre em conjunto e com o aval da Tecelã). Toda técnica é descrita por um tipo e custo (ou requerimento): Ataque
+    (ATQ), técnicas que modificam ou são baseadas em ataques; Suporte (SUP), técnicas que permitem realizar alguma ação
+    de maneira diferente; Reação (REAC), técnicas que usam sua reação, agindo fora de seu turno.
+  en: >-
+    Techniques allow the Awakened to channel the power of their Aura intuitively, fortifying their bodies and minds to
+    deal with the mysteries of the material and suprareal worlds. Through training, focus and talent, it is possible to
+    learn any of the techniques presented in this book (and others can be created, always together with and with the
+    approval of the Weaver). Every technique is described by a type and a cost (or requirement): Attack (ATK),
+    techniques that modify or are based on attacks; Support (SUP), techniques that allow you to perform some action in a
+    different way; Reaction (REAC), techniques that use your reaction, acting outside your turn.
+folders:
+  - key: atq
+    name:
+      pt: Ataque (ATQ)
+      en: Attack (ATK)
+  - key: sup
+    name:
+      pt: Suporte (SUP)
+      en: Support (SUP)
+  - key: reac
+    name:
+      pt: Reação (REAC)
+      en: Reaction (REAC)
+entries:
+  - key: golpe-atordoante
+    itemType: technique
+    d66: "1/1"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    test: { attack: brabo }
+    name:
+      pt: Golpe Atordoante
+      en: Stunning Blow
+    description:
+      pt: Descarte um Acerto de um ataque brabo para deixar o alvo atordoado.
+      en: Discard a Hit from a FIERCE attack to leave the target stunned.
+
+  - key: atropelo
+    itemType: technique
+    d66: "1/2"
+    techType: atq
+    cost: { value: 0, resource: none }
+    test: { attack: brabo }
+    name:
+      pt: Atropelo
+      en: Trample
+    description:
+      pt: Descarte um Acerto de um ataque brabo para deixar o alvo desequilibrado.
+      en: Discard a Hit from a FIERCE attack to leave the target off-balance.
+
+  - key: forcar-caminho
+    itemType: technique
+    d66: "1/3"
+    techType: atq
+    cost: { value: 0, resource: none }
+    test: { attack: safo, attribute: brabo }
+    name:
+      pt: Forçar Caminho
+      en: Force the Way
+    description:
+      pt: >-
+        Você pode fazer um ataque safo testando BRABO em vez de SAFO, aproveitando do que tiver em volta para limitar as
+        opções de movimentação do alvo.
+      en: >-
+        You can make a SAVVY attack testing FIERCE instead of SAVVY, using whatever is around you to limit the target's
+        movement options.
+
+  - key: estrago-residual
+    itemType: technique
+    d66: "1/4"
+    techType: atq
+    cost: { value: 0, resource: none }
+    name:
+      pt: Estrago Residual
+      en: Residual Damage
+    description:
+      pt: Seus ataques brabos sempre contam com no mínimo um Acerto, mesmo que não tenha obtido nenhum durante o teste.
+      en: Your FIERCE attacks always count as having at least one Hit, even if you got none during the Test.
+
+  - key: imbuir-aura
+    itemType: technique
+    d66: "1/5"
+    techType: atq
+    cost: { value: 1, resource: aura, channel: true }
+    name:
+      pt: Imbuir Aura
+      en: Imbue Aura
+    description:
+      pt: Enquanto estiver canalizando, faça um ataque ignorando resistência ao tipo de dano causado.
+      en: While Channeling, make an attack that ignores resistance to the type of damage dealt.
+
+  - key: trespassar
+    itemType: technique
+    d66: "1/6"
+    techType: atq
+    cost: { value: 1, resource: brabo }
+    name:
+      pt: Trespassar
+      en: Cleave
+    description:
+      pt: >-
+        Ao causar dano com um ataque brabo, cause o mesmo dano em um outro alvo. Caso um dos alvos seja derrotado por esse
+        dano, escolha um novo alvo.
+      en: >-
+        When you deal damage with a FIERCE attack, deal the same damage to another target. If one of the targets is
+        defeated by this damage, choose a new target.
+
+  - key: sacrificio
+    itemType: technique
+    d66: "2/1"
+    techType: atq
+    cost: { value: 1, resource: brabo }
+    name:
+      pt: Sacrifício
+      en: Sacrifice
+    description:
+      pt: Ao causar dano com um ataque brabo, cause dano extra igual a diferença entre sua Guarda máxima e atual.
+      en: When you deal damage with a FIERCE attack, deal extra damage equal to the difference between your maximum and current Guard.
+
+  - key: destruicao-imediata
+    itemType: technique
+    d66: "2/2"
+    techType: atq
+    cost: { value: 1, resource: brabo }
+    test: { attack: brabo }
+    name:
+      pt: Destruição Imediata
+      en: Immediate Destruction
+    description:
+      pt: Ao custo de acabar com seus próprios músculos, faça um ataque brabo como uma ação livre.
+      en: At the cost of wrecking your own muscles, make a FIERCE attack as a free action.
+
+  - key: ainda-de-pe
+    itemType: technique
+    d66: "2/3"
+    techType: reac
+    cost: { value: 1, resource: brabo }
+    name:
+      pt: Ainda de Pé
+      en: Still Standing
+    description:
+      pt: >-
+        Gaste BRABO para Levantar a Guarda como uma reação antes ou após receber dano, recuperando imediatamente metade de
+        sua Guarda.
+      en: >-
+        Spend FIERCE to Raise Guard as a reaction before or after taking damage, immediately recovering half of your
+        Guard.
+
+  - key: superacao
+    itemType: technique
+    d66: "2/4"
+    techType: sup
+    cost: { value: 1, resource: aura }
+    name:
+      pt: Superação
+      en: Overcoming
+    description:
+      pt: Use aura para Superar como uma ação livre.
+      en: Use Aura to Overcome as a free action.
+
+  - key: reacao-imune
+    itemType: technique
+    d66: "2/5"
+    techType: reac
+    cost: { value: 1, resource: brabo }
+    name:
+      pt: Reação Imune
+      en: Immune Reaction
+    description:
+      pt: Ao ser alvo de um feitiço, cause dano AD vazio igual ao seu valor de BRABO de volta ao feiticeiro.
+      en: When you are the target of a spell, deal void PD damage equal to your FIERCE value back to the caster.
+
+  - key: foi-so-um-arranhao
+    itemType: technique
+    d66: "2/6"
+    techType: reac
+    cost: { value: 1, resource: brabo }
+    name:
+      pt: Foi só um Arranhão
+      en: Just a Scratch
+    description:
+      pt: >-
+        Ao bloquear um ataque, gaste BRABO para impedir que o dano lhe reduza a menos da metade da sua Guarda, caso ainda
+        esteja acima dela.
+      en: >-
+        When you block an attack, spend FIERCE to prevent the damage from reducing you to less than half of your Guard,
+        if you are still above that.
+
+  - key: velocidade
+    itemType: technique
+    d66: "3/1"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    test: { attack: ligeiro }
+    name:
+      pt: Velocidade
+      en: Speed
+    description:
+      pt: Caso tenha feito um ataque ligeiro, você pode fazer outro ataque ligeiro como uma ação livre uma vez por turno.
+      en: If you made a SWIFT attack, you can make another SWIFT attack as a free action once per turn.
+
+  - key: veneno
+    itemType: technique
+    d66: "3/2"
+    techType: atq
+    cost: { value: 0, resource: none }
+    name:
+      pt: Veneno
+      en: Poison
+    description:
+      pt: >-
+        Descarte um Acerto de um ataque safo para deixar o alvo envenenado. Você pode usar uma ação livre em seus turnos
+        seguintes para causar 1 de dano vazio AD a cada alvo envenenado.
+      en: >-
+        Discard a Hit from a SAVVY attack to leave the target poisoned. You can use a free action on your following turns
+        to deal 1 void PD damage to each poisoned target.
+
+  - key: pontos-de-pressao
+    itemType: technique
+    d66: "3/3"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    test: { attack: ligeiro }
+    name:
+      pt: Pontos de Pressão
+      en: Pressure Points
+    description:
+      pt: >-
+        Faça um ataque ligeiro contra um alvo. Se for um aliado, você o faz curar Guarda equivalente ao dano que seria
+        causado. Se for um oponente, você ganha +1d e +1 ao dano a cada vez consecutiva que usar Pontos de Pressão contra
+        esse mesmo alvo em uma mesma cena.
+      en: >-
+        Make a SWIFT attack against a target. If it is an ally, you make them heal Guard equal to the damage that would
+        have been dealt. If it is an opponent, you gain +1d and +1 damage each consecutive time you use Pressure Points
+        against that same target in the same scene.
+
+  - key: tornado
+    itemType: technique
+    d66: "3/4"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    name:
+      pt: Tornado
+      en: Tornado
+    description:
+      pt: >-
+        Uma vez por turno, descarte um Acerto de um ataque ligeiro para provocar o mesmo dano em todos os alvos dentro do
+        alcance.
+      en: >-
+        Once per turn, discard a Hit from a SWIFT attack to deal the same damage to all targets within range.
+
+  - key: combo-sem-fim
+    itemType: technique
+    d66: "3/5"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    test: { attack: ligeiro }
+    name:
+      pt: Combo Sem Fim
+      en: Endless Combo
+    description:
+      pt: >-
+        Faça um ataque ligeiro. Caso role ao menos um 1 (não transformado em Acerto), faça outro ataque ligeiro como parte
+        desta mesma ação. Caso no ataque adicional venham outros 1s, continue fazendo ataques adicionais. A cada 1 mantido
+        você gera pontos de Trama normalmente.
+      en: >-
+        Make a SWIFT attack. If you roll at least one 1 (not turned into a Hit), make another SWIFT attack as part of
+        this same action. If the additional attack brings more 1s, keep making additional attacks. For each 1 kept you
+        generate Weave Points as normal.
+
+  - key: redirecionar
+    itemType: technique
+    d66: "3/6"
+    techType: reac
+    cost: { value: 1, resource: aura }
+    test: { attribute: ligeiro }
+    name:
+      pt: Redirecionar
+      en: Redirect
+    description:
+      pt: >-
+        Ao ser o alvo de um ataque, use Superar como uma reação usando LIGEIRO. Se superar o GRAU do atacante, escolha
+        outro alvo para receber o ataque.
+      en: >-
+        When you are the target of an attack, use Overcome as a reaction using SWIFT. If you beat the attacker's GRADE,
+        choose another target to receive the attack.
+
+  - key: resposta
+    itemType: technique
+    d66: "4/1"
+    techType: reac
+    cost: { value: 1, resource: ligeiro }
+    name:
+      pt: Resposta
+      en: Riposte
+    description:
+      pt: >-
+        Ao bloquear um ataque, responda com um ataque básico como parte da mesma reação, contanto que o alvo esteja em seu
+        alcance.
+      en: >-
+        When you block an attack, respond with a basic attack as part of the same reaction, as long as the target is
+        within your range.
+
+  - key: interceptar
+    itemType: technique
+    d66: "4/2"
+    techType: reac
+    cost: { value: 1, resource: ligeiro }
+    name:
+      pt: Interceptar
+      en: Intercept
+    description:
+      pt: >-
+        Torne-se o alvo de uma ação que tinha como alvo alguém dentro ou fora da briga. Você pode fazer outra reação como
+        parte desta mesma reação.
+      en: >-
+        Become the target of an action that was targeting someone inside or outside the Brawl. You can make another
+        reaction as part of this same reaction.
+
+  - key: observador
+    itemType: technique
+    d66: "4/3"
+    techType: sup
+    cost: { value: 0, resource: none }
+    name:
+      pt: Observador
+      en: Observer
+    description:
+      pt: >-
+        Você enxerga o que ninguém mais vê. Você pode Criar Vantagem como uma ação livre para notar algo ligeiramente
+        estranho ou fora do lugar na cena.
+      en: >-
+        You see what no one else sees. You can Create Advantage as a free action to notice something slightly odd or out
+        of place in the scene.
+
+  - key: premonicao
+    itemType: technique
+    d66: "4/4"
+    techType: sup
+    cost: { value: 0, resource: none }
+    name:
+      pt: Premonição
+      en: Premonition
+    description:
+      pt: >-
+        Ao usar LIGEIRO para Criar Vantagem, você pode perguntar o que um alvo irá fazer a seguir com sua próxima ação. O
+        alvo é forçado a seguir a ação anunciada, e você tem +1d para interações contra o alvo até que ele tenha concluído
+        ou tentado concluir a ação indicada.
+      en: >-
+        When you use SWIFT to Create Advantage, you can ask what a target will do next with their next action. The target
+        is forced to follow the announced action, and you have +1d on interactions against the target until they have
+        completed or attempted to complete the indicated action.
+
+  - key: detector-de-mentiras
+    itemType: technique
+    d66: "4/5"
+    techType: reac
+    cost: { value: 1, resource: ligeiro }
+    name:
+      pt: Detector de Mentiras
+      en: Lie Detector
+    description:
+      pt: >-
+        Você sente o cheiro de mentira. Você pode gastar 1 de LIGEIRO como uma reação para saber se alguém está ou não
+        mentindo.
+      en: >-
+        You can smell a lie. You can spend 1 SWIFT as a reaction to know whether someone is lying or not.
+
+  - key: finta
+    itemType: technique
+    d66: "4/6"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    test: { attack: safo, attribute: ligeiro }
+    name:
+      pt: Finta
+      en: Feint
+    description:
+      pt: >-
+        Faça um ataque safo contra um alvo jogando LIGEIRO em vez de SAFO. Caso vença a disputa, o seu próximo ataque
+        contra o alvo causará dano AD.
+      en: >-
+        Make a SAVVY attack against a target rolling SWIFT instead of SAVVY. If you win the contest, your next attack
+        against the target will deal PD damage.
+
+  - key: apoio-moral
+    itemType: technique
+    d66: "5/1"
+    techType: reac
+    cost: { value: 1, resource: aura }
+    test: { attribute: safo }
+    name:
+      pt: Apoio Moral
+      en: Moral Support
+    description:
+      pt: >-
+        Quando um aliado falhar em um teste, grite palavras de determinação para animá-lo, e faça um teste de Superar
+        usando SAFO como uma reação. Em um Acerto, o seu aliado poderá rolar novamente o teste com +1d.
+      en: >-
+        When an ally fails a Test, shout words of determination to cheer them on, and make an Overcome Test using SAVVY
+        as a reaction. On a Hit, your ally can reroll the Test with +1d.
+
+  - key: lucha-libre
+    itemType: technique
+    d66: "5/2"
+    techType: sup
+    cost: { value: 0, resource: none }
+    name:
+      pt: Lucha Libre
+      en: Lucha Libre
+    description:
+      pt: >-
+        Você sempre se dá melhor em brigas quando há uma plateia ao seu redor. Contanto que haja uma plateia, você pode
+        descartar um Acerto de um ataque para adicionar +1d à Pilha Comum (+Δd).
+      en: >-
+        You always do better in fights when there is an audience around you. As long as there is an audience, you can
+        discard a Hit from an attack to add +1d to the Common Pool (+Δd).
+
+  - key: quebrar-limites
+    itemType: technique
+    d66: "5/3"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    test: { attack: brabo, attribute: safo }
+    name:
+      pt: Quebrar Limites
+      en: Break Limits
+    description:
+      pt: >-
+        Transforme sua Aura em uma determinação sobrenatural. Faça um ataque brabo usando SAFO em vez de BRABO. Em um
+        Acerto, recupere 1 BRABO.
+      en: >-
+        Turn your Aura into supernatural determination. Make a FIERCE attack using SAVVY instead of FIERCE. On a Hit,
+        recover 1 FIERCE.
+
+  - key: provocar
+    itemType: technique
+    d66: "5/4"
+    techType: atq
+    cost: { value: 1, resource: aura }
+    name:
+      pt: Provocar
+      en: Taunt
+    description:
+      pt: >-
+        Descarte um Acerto de um ataque safo para provocar um alvo, abalando o seu psicológico. O alvo fica compelido a
+        ter você como alvo até que Supere esse efeito.
+      en: >-
+        Discard a Hit from a SAVVY attack to taunt a target, shaking their psyche. The target is compelled to target you
+        until they Overcome this effect.
+
+  - key: perseveranca
+    itemType: technique
+    d66: "5/5"
+    techType: reac
+    cost: { value: 1, resource: aura }
+    name:
+      pt: Perseverança
+      en: Perseverance
+    description:
+      pt: >-
+        Quando algo lhe deixar com 0 de Guarda, use sua reação para continuar com 1 de Guarda e ignorar qualquer dano
+        sofrido até o início de seu próximo turno.
+      en: >-
+        When something leaves you with 0 Guard, use your reaction to stay at 1 Guard and ignore any damage taken until
+        the start of your next turn.
+
+  - key: achar-esperancas
+    itemType: technique
+    d66: "5/6"
+    techType: sup
+    cost: { value: 1, resource: aura }
+    test: { attribute: safo }
+    name:
+      pt: Achar Esperanças
+      en: Find Hope
+    description:
+      pt: >-
+        Quando tudo parecer perdido, teste Superar como uma ação usando SAFO. Em um Acerto, o destino lhe sorri, e você
+        encontra um pequeno milagre para sair da situação.
+      en: >-
+        When all seems lost, Test Overcome as an action using SAVVY. On a Hit, fate smiles upon you, and you find a small
+        miracle to get out of the situation.
+
+  - key: saber-fraqueza
+    itemType: technique
+    d66: "6/1"
+    techType: sup
+    cost: { value: 1, resource: safo }
+    name:
+      pt: Saber Fraqueza
+      en: Know Weakness
+    description:
+      pt: >-
+        Gaste SAFO para conhecer a fraqueza de um alvo. Quando o alvo sofrer dano, use sua reação para somar seu valor de
+        SAFO ao dano sofrido. Alternativamente, você pode descobrir um podre de um alvo, uma fraqueza moral ou algo nesse
+        sentido.
+      en: >-
+        Spend SAVVY to learn a target's weakness. When the target takes damage, use your reaction to add your SAVVY value
+        to the damage taken. Alternatively, you can uncover a target's dirty secret, a moral weakness or something along
+        those lines.
+
+  - key: fala-onirica
+    itemType: technique
+    d66: "6/2"
+    techType: sup
+    cost: { value: 1, resource: safo }
+    name:
+      pt: Fala Onírica
+      en: Dream Speech
+    description:
+      pt: >-
+        Você conhece a língua dos sonhos. Gaste SAFO para se comunicar com qualquer criatura capaz de sonhar, mesmo que não
+        compartilhem um idioma em comum, precisando apenas que cruzem olhares ou outras formas de percepção ao menos uma
+        vez.
+      en: >-
+        You know the language of dreams. Spend SAVVY to communicate with any creature capable of dreaming, even if you
+        do not share a common language, needing only that you cross gazes or other forms of perception at least once.
+
+  - key: escudo-do-saber
+    itemType: technique
+    d66: "6/3"
+    techType: sup
+    cost: { value: 1, resource: safo }
+    name:
+      pt: Escudo do Saber
+      en: Shield of Knowledge
+    description:
+      pt: >-
+        Você analisa um alvo e seus arredores e descobre a melhor maneira de defender a si mesmo ou um aliado deste alvo.
+        Durante o restante da cena ou até que o efeito tenha sido superado, use sua reação para subtrair seu valor de SAFO
+        de qualquer dano causado pelo alvo.
+      en: >-
+        You analyze a target and their surroundings and find the best way to defend yourself or an ally from this target.
+        For the rest of the scene or until the effect has been overcome, use your reaction to subtract your SAVVY value
+        from any damage dealt by the target.
+
+  - key: estrategia-cadenciada
+    itemType: technique
+    d66: "6/4"
+    techType: atq
+    cost: { value: 1, resource: safo }
+    test: { attack: safo }
+    name:
+      pt: Estratégia Cadenciada
+      en: Cadenced Strategy
+    description:
+      pt: Após realizar um ataque qualquer, faça um ataque safo como uma ação livre.
+      en: After making any attack, make a SAVVY attack as a free action.
+
+  - key: colaboracao
+    itemType: technique
+    d66: "6/5"
+    techType: reac
+    cost: { value: 1, resource: safo }
+    name:
+      pt: Colaboração
+      en: Collaboration
+    description:
+      pt: >-
+        Quando um aliado Criar Vantagem adicionando detalhes à cena ou fazendo uma pergunta, gaste SAFO como reação para
+        aprofundar a interação do aliado com outra pergunta ou detalhe, adicionando outro dado à Pilha Comum (+Δd).
+      en: >-
+        When an ally Creates Advantage by adding details to the scene or asking a question, spend SAVVY as a reaction to
+        deepen the ally's interaction with another question or detail, adding another die to the Common Pool (+Δd).
+
+  - key: medicina-milenar
+    itemType: technique
+    d66: "6/6"
+    techType: sup
+    cost: { value: 1, resource: safo }
+    name:
+      pt: Medicina Milenar
+      en: Ancient Medicine
+    description:
+      pt: >-
+        Você sabe resolver de forma provisória quase todo tipo de enfermidade, ganhando tempo ou dando bem estar ao
+        enfermo. Gaste 1 de SAFO como uma ação para suspender descritores relacionados a doenças ou venenos e sarar um
+        Ferimento de um aliado, retornando-o para a metade de sua Guarda caso estivesse abaixo dela.
+      en: >-
+        You know how to provisionally treat almost any kind of ailment, buying time or giving comfort to the sick. Spend
+        1 SAVVY as an action to suspend descriptors related to diseases or poisons and heal a Wound of an ally, returning
+        them to half of their Guard if they were below it.

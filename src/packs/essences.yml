@@ -1,0 +1,435 @@
+pack: essences
+type: Item
+label:
+  pt: Essências
+  en: Essences
+intro:
+  pt: >-
+    A Essência representa o cerne do seu personagem; é a maneira como ele se expressa no mundo, e está profundamente
+    ligada à sua Aura. Amálgama de personalidade, propósito, comportamento e modo de enxergar as coisas ao seu redor, a
+    Essência serve para medir quando o Protagonista recupera seus pontos de Aura. Essências não são imutáveis, no
+    entanto. Caso surja uma oportunidade que seja coerente com os eventos em jogo e com a visão de Protagonista que você
+    tenha, ela poderá ser alterada, com aval da Tecelã e possivelmente a opinião do resto da mesa.
+  en: >-
+    The Essence represents the core of your character; it's the way they express themselves in the world, and it's
+    deeply tied to their Aura. An amalgam of personality, purpose, behavior and the way of seeing the things around
+    them, the Essence serves to measure when the Protagonist recovers their Aura points. Essences aren't set in stone,
+    however. If an opportunity comes up that is consistent with the events in play and with the vision of the
+    Protagonist you have, it can be changed, with the approval of the Weaver and possibly the opinion of the rest of
+    the table.
+entries:
+  - key: o-gostosao
+    itemType: essence
+    d66: "1-2/1"
+    name:
+      pt: O Gostosão
+      en: The Hunk
+    description:
+      pt: >-
+        Você tem presença física, porte, um rosto que parece desenhado a lápis, e também se veste bem, mas é muito sexy
+        para ficar com o corpo todo coberto. Como não se pode ter tudo na vida, você tem dificuldade com palavras grandes
+        ou pouco óbvias, mas nada que abale sua confiança.
+      en: >-
+        You've got the physical presence, the build, a face that looks like it was sketched in pencil, and you dress
+        well too, but you're way too sexy to keep your whole body covered. Since you can't have everything in life,
+        you struggle with big or not-so-obvious words, but nothing that shakes your confidence.
+    triggers:
+      - pt: Tentar muito soar mais inteligente do que é
+        en: Try way too hard to sound smarter than you are
+      - pt: Posar sem camisa
+        en: Strike a pose shirtless
+      - pt: Resolver um problema com um sorriso
+        en: Solve a problem with a smile
+
+  - key: o-mae-de-todos
+    itemType: essence
+    d66: "1-2/2"
+    name:
+      pt: O Mãe de Todos
+      en: The Mother of All
+    description:
+      pt: >-
+        Você é muito perspicaz para observar o comportamento humano, seja por sua criação ou por uma sabedoria acumulada
+        por mais anos que seu rosto aparenta. Assim, você acaba sendo a pessoa que escuta os desabafos das pessoas ao seu
+        redor e dá conselhos, ou percebendo coisas que embora lhe pareçam óbvias, pode passar despercebido por outros.
+      en: >-
+        You're very sharp at reading human behavior, whether from how you were raised or from wisdom piled up over
+        more years than your face lets on. So you end up being the person who hears everyone's venting and hands out
+        advice, or who notices things that seem obvious to you but might slip right past everybody else.
+    triggers:
+      - pt: Dar "bons conselhos" aos seus companheiros
+        en: "Give your companions some \"good advice\""
+      - pt: Apontar algo óbvio que tem que ser visto
+        en: Point out something obvious that needs to be seen
+      - pt: Assumir responsabilidade sobre algo ou alguém
+        en: Take responsibility for something or someone
+
+  - key: o-nasceu-ontem
+    itemType: essence
+    d66: "1-2/3"
+    name:
+      pt: O Nasceu-Ontem
+      en: The Born-Yesterday
+    description:
+      pt: >-
+        O mundo é um lugar novo, incrível, maravilhoso, e você é capaz de ver isso! Há tanto para desvelar, aprender e se
+        encantar! Mesmo nas coisas simples do cotidiano há uma certa poesia que você pode não ser capaz de descrever, mas
+        tudo lhe parece tão curioso e inventivo que é impossível disfarçar seu encanto.
+      en: >-
+        The world is a new, amazing, wonderful place, and you can see it! There's so much to uncover, learn and be
+        enchanted by! Even in the simple things of everyday life there's a certain poetry you may not be able to
+        describe, but it all seems so curious and inventive that you just can't hide your delight.
+    triggers:
+      - pt: Performar adultices de maneira inesperada/boba
+        en: Perform adulting in an unexpected or silly way
+      - pt: Tentar fazer parecer que você "na verdade" sabia de algo (você não sabia)
+        en: "Try to make it look like you \"actually\" knew something (you didn't)"
+      - pt: Deixar escapar a criança maravilhada que tem dentro de si
+        en: Let the wide-eyed kid inside you slip out
+
+  - key: o-engracadalho
+    itemType: essence
+    d66: "1-2/4"
+    name:
+      pt: O Engraçadalho
+      en: The Jokester
+    description:
+      pt: >-
+        Rir é um talento raro, seja de si ou dos outros, e você tem muito apreço pelo riso. Especialmente quando ele pode
+        ser utilizado para desarmar possíveis problemas, ou ao menos diminui-los um pouco. A vida já é dura, você não
+        precisa contribuir para isso com uma cara amarrada e uma testa franzida.
+      en: >-
+        Laughing is a rare talent, whether at yourself or at others, and you have a deep appreciation for it.
+        Especially when it can defuse potential problems, or at least shrink them a little. Life is hard enough
+        already; you don't need to add to it with a scowl and a furrowed brow.
+    triggers:
+      - pt: Fizer seus companheiros rirem
+        en: Make your companions laugh
+      - pt: Fizer piada de um adversário
+        en: "Crack a joke at an adversary's expense"
+      - pt: Fazer um adversário rir
+        en: Make an adversary laugh
+
+  - key: o-engrenagem
+    itemType: essence
+    d66: "1-2/5"
+    name:
+      pt: O Engrenagem
+      en: The Cog
+    description:
+      pt: >-
+        Você sabe que é só mais uma peça na grande máquina que move o mundo, seja ela qual for. Uma ferramenta útil,
+        talvez, mas pouco além disso. Você costuma se manter emocionalmente distante das coisas e pessoas, pois sabe que,
+        o que quer que aconteça, não vai terminar bem pra você.
+      en: >-
+        You know you're just one more part in the great machine that moves the world, whatever it may be. A useful
+        tool, maybe, but little more than that. You tend to keep emotionally distant from things and people, because
+        you know that whatever happens, it won't end well for you.
+    triggers:
+      - pt: Fizer algo porque "é o necessário"
+        en: "Do something because \"it has to be done\""
+      - pt: Sofrer em silêncio
+        en: Suffer in silence
+      - pt: Agir apesar do medo
+        en: Act in spite of fear
+
+  - key: o-cerebro
+    itemType: essence
+    d66: "1-2/6"
+    name:
+      pt: O Cérebro
+      en: The Mastermind
+    description:
+      pt: >-
+        Você tem um plano, e não raramente, um plano dentro do plano. Você não é vidente, mas busca estar preparado para
+        qualquer possibilidade que possa estragar seus planos infalíveis, estudando diferentes técnicas para saber como
+        contrabalanceá-las.
+      en: >-
+        You have a plan, and not rarely, a plan within the plan. You're no psychic, but you strive to be prepared for
+        any possibility that could ruin your foolproof plans, studying different techniques to learn how to counter
+        them.
+    triggers:
+      - pt: Explicar como algo aconteceu exatamente como planejado
+        en: Explain how something happened exactly as planned
+      - pt: Fazer um plano super complicado
+        en: Come up with a super complicated plan
+      - pt: Explicar o mecanismo de uma técnica ou feitiçaria enquanto a presencia
+        en: Explain the mechanism of a technique or sorcery while witnessing it
+
+  - key: o-desequilibrado
+    itemType: essence
+    d66: "3-4/1"
+    name:
+      pt: O Desequilibrado
+      en: The Unhinged
+    description:
+      pt: >-
+        Algumas pessoas têm a sorte de ver a realidade pelo que ela realmente é, e você é uma delas. Especialmente no que
+        diz respeito à sua obsessão, que é, sem dúvida, o que há de mais importante, essencial e imprescindível, e você
+        sabe que não vai tardar até que os outros descubram isso. Suas ações nada mais são do que cuidado, pura e
+        simplesmente.
+      en: >-
+        Some people are lucky enough to see reality for what it truly is, and you're one of them. Especially when it
+        comes to your obsession, which is, without a doubt, the most important, essential and indispensable thing
+        there is, and you know it won't be long before everyone else figures that out. Your actions are nothing more
+        than care, pure and simple.
+    triggers:
+      - pt: Demonstrar afeição de forma bizarra e/ou potencialmente perigosa
+        en: Show affection in a bizarre and/or potentially dangerous way
+      - pt: Relacionar algo com sua obsessão
+        en: Tie something back to your obsession
+      - pt: Reagir de maneira desproporcional a algo
+        en: React disproportionately to something
+
+  - key: o-supersticioso
+    itemType: essence
+    d66: "3-4/2"
+    name:
+      pt: O Supersticioso
+      en: The Superstitious
+    description:
+      pt: >-
+        Há poder nos pequenos rituais, cantigas e superstições, e você sabe disso. Você decorou pequenas rimas, faz três
+        saltinhos quando acha que perdeu alguma coisa, bate na madeira para afastar maus ditos e não sai de casa sem seus
+        pequenos sortilégios.
+      en: >-
+        There's power in little rituals, chants and superstitions, and you know it. You've memorized little rhymes, do
+        three little hops when you think you've lost something, knock on wood to ward off bad words, and never leave
+        the house without your little charms.
+    triggers:
+      - pt: Expressar alguma superstição sua
+        en: Express one of your superstitions
+      - pt: Uma superstição se concretizar em jogo
+        en: Watch one of your superstitions come true in play
+      - pt: Ajudar ou atrapalhar alguém com suas mandingas
+        en: Help or hinder someone with your hexes and charms
+
+  - key: o-sabio
+    itemType: essence
+    d66: "3-4/3"
+    name:
+      pt: O Sábio
+      en: The Sage
+    description:
+      pt: >-
+        A sabedoria lhe cai bem, seja pelas rugas que se acumulam na sua testa ou pela experiência compartilhada por
+        outros mais sábios que você. Suas palavras trazem conhecimento, conforto, inquietações ou reprimendas, e você sabe
+        exatamente em que situações utilizá-las.
+      en: >-
+        Wisdom suits you, whether from the wrinkles piling up on your forehead or from experience shared by others
+        wiser than you. Your words bring knowledge, comfort, unease or scolding, and you know exactly when to use each
+        one.
+    triggers:
+      - pt: Distribuir palavras de sabedoria
+        en: Hand out words of wisdom
+      - pt: Resolver algum problema com sua postura sábia
+        en: Solve a problem with your wise demeanor
+      - pt: Disser "eu avisei, não avisei?" para seus companheiros ou oponentes
+        en: "Say \"told you so, didn't I?\" to your companions or opponents"
+
+  - key: o-enfrentador
+    itemType: essence
+    d66: "3-4/4"
+    name:
+      pt: O Enfrentador
+      en: The Challenger
+    description:
+      pt: >-
+        Você tem em si um espírito forte e determinado, seja por sua própria natureza ou por dividir o corpo com um
+        espírito de fato. Você tem coragem, força de vontade e uma imensa disposição para enfrentar quaisquer desafios,
+        pessoas ou criaturas que estejam entre você e seu objetivo, às vezes sem medir as consequências.
+      en: >-
+        You have a strong, determined spirit, whether by your own nature or because you share your body with an actual
+        spirit. You have courage, willpower and an immense readiness to face any challenges, people or creatures
+        standing between you and your goal, sometimes without weighing the consequences.
+    triggers:
+      - pt: Agir de maneira corajosa e desafiadora
+        en: Act in a brave and defiant way
+      - pt: Inspirar seus companheiros com sua coragem desmedida
+        en: Inspire your companions with your boundless courage
+      - pt: Arriscar com sua insensatez a si ou a seus companheiros
+        en: Put yourself or your companions at risk through your recklessness
+
+  - key: o-boa-pinta
+    itemType: essence
+    d66: "3-4/5"
+    name:
+      pt: O Boa Pinta
+      en: The Charmer
+    description:
+      pt: >-
+        Gentileza, simpatia e um punhado de palavras certas são suas armas preferidas para vencer suas batalhas. Você
+        aprendeu a ler as pessoas ao seu redor, e sabe como reagir a elas. Há quem tome sua natureza por indecisão, mas
+        você apenas preza pelo bem estar seu e de outros.
+      en: >-
+        Kindness, friendliness and a handful of the right words are your favorite weapons for winning your battles.
+        You've learned to read the people around you, and you know how to react to them. Some people mistake your
+        nature for indecision, but you simply care about your own well-being and that of others.
+    triggers:
+      - pt: Resolver um conflito com gentileza
+        en: Resolve a conflict with kindness
+      - pt: Ocultar suas intenções com palavras doces e gentis
+        en: Hide your intentions behind sweet, gentle words
+      - pt: Sofrer as consequências de seu comportamento gentil
+        en: Suffer the consequences of your kind behavior
+
+  - key: o-pau-mandado
+    itemType: essence
+    d66: "3-4/6"
+    name:
+      pt: O Pau Mandado
+      en: The Yes-Man
+    description:
+      pt: >-
+        Seja por decepções com suas próprias escolhas ou porque resolveu se dedicar a uma causa maior, pensar com sua
+        própria mente nunca foi seu forte, e em algum momento da vida você resolveu que era melhor que alguém decidisse
+        por você.
+      en: >-
+        Whether from disappointment in your own choices or because you decided to dedicate yourself to a greater
+        cause, thinking for yourself was never your strong suit, and at some point in life you decided it was better
+        for someone else to decide for you.
+    triggers:
+      - pt: Seguir ordens sem titubear
+        en: Follow orders without hesitating
+      - pt: O plano de outro que você seguiu der certo
+        en: "See someone else's plan that you followed work out"
+      - pt: Questionar as ordens que você recebeu de alguém
+        en: Question the orders you received from someone
+
+  - key: o-malandro
+    itemType: essence
+    d66: "5-6/1"
+    name:
+      pt: O Malandro
+      en: The Hustler
+    description:
+      pt: >-
+        Você tem sempre um esquema dentro de outro, e às vezes todos dão errado ao mesmo tempo, mas assim é a vida.
+        Sempre em busca de alguma vantagem para si, você usa de lero-lero, intimidação ou qualquer outra coisa te dê menos
+        trabalho.
+      en: >-
+        You always have a scheme inside another scheme, and sometimes they all go wrong at the same time, but that's
+        life. Always looking for some advantage for yourself, you use smooth talk, intimidation or whatever else gives
+        you the least work.
+    triggers:
+      - pt: Resolver um problema com seu lero-lero
+        en: Solve a problem with your smooth talk
+      - pt: Convencer alguém a resolver algo para você
+        en: Convince someone to take care of something for you
+      - pt: Sofrer as consequências dos seus esquemas
+        en: Suffer the consequences of your schemes
+
+  - key: o-ultimo-romantico
+    itemType: essence
+    d66: "5-6/2"
+    name:
+      pt: O Último Romântico
+      en: The Last Romantic
+    description:
+      pt: >-
+        Se dicionários tivessem fotos, você estaria no verbete "brega". Você pode até ser valente, mas chora só com a
+        lembrança de um beijo, e não tem vergonha de admitir e expressar seus sentimentos. Você gosta de gestos grandiosos
+        e chamativos, e quando não é correspondido, costuma deixar uma conta generosa no bar.
+      en: >-
+        If dictionaries had pictures, you'd be in the entry for "cheesy". You may be brave, but you tear up at the
+        mere memory of a kiss, and you're not ashamed to admit and express your feelings. You love grand, flashy
+        gestures, and when your love isn't returned, you usually leave a generous tab at the bar.
+    triggers:
+      - pt: Demonstrar carência por alguém amado
+        en: Show neediness for a loved one
+      - pt: For correspondido em algum amor
+        en: Have your love returned
+      - pt: Ajudar alguém amado em alguma situação perigosa
+        en: Help a loved one in a dangerous situation
+
+  - key: o-idealista
+    itemType: essence
+    d66: "5-6/3"
+    name:
+      pt: O Idealista
+      en: The Idealist
+    description:
+      pt: >-
+        As coisas são o que são, mas você se recusa a acreditar que não há o que fazer a respeito. Você tem um ímpeto por
+        mudança, um ideal que impele você e ajuda a não fraquejar quando as coisas ficam difíceis. Seus ideais, porém,
+        podem nublar a dureza da realidade ao seu redor.
+      en: >-
+        Things are what they are, but you refuse to believe there's nothing to be done about it. You have a drive for
+        change, an ideal that pushes you and helps you not to falter when things get tough. Your ideals, however, may
+        cloud the harshness of the reality around you.
+    triggers:
+      - pt: Expressar seus ideais
+        en: Express your ideals
+      - pt: Seus ideais ajudarem você ou seus companheiros em situações difíceis
+        en: See your ideals help you or your companions in tough situations
+      - pt: Seus ideais forem confrontados com a realidade
+        en: See your ideals confronted with reality
+
+  - key: o-do-contra
+    itemType: essence
+    d66: "5-6/4"
+    name:
+      pt: O do Contra
+      en: The Contrarian
+    description:
+      pt: >-
+        Você se recusa a se conformar a qualquer padrão ou unanimidade, e suas provocações têm um propósito maior: fazer
+        as pessoas irem além do óbvio. Vozes contrárias são as responsáveis por movimentar e mudar as coisas, e você faz
+        questão de expressar seu descontentamento com o que quer que seja.
+      en: >-
+        You refuse to conform to any standard or unanimity, and your provocations have a greater purpose: making
+        people go beyond the obvious. Dissenting voices are what move and change things, and you make a point of
+        voicing your discontent with whatever it may be.
+    triggers:
+      - pt: Expressar ideias contrárias
+        en: Voice contrary ideas
+      - pt: Resolver algum problema com seu comportamento rebelde
+        en: Solve a problem with your rebellious behavior
+      - pt: Sofrer as consequências de seu comportamento contrário
+        en: Suffer the consequences of your contrary behavior
+
+  - key: o-orgulhoso
+    itemType: essence
+    d66: "5-6/5"
+    name:
+      pt: O Orgulhoso
+      en: The Proud
+    description:
+      pt: >-
+        Você vem de uma estirpe superior, seja por berço, tradição ou mérito, e tem muito orgulho disso. Qualquer que seja
+        a razão da sua impáfia, faz você pensar que está acima das pessoas ao seu redor, inclusive aquela pessoa pobretona
+        por quem você se apaixonou certa vez.
+      en: >-
+        You come from a superior stock, whether by birth, tradition or merit, and you're very proud of it. Whatever
+        the reason for your haughtiness, it makes you think you're above the people around you, including that
+        dirt-poor person you fell in love with once upon a time.
+    triggers:
+      - pt: Desmerecer alguém pelo seu orgulho
+        en: Look down on someone out of pride
+      - pt: Resolver algum problema através do seu orgulho
+        en: Solve a problem through your pride
+      - pt: Causar algum problema para si por causa do seu orgulho
+        en: Cause yourself a problem because of your pride
+
+  - key: o-teorico-da-conspiracao
+    itemType: essence
+    d66: "5-6/6"
+    name:
+      pt: O Teórico da Conspiração
+      en: The Conspiracy Theorist
+    description:
+      pt: >-
+        Você tem certeza que engrenagens nefastas movimentam os eventos em Babelém. Muitas coisas estranhas acontecem e
+        passam despercebidas pela maioria das pessoas, mas não para você. Seu olhar atento e inseparáveis notas e dossiês
+        sempre têm ideias e teorias sobre o que realmente acontece nas vielas da cidade.
+      en: >-
+        You're certain that sinister gears move the events in Babelém. Lots of strange things happen and go unnoticed
+        by most people, but not by you. Your watchful eye and inseparable notes and dossiers always have ideas and
+        theories about what really goes on in the city's alleys.
+    triggers:
+      - pt: Apontar alguma evidência conspiratória em algo aparentemente não relacionado
+        en: Point out conspiratorial evidence in something seemingly unrelated
+      - pt: Relacionar elementos em jogo à sua teoria principal
+        en: Tie elements in play back to your main theory
+      - pt: Uma teoria apontada por você se prova correta
+        en: Have a theory you pointed out prove correct

@@ -1,0 +1,33 @@
+<div class="babelem chat-card test-card {{#if finalized}}finalized{{/if}}">
+  <header class="card-header">
+    <h3>{{label}}</h3>
+    <span class="card-sub">
+      {{#if threat}}{{localize "BABELEM.Threat.testDanger"}}{{else}}{{attributeLabel}}{{/if}}
+      · {{count}}d6{{#if pool}} · {{localize "BABELEM.Pool.used" dice=pool}}{{/if}}{{#if background}} · {{localize "BABELEM.Background.used"}}{{/if}}{{#if guardBonus}} · {{localize "BABELEM.Status.guardRaised"}}{{/if}}
+    </span>
+  </header>
+  <ol class="bab-dice">
+    {{#each dice}}
+    <li class="bab-die {{#if hit}}hit{{/if}} {{#if one}}one{{/if}} {{#if burned}}burned{{/if}}" data-tooltip="{{#if burned}}{{localize 'BABELEM.Test.burned'}}{{/if}}">{{value}}</li>
+    {{/each}}
+  </ol>
+  <div class="bab-result">
+    <span class="hits"><strong>{{hits}}</strong> {{localize "BABELEM.Test.hits"}}</span>
+    {{#if effort}}<span class="effort">({{localize "BABELEM.Test.effort"}} +{{effort}})</span>{{/if}}
+    {{#unless threat}}{{#if ones}}<span class="ones">{{ones}} × 1</span>{{/if}}{{/unless}}
+  </div>
+  {{#if defense}}
+  <p class="bab-outcome">{{#if (bab-eq defense "block")}}{{localize "BABELEM.Defense.blockResult" hits=hits}}{{else}}{{localize "BABELEM.Defense.dodgeResult" hits=hits}}{{/if}}</p>
+  {{/if}}
+  {{#if payPrice}}<p class="bab-outcome warn">{{localize "BABELEM.Attack.payPrice"}}</p>{{/if}}
+  {{#if (bab-eq attack "safo")}}<p class="bab-outcome">{{localize "BABELEM.Attack.safoResult"}}</p>{{/if}}
+  {{#if finalized}}
+    {{#unless threat}}{{#if ones}}<p class="bab-outcome weave">{{localize "BABELEM.Test.onesResolved" ones=ones}}</p>{{/if}}{{/unless}}
+  {{/if}}
+  <div class="card-buttons">
+    {{#if canBurn}}<button type="button" data-babelem-action="burn"><i class="fa-solid fa-fire"></i> {{localize "BABELEM.Test.burn"}}</button>{{/if}}
+    {{#if canEffort}}<button type="button" data-babelem-action="effort"><i class="fa-solid fa-dumbbell"></i> {{localize "BABELEM.Test.effortButton"}}</button>{{/if}}
+    {{#if canFinalize}}<button type="button" data-babelem-action="finalize"><i class="fa-solid fa-check"></i> {{localize "BABELEM.Test.finalize"}}</button>{{/if}}
+    {{#if damage}}<button type="button" data-babelem-action="applyDamage" data-amount="{{damage}}" data-damage-type="{{damageType}}"><i class="fa-solid fa-burst"></i> {{localize "BABELEM.Damage.applyAmount" amount=damage type=damageTypeLabel}}</button>{{/if}}
+  </div>
+</div>

@@ -1,0 +1,376 @@
+pack: traits
+type: Item
+label:
+  pt: Traços
+  en: Traits
+intro:
+  pt: >-
+    Traços representam habilidades únicas do seu Protagonista. Como uma cicatriz, não é algo que irá definir o
+    personagem que você está criando, mas pode evocar elementos de sua história, ou pode ainda ser algo com o qual foi
+    necessário aprender a conviver. Você deverá escolher dois traços para o seu Protagonista. Em geral, traços não podem
+    ser alterados, a não ser que eventos dentro da história os façam mudar (um Protagonista se despedir de um Amigo
+    Espiritual, por exemplo). Em casos assim, você poderá escolher outro ou, junto com a Tecelã, será possível recuperar
+    o Traço perdido, desde que seja coerente com a história sendo contada.
+  en: >-
+    Traits represent unique abilities of your Protagonist. Like a scar, it's not something that will define the
+    character you're creating, but it can evoke elements of their history, or it may even be something they had to
+    learn to live with. You must choose two traits for your Protagonist. In general, traits can't be changed, unless
+    events within the story make them change (a Protagonist saying goodbye to a Spirit Friend, for example). In cases
+    like that, you may choose another one or, together with the Weaver, it will be possible to recover the lost Trait,
+    as long as it's consistent with the story being told.
+entries:
+  - key: amigo-espiritual
+    itemType: trait
+    d66: "1-2/1"
+    name:
+      pt: Amigo Espiritual
+      en: Spirit Friend
+    description:
+      pt: >-
+        Desde que descobriu sua Aura, você tem um bichinho que o acompanha e ajuda com suas tarefas. Ele tem uma ação a
+        cada turno seu, que pode usar para se mover ou para criar vantagem. Você também consegue usar feitiçaria através
+        dele e de seu ponto de vista se estiver Canalizando. Seu amigo espiritual tem Guarda 6 + Aura máxima do
+        Protagonista. Use sua Aura também para testes e como reserva do amigo, se necessário. Caso seu amigo sofra um
+        ferimento, ele suspende a própria existência até que a cena acabe.
+      en: >-
+        Ever since you discovered your Aura, you've had a little critter that accompanies you and helps with your
+        tasks. It gets one action each turn of yours, which it can use to move or to create an advantage. You can also
+        use sorcery through it and from its point of view if you're Channeling. Your spirit friend has Guard 6 + the
+        Protagonist's maximum Aura. Use your Aura for its tests and as its reserve too, if needed. If your friend
+        suffers a wound, it suspends its own existence until the scene ends.
+
+  - key: apostador
+    itemType: trait
+    d66: "1-2/2"
+    name:
+      pt: Apostador
+      en: Gambler
+    description:
+      pt: >-
+        Você consegue invocar um deck de cartas, roleta ou chapéu de mágico, ou qualquer outro tipo de objeto que evoque a
+        ideia de sorteio. Gaste uma Aura para sortear uma habilidade aleatória, escolhendo apenas se será uma técnica ou
+        feitiço, colocando-a em seu repertório até o final da cena. Você pode usar esta habilidade mesmo que tenha algum
+        impedimento (como no caso dos traços CORPO FECHADO, ECO DE LITURA ou ECO DE OBLIVO). Você pode ainda imbuir a
+        habilidade sorteada em um aliado próximo, caso ele tenha 1 AURA à disposição para gastar.
+      en: >-
+        You can summon a deck of cards, a roulette wheel, a magician's hat, or any other kind of object that evokes
+        the idea of a draw. Spend 1 Aura to draw a random Ability, choosing only whether it will be a Technique or a
+        Spell, placing it in your repertoire until the end of the scene. You can use this Ability even if you're under
+        some impediment (as with the traits CLOSED BODY, ECHO OF LITURA or ECHO OF OBLIVO). You can also imbue the
+        drawn Ability into a nearby ally, as long as they have 1 AURA available to spend.
+
+  - key: central-de-comando
+    itemType: trait
+    d66: "1-2/3"
+    name:
+      pt: Central de Comando
+      en: Command Center
+    description:
+      pt: >-
+        Você tem maneiras de se comunicar à distância com seus aliados e intervir em situações através de objetos
+        marcados, sejam eles narrados como comunicadores ou abotoaduras mágicas que você prende nas roupas deles. Você
+        pode agir uma vez por rodada no turno de um aliado marcado em uma cena que você não esteja presente. Durante essa
+        ação livre, você pode narrar um flashback para descrever como fez algo estar com seu aliado e então realizar a
+        ação através daquele aliado, consumindo 1 reserva à sua escolha.
+      en: >-
+        You have ways to communicate at a distance with your allies and to intervene in situations through marked
+        objects, whether narrated as communicators or magical cufflinks that you pin onto their clothes. You can act
+        once per round on the turn of a marked ally in a scene you're not present in. During that free action, you can
+        narrate a flashback to describe how you got something onto your ally and then carry out the action through
+        that ally, consuming 1 Reserve of your choice.
+
+  - key: corpo-fechado
+    itemType: trait
+    d66: "1-2/4"
+    name:
+      pt: Corpo Fechado
+      en: Closed Body
+    resistances: [kinetic]
+    description:
+      pt: >-
+        Você é incapaz de conjurar feitiços. Sua aura toda se confina em seu corpo, tornando-se completamente silenciosa e
+        fortificando sua estrutura física, conferindo-lhe resistência a dano cinético. Em compensação, você não consegue
+        enxergar feitiços ou ecos até o momento em que eles toquem em você. Você pode fazer ritos para técnicas sem gerar
+        pontos de Trama uma vez por rodada.
+      en: >-
+        You're unable to cast spells. Your whole aura is confined within your body, becoming completely silent and
+        fortifying your physical structure, granting you Resistance to kinetic damage. In exchange, you can't see
+        spells or echoes until the moment they touch you. You can perform Rites for Techniques without generating
+        Weave Points once per round.
+
+  - key: duro-de-matar
+    itemType: trait
+    d66: "1-2/5"
+    name:
+      pt: Duro de Matar
+      en: Hard to Kill
+    description:
+      pt: >-
+        Você já passou por altos e baixos, mas sempre sai por cima. Uma vez por cena, ao receber um ferimento Mortal, você
+        pode imediatamente ignorar esse ferimento e deixar sua Guarda cheia, gastando toda sua Aura. Além disso, você pode
+        gastar pontos de Guarda quando estiver causando dano a um alvo, aumentando o dano pela mesma quantidade de pontos
+        gastos.
+      en: >-
+        You've been through ups and downs, but you always come out on top. Once per scene, when you receive a Mortal
+        Wound, you can immediately ignore that wound and fill your Guard, spending all of your Aura. In addition, you
+        can spend Guard points when dealing damage to a target, increasing the damage by the same number of points
+        spent.
+
+  - key: eco-de-litura
+    itemType: trait
+    d66: "1-2/6"
+    name:
+      pt: Eco de Litura
+      en: Echo of Litura
+    resistances: [energy]
+    description:
+      pt: >-
+        Sua aura se alinha apenas a Litura, e por consequência, sua feitiçaria também. Você só pode conjurar feitiços de
+        Litura. Devido à natureza de sua aura, você possui resistência a dano energético. Você consegue sentir à distância
+        a presença de ecos de Litura. Você pode fazer ritos para feitiços sem gerar pontos de Trama uma vez por rodada.
+      en: >-
+        Your aura aligns only with Litura, and consequently so does your sorcery. You can only cast Litura Spells. Due
+        to the nature of your aura, you have Resistance to energy damage. You can sense the presence of Litura echoes
+        from a distance. You can perform Rites for Spells without generating Weave Points once per round.
+
+  - key: eco-de-oblivo
+    itemType: trait
+    d66: "3-4/1"
+    name:
+      pt: Eco de Oblivo
+      en: Echo of Oblivo
+    resistances: [void]
+    description:
+      pt: >-
+        Sua aura se alinha apenas ao Oblivo, e por consequência, sua feitiçaria também. Você só pode conjurar feitiços do
+        Oblivo. Devido à natureza de sua aura, você possui resistência a dano vazio. Você consegue sentir à distância a
+        presença de ecos de Oblivo. Você pode fazer ritos para feitiços sem gerar pontos de Trama uma vez por rodada.
+      en: >-
+        Your aura aligns only with Oblivo, and consequently so does your sorcery. You can only cast Oblivo Spells. Due
+        to the nature of your aura, you have Resistance to void damage. You can sense the presence of Oblivo echoes
+        from a distance. You can perform Rites for Spells without generating Weave Points once per round.
+
+  - key: espirito-imortal
+    itemType: trait
+    d66: "3-4/2"
+    name:
+      pt: Espírito Imortal
+      en: Immortal Spirit
+    description:
+      pt: >-
+        Apesar de habitar um corpo, você não é humano, não no sentido convencional da palavra. Sua existência foi dividida
+        em algum momento, e suas partes estão espalhadas entre os planos. Você não pode possuir os traços Eco de Litura,
+        Eco de Oblivo ou Corpo Fechado. Uma âncora, a ser decidida junto com a Tecelã, prende sua existência a um lugar
+        específico de Babelém, reformando seu corpo físico próximo a essa âncora sempre que você morrer. Você apenas
+        conseguirá se desancorar caso junte novamente suas três partes.
+      en: >-
+        Although you inhabit a body, you aren't human, not in the conventional sense of the word. Your existence was
+        split at some point, and its parts are scattered across the planes. You can't have the traits Echo of Litura,
+        Echo of Oblivo or Closed Body. An anchor, to be decided together with the Weaver, ties your existence to a
+        specific place in Babelém, reforming your physical body near that anchor whenever you die. You'll only be able
+        to unanchor yourself if you bring your three parts back together.
+
+  - key: fe-inabalavel
+    itemType: trait
+    d66: "3-4/3"
+    name:
+      pt: Fé Inabalável
+      en: Unshakable Faith
+    tracker:
+      label:
+        pt: Bênção
+        en: Blessing
+      max: 3
+    description:
+      pt: >-
+        Defina um tipo de sacrifício que você faz em nome do que você acredita. Sempre que efetuar tais sacrifícios, ganhe
+        1 BÊNÇÃO, acumulando até um máximo de 3. Você pode gastar BÊNÇÃO quando fizer um teste em nome de algo que você
+        acredita para transformar qualquer resultado de dado em um Acerto.
+      en: >-
+        Define a type of sacrifice you make in the name of what you believe in. Whenever you make such sacrifices,
+        gain 1 BLESSING, accumulating up to a maximum of 3. You can spend BLESSING when you make a test in the name of
+        something you believe in to turn any die result into a Hit.
+
+  - key: feiticaria-de-sangue
+    itemType: trait
+    d66: "3-4/4"
+    name:
+      pt: Feitiçaria de Sangue
+      en: Blood Sorcery
+    tracker:
+      label:
+        pt: Sangue
+        en: Blood
+      max: 0
+    description:
+      pt: >-
+        Toda vez que sofrer dano, ganhe 1 SANGUE. Você pode usar SANGUE em vez de Aura para o custo de seus feitiços ou
+        para Liberação Extra. Você perde todo o SANGUE durante um descanso. Você pode infligir 1 dano AD a si mesmo como
+        uma ação livre, se assim desejar.
+      en: >-
+        Every time you take damage, gain 1 BLOOD. You can use BLOOD instead of Aura for the cost of your Spells or for
+        Extra Release. You lose all BLOOD during a rest. You can inflict 1 PD damage on yourself as a free action, if
+        you so wish.
+
+  - key: legiao
+    itemType: trait
+    d66: "3-4/5"
+    name:
+      pt: Legião
+      en: Legion
+    tracker:
+      label:
+        pt: Clones
+        en: Clones
+      max: 0
+    description:
+      pt: >-
+        Sua aura é capaz de multiplicar sua presença, possibilitando a criação de clones efêmeros de si mesmo. Como uma
+        ação, você pode gastar 1 de Aura para criar uma cópia que dura até o final da cena, se não for gasta. Você pode
+        acumular quantas cópias conseguir em uma cena, contanto que tenha Aura para gastar. Você pode gastar clones para
+        ganhar acertos em testes de defesa ou ataque, na proporção de um para um. Até serem consumidos, os clones espelham
+        todo movimento realizado por você, não agindo independentemente.
+      en: >-
+        Your aura is capable of multiplying your presence, making it possible to create ephemeral clones of yourself.
+        As an action, you can spend 1 Aura to create a copy that lasts until the end of the scene, if not spent. You
+        can accumulate as many copies as you can in a scene, as long as you have Aura to spend. You can spend clones
+        to gain Hits on defense or attack tests, on a one-to-one basis. Until they're consumed, the clones mirror
+        every movement you make, not acting independently.
+
+  - key: mediunidade
+    itemType: trait
+    d66: "3-4/6"
+    name:
+      pt: Mediunidade
+      en: Mediumship
+    description:
+      pt: >-
+        Você tem uma sensibilidade ao espiritual, podendo servir como receptáculo temporário para um outro espírito ou
+        alma, que vai compartilhar seu corpo com você. Você é capaz de se comunicar com espíritos visíveis ou não, e,
+        mediante o investimento de 1 AURA, você pode receber um espírito no seu corpo, dividindo sua consciência, tendo
+        acesso aos seus conhecimentos, e talvez uma técnica ou feitiço que o espírito souber. Enquanto o espírito estiver
+        dividindo o seu corpo, você não poderá recuperar o ponto de Aura investido.
+      en: >-
+        You have a sensitivity to the spiritual, able to serve as a temporary vessel for another spirit or soul, which
+        will share your body with you. You're able to communicate with spirits, visible or not, and, by investing 1
+        AURA, you can receive a spirit into your body, splitting your consciousness, gaining access to its knowledge,
+        and perhaps a Technique or Spell the spirit knows. While the spirit is sharing your body, you can't recover
+        the Aura point you invested.
+
+  - key: necromante
+    itemType: trait
+    d66: "5-6/1"
+    name:
+      pt: Necromante
+      en: Necromancer
+    description:
+      pt: >-
+        Você pode gastar BRABO em vez de Aura quando conjurar seus feitiços, e sempre que usar BRABO para conjurar um
+        feitiço, recupere o valor gasto como Guarda. Feitiços que já usam BRABO como custo contam sempre como se
+        estivessem em Liberação Extra para você. Você pode usar uma reação para recuperar 1 BRABO ao custo de 1 AURA
+        sempre que presenciar alguém sendo derrotado.
+      en: >-
+        You can spend FIERCE instead of Aura when casting your Spells, and whenever you use FIERCE to cast a Spell,
+        recover the amount spent as Guard. Spells that already use FIERCE as a cost always count as being in Extra
+        Release for you. You can use a Reaction to recover 1 FIERCE at the cost of 1 AURA whenever you witness someone
+        being defeated.
+
+  - key: pessoa-fera
+    itemType: trait
+    d66: "5-6/2"
+    name:
+      pt: Pessoa Fera
+      en: Beast Person
+    description:
+      pt: >-
+        Você pode assumir a forma de um animal (ou híbrido entre animal e humano). Defina junto da Tecelã um punhado de
+        características para sua forma fera, se ela pode correr muito bem, nadar rápido ou voar em silêncio. Ao se
+        transformar com uma ação, consuma de 1 a 3 AURA para assumir a forma de fera, recebendo BARREIRA equivalente ao
+        número gasto, e +1d em testes para atacar ou superar que façam proveito da transformação. Ao sofrer um ferimento,
+        você volta à forma humana. A forma completa ganha +1d em testes para atacar ou superar, totalizando +2d, porém o
+        restringe a apenas ataques de alcance curto e impede de usar feitiçaria, enquanto a forma híbrida permite usar
+        qualquer alcance e feitiços.
+      en: >-
+        You can take the form of an animal (or a hybrid between animal and human). Define together with the Weaver a
+        handful of traits for your beast form, such as whether it can run really well, swim fast or fly silently. When
+        transforming with an action, consume 1 to 3 AURA to take beast form, receiving BARRIER equal to the number
+        spent, and +1d on tests to attack or overcome that take advantage of the transformation. When you suffer a
+        wound, you return to human form. The full form gains +1d on tests to attack or overcome, totaling +2d, but
+        restricts you to short range attacks only and prevents you from using sorcery, while the hybrid form allows
+        any range and Spells.
+
+  - key: portao
+    itemType: trait
+    d66: "5-6/3"
+    name:
+      pt: Portão
+      en: Gate
+    description:
+      pt: >-
+        Você consegue ignorar limitações espaciais, contanto que não esteja impedido de mover-se. Você pode usar 1 AURA
+        como uma ação para sumir e reaparecer em um lugar que possa ver, ou qualquer lugar que já tenha ido antes ao custo
+        de 2 de Aura. Use 1 AURA adicional para garantir que a viagem seja instantânea. Você deixa um rastro indicando
+        para onde foi, como um cheiro, imagem ou som.
+      en: >-
+        You can ignore spatial limitations, as long as you're not impeded from moving. You can use 1 AURA as an action
+        to vanish and reappear in a place you can see, or anywhere you've been before at the cost of 2 Aura. Spend 1
+        additional AURA to make sure the trip is instantaneous. You leave a trail indicating where you went, like a
+        smell, image or sound.
+
+  - key: portador-de-arma-pactuada
+    itemType: trait
+    d66: "5-6/4"
+    name:
+      pt: Portador de Arma Pactuada
+      en: Pact Weapon Bearer
+    description:
+      pt: >-
+        Você é um desperto dependente de uma arma específica para usar seus feitiços e técnicas. Descreva-a. Escolha uma
+        Técnica e Feitiço adicional, bem como uma propriedade extra para o seu estilo de combate. Você ficará impedido de
+        utilizar seus feitiços e técnicas quando estiver sem sua arma em punho.
+      en: >-
+        You're an Awakened who depends on a specific weapon to use your Spells and Techniques. Describe it. Choose an
+        additional Technique and Spell, as well as an extra Property for your Combat Style. You'll be impeded from
+        using your Spells and Techniques when you don't have your weapon in hand.
+
+  - key: troca-face
+    itemType: trait
+    d66: "5-6/5"
+    name:
+      pt: Troca-Face
+      en: Face-Changer
+    description:
+      pt: |-
+        <p>Você pode imitar a aparência de qualquer humano, contanto que respeite uma condição. Quanto mais restritiva a condição, maior o poder da imitação.</p>
+        <ul>
+        <li><strong>Transformação menor [1 AURA]:</strong> basta apenas ter visto o alvo, mesmo através de fotos, para imitar a face do alvo, sem mudar roupas ou voz.</li>
+        <li><strong>Transformação avançada [2 AURA]:</strong> tendo visto e ouvido o alvo pessoalmente, é possível imitar a voz e face do alvo.</li>
+        <li><strong>Transformação plena [3 AURA]:</strong> tendo tocado o alvo com a mão direita ou outra restrição similar pensada em acordo com a Tecelã, é possível imitá-lo com perfeição, inclusive criando vestimentas idênticas.</li>
+        </ul>
+      en: |-
+        <p>You can imitate the appearance of any human, as long as you respect a condition. The more restrictive the condition, the greater the power of the imitation.</p>
+        <ul>
+        <li><strong>Minor transformation [1 AURA]:</strong> you only need to have seen the target, even through photos, to imitate the target's face, without changing clothes or voice.</li>
+        <li><strong>Advanced transformation [2 AURA]:</strong> having seen and heard the target in person, you can imitate the target's voice and face.</li>
+        <li><strong>Full transformation [3 AURA]:</strong> having touched the target with your right hand or some similar restriction worked out with the Weaver, you can imitate them perfectly, even creating identical clothing.</li>
+        </ul>
+
+  - key: vida-secreta-estilo-secreto
+    itemType: trait
+    d66: "5-6/6"
+    name:
+      pt: Vida Secreta, Estilo Secreto
+      en: Secret Life, Secret Style
+    description:
+      pt: >-
+        Você faz parte de um clube secreto que lhe garante recursos, abrigo ou informações quando necessário. Junto com a
+        Tecelã, descreva-o de forma geral e coloque-o como uma área extra em seu Passado/Inventário. Você recebe uma
+        propriedade de estilo adicional, representando um estilo treinado em segredo, como uma carta na manga. Além disso,
+        você pode evocar sua vida secreta gerando 1 Ponto de Trama para conseguir benefícios em Babelém, sejam materiais
+        ou sociais.
+      en: >-
+        You're part of a secret club that grants you resources, shelter or information when needed. Together with the
+        Weaver, describe it in general terms and add it as an extra area in your Background/Inventory. You receive an
+        additional style Property, representing a style trained in secret, like an ace up your sleeve. In addition,
+        you can evoke your secret life by generating 1 Weave Point to gain benefits in Babelém, whether material or
+        social.

@@ -1,0 +1,27 @@
+<div class="babelem chat-card item-card">
+  <header class="card-header">
+    <img src="{{item.img}}" alt="">
+    <div>
+      <h3>{{item.name}}</h3>
+      <span class="card-sub">{{typeLabel}}{{#if attackLabel}} · {{attackLabel}}{{/if}}{{#if rangeLabel}} · {{rangeLabel}}{{/if}}</span>
+    </div>
+  </header>
+  {{#if paid}}<p class="bab-paid"><i class="fa-solid fa-coins"></i> {{localize "BABELEM.Ability.paid"}}: {{paid}}</p>{{/if}}
+  {{#if motorRite}}<p class="bab-paid">{{localize "BABELEM.Rite.motorUsed"}}</p>{{/if}}
+  {{#if sonicRite}}<p class="bab-paid">{{localize "BABELEM.Rite.sonicUsed"}}</p>{{/if}}
+  <div class="card-content">{{{description}}}</div>
+  {{#if triggers}}
+  <p><strong>{{localize "BABELEM.Essence.recoverWhen"}}</strong></p>
+  <ul>{{#each triggers}}<li>{{this}}</li>{{/each}}</ul>
+  {{/if}}
+  {{#if extra}}
+  <div class="card-extra"><strong>{{localize "BABELEM.Spell.extraRelease"}}:</strong> {{{extraRelease}}}</div>
+  {{/if}}
+  {{#if hits}}<p class="bab-outcome">{{localize "BABELEM.Threat.attackHits" hits=hits}}</p>{{/if}}
+  {{#if damage}}
+  <p class="bab-outcome">{{localize "BABELEM.Damage.rolled" amount=damage type=damageTypeLabel formula=damageFormula}}{{#if pierce}} ({{localize "BABELEM.Damage.pierceShort"}}){{/if}}</p>
+  <div class="card-buttons">
+    <button type="button" data-babelem-action="applyDamage" data-amount="{{damage}}" data-damage-type="{{damageType}}" data-pierce="{{pierce}}"><i class="fa-solid fa-burst"></i> {{localize "BABELEM.Damage.applyAmount" amount=damage type=damageTypeLabel}}</button>
+  </div>
+  {{/if}}
+</div>

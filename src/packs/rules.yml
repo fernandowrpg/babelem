@@ -1,0 +1,493 @@
+pack: rules
+type: JournalEntry
+label:
+  pt: Regras de Babelém
+  en: Babelém Rules
+entries:
+  - key: regras-basicas
+    name:
+      pt: Regras Básicas
+      en: Core Rules
+    pages:
+      - key: jogando-dados
+        name:
+          pt: Jogando Dados
+          en: Rolling Dice
+        content:
+          pt: |-
+            <h2>Atributos x Reservas</h2>
+            <p>Todo protagonista possui três atributos: <strong>BRABO</strong>, <strong>LIGEIRO</strong> e <strong>SAFO</strong>. Cada atributo possui pontos de Reserva que podem ser gastos para obter diferentes efeitos. O atributo é um valor fixo, o número máximo da reserva em questão, e é o valor utilizado em Testes. A reserva é flutuante, aumentando e diminuindo conforme o jogo corre.</p>
+            <h2>Testes</h2>
+            <p>Quando precisar fazer um Teste, você irá jogar um número de dados de seis lados (d6) igual ao valor do atributo (valor máximo) utilizado. De acordo com a presença de vantagens (+1d) ou desvantagens (-1d), acrescente ou subtraia dados à jogada, podendo chegar até o máximo de 9d, ou o mínimo de 1d. Cada dado com um resultado de 5 ou 6 significa um <strong>Acerto</strong>. A Tecelã recebe pontos de Trama e você recebe pontos de Aura equivalentes ao número de dados iguais a 1 na jogada. Você pode queimar Aura para transformar dados que caíram em 1 em Acertos, 1 ponto para cada, deixando de gerar Trama ou Aura.</p>
+            <p><em>Exemplo:</em> Você irá jogar um teste com +1d de vantagem em um atributo de valor 3. Você então joga 4 dados (3d6 +1d) e obtém 1, 1, 4 e 6. Isso lhe dá de cara um Acerto, mas você decide queimar 2 AURA para transformar os dois 1's em Acertos, totalizando três Acertos na jogada. Como todo 1 obtido foi transformado em Acerto, sua jogada não gera pontos de Trama para a Tecelã nem Aura para você.</p>
+            <h2>Grau da Tarefa</h2>
+            <p>Algumas tarefas podem ser mais delicadas ou difíceis que outras. Quando for o caso, a Tecelã irá determinar um Grau para a tarefa, necessitando acumular um número de Acertos iguais ao Grau para cumprir a tarefa. A depender das circunstâncias, será possível que vários testes em momentos diferentes ou feitos por personagens distintos contribuam para o número de Acertos necessários para cumprir a tarefa, geralmente através de testes para Superar.</p>
+            <h2>Acertos Extras</h2>
+            <p>Algumas situações específicas irão oferecer diferentes bônus por cada Acerto obtido, mas você poderá sempre trocar Acertos pelos seguintes benefícios:</p>
+            <ul>
+            <li>1 Acerto para dar +1 ao valor rolado no Dado do Eco, possivelmente evitando uma complicação.</li>
+            <li>2 Acertos para recuperar 1 ponto gasto de uma reserva.</li>
+            </ul>
+            <h2>A Pilha Comum [ +Δd ]</h2>
+            <p>Diferentes situações podem adicionar dados a uma Pilha Comum para a cena. Essa pilha confere +d a jogadas relevantes até que seus dados sejam esvaziados pela Tecelã (por deixarem de ser relevantes) ou por Ameaças. Protagonistas podem usar os dados da Pilha Comum em suas jogadas sempre que quiserem. Fazer isso irá fazer a Tecelã rodar o Dado do Eco, removendo um dado da Pilha Comum após a jogada, caso haja complicação.</p>
+            <h2>Pontos de Trama</h2>
+            <p>A Tecelã acumula pontos de Trama sempre que permanecerem 1s em uma jogada. Esses pontos podem ser gastos para gerar complicações na cena, além de interagirem com o Dado do Eco. Em jogadas de Ameaças, no entanto, dados que resultem em 1 são automaticamente transformados em Acertos, a não ser que a Tecelã decida transformá-los em pontos de Trama. Todo início de sessão a Tecelã deve zerar seus pontos de Trama e então receber um ponto para cada jogador na mesa além de si mesma.</p>
+            <h2>Disputas</h2>
+            <p>Ambas as partes rolam dados, com Ameaças jogando um número de dados igual ao seu PERIGO. Vence o embate o lado que obtiver mais Acertos.</p>
+            <h2>Esforço</h2>
+            <p>Testes podem ser incrementados por gastos de reserva chamados de Esforço. Você pode gastar da reserva antes ou após rolar os dados para obter +1 Acerto na jogada.</p>
+            <h2>Recuperando Reservas</h2>
+            <p>Ao final de toda cena, todos os protagonistas recuperam 1 ponto em cada reserva, desmarcam ferimentos temporários, voltam sua Guarda ao valor máximo e a Tecelã recebe um Ponto de Trama.</p>
+          en: |-
+            <h2>Attributes x Reserves</h2>
+            <p>Every protagonist has three Attributes: <strong>FIERCE</strong>, <strong>SWIFT</strong> and <strong>SAVVY</strong>. Each Attribute has Reserve points that can be spent to obtain different effects. The Attribute is a fixed value, the maximum number of the Reserve in question, and is the value used in Tests. The Reserve is floating, going up and down as the game unfolds.</p>
+            <h2>Tests</h2>
+            <p>When you need to make a Test, you roll a number of six-sided dice (d6) equal to the value of the Attribute (maximum value) being used. Depending on the presence of advantages (+1d) or disadvantages (-1d), add or subtract dice from the roll, up to a maximum of 9d or a minimum of 1d. Each die showing a 5 or 6 counts as a <strong>Hit</strong>. The Weaver receives Weave Points and you receive Aura points equal to the number of dice that show a 1 in the roll. You can burn Aura to turn dice that landed on 1 into Hits, 1 point for each, no longer generating Weave or Aura.</p>
+            <p><em>Example:</em> You are going to make a Test with +1d of advantage on an Attribute of value 3. You roll 4 dice (3d6 +1d) and get 1, 1, 4 and 6. That immediately gives you one Hit, but you decide to burn 2 AURA to turn both 1's into Hits, for a total of three Hits on the roll. Since every 1 rolled was turned into a Hit, your roll generates neither Weave Points for the Weaver nor Aura for you.</p>
+            <h2>Task Degree</h2>
+            <p>Some tasks may be more delicate or difficult than others. When that is the case, the Weaver will set a Degree for the task, requiring you to accumulate a number of Hits equal to the Degree to complete it. Depending on the circumstances, several Tests made at different moments or by different characters can contribute to the number of Hits needed to complete the task, usually through Tests to Overcome.</p>
+            <h2>Extra Hits</h2>
+            <p>Some specific situations will offer different bonuses for each Hit obtained, but you can always trade Hits for the following benefits:</p>
+            <ul>
+            <li>1 Hit to add +1 to the value rolled on the Echo Die, possibly avoiding a complication.</li>
+            <li>2 Hits to recover 1 spent point of a Reserve.</li>
+            </ul>
+            <h2>The Common Pool [ +Δd ]</h2>
+            <p>Different situations can add dice to a Common Pool for the scene. This pool grants +d to relevant rolls until its dice are emptied by the Weaver (because they stop being relevant) or by Threats. Protagonists can use the dice from the Common Pool in their rolls whenever they want. Doing so makes the Weaver roll the Echo Die, removing one die from the Common Pool after the roll if there is a complication.</p>
+            <h2>Weave Points</h2>
+            <p>The Weaver accumulates Weave Points whenever 1s remain on a roll. These points can be spent to generate complications in the scene, and they also interact with the Echo Die. On Threat rolls, however, dice that result in 1 are automatically turned into Hits, unless the Weaver decides to turn them into Weave Points. At the start of every session the Weaver must reset their Weave Points to zero and then receive one point for each player at the table other than themselves.</p>
+            <h2>Contests</h2>
+            <p>Both sides roll dice, with Threats rolling a number of dice equal to their DANGER. The side that obtains more Hits wins the clash.</p>
+            <h2>Effort</h2>
+            <p>Tests can be boosted by Reserve expenditures called Effort. You can spend from the Reserve before or after rolling the dice to gain +1 Hit on the roll.</p>
+            <h2>Recovering Reserves</h2>
+            <p>At the end of every scene, all protagonists recover 1 point in each Reserve, clear their Temporary Wounds, return their Guard to its maximum value, and the Weaver receives one Weave Point.</p>
+      - key: dado-do-eco
+        name:
+          pt: Dado do Eco e Testes de Ameaças
+          en: Echo Die and Threat Tests
+        content:
+          pt: |-
+            <h2>Testes de Ameaças</h2>
+            <p>Ameaças por si só não requerem que a Tecelã faça testes, geralmente com valores descritos para ataques e defesas onde quem irá jogar dados será o protagonista alvo.</p>
+            <p>Quando alguma técnica ou interação de um protagonista pedir por um teste de um atributo de uma Ameaça, as Ameaças usam o valor de PERIGO + GRAU para testes ofensivos e DEFESA para ações defensivas. Quando a Tecelã precisar definir algo com algum requinte de aleatoriedade não imediatamente ligado a uma Ameaça, ela usará o Dado do Eco.</p>
+            <h2>Dado do Eco</h2>
+            <p>Caso a Tecelã julgue que o teste em questão seja algo particularmente arriscado ou complicado, a Tecelã jogará o Dado do Eco (1d8). Caso o resultado seja o número 1 ou um número menor que o valor atual de pontos de Trama, uma complicação surge imediatamente, como se algo não saísse como planejado. A Tecelã pode decidir rolar o Dado do Eco sempre que:</p>
+            <ul>
+            <li>Uma ação vai diretamente contra o Poder de um Eco em cena.</li>
+            <li>Uma interação revelar algo perigoso.</li>
+            <li>Uma decisão importante for tomada.</li>
+            <li>Algo se move nas sombras, e quer seguir sem ser notado.</li>
+            <li>As coisas parecerem simples/fáceis demais.</li>
+            </ul>
+            <h2>Pagando um Preço</h2>
+            <p>Quando for obrigado a pagar um preço, cumpra alguma entre as seguintes opções:</p>
+            <ul>
+            <li>Consuma uma Reserva à escolha da contraparte.</li>
+            <li>Cumpra alguma vontade ou pedido da contraparte.</li>
+            <li>Receba um estado ou descritor à escolha da contraparte.</li>
+            <li>Sofra dano AD igual ao grau da contraparte.</li>
+            </ul>
+          en: |-
+            <h2>Threat Tests</h2>
+            <p>Threats by themselves do not require the Weaver to make Tests, usually having listed values for attacks and defenses where the one rolling dice will be the target protagonist.</p>
+            <p>When a protagonist's Technique or interaction calls for a Test of a Threat's Attribute, Threats use the value of DANGER + GRADE for offensive Tests and DEFENSE for defensive actions. When the Weaver needs to determine something with a touch of randomness not immediately tied to a Threat, they will use the Echo Die.</p>
+            <h2>Echo Die</h2>
+            <p>If the Weaver judges that the Test in question is particularly risky or complicated, the Weaver rolls the Echo Die (1d8). If the result is the number 1 or a number lower than the current value of Weave Points, a complication arises immediately, as if something did not go as planned. The Weaver can decide to roll the Echo Die whenever:</p>
+            <ul>
+            <li>An action goes directly against the Power of an Echo in the scene.</li>
+            <li>An interaction reveals something dangerous.</li>
+            <li>An important decision is made.</li>
+            <li>Something moves in the shadows and wants to proceed without being noticed.</li>
+            <li>Things seem too simple/easy.</li>
+            </ul>
+            <h2>Paying a Price</h2>
+            <p>When forced to pay a price, fulfill one of the following options:</p>
+            <ul>
+            <li>Consume a Reserve of the counterpart's choice.</li>
+            <li>Fulfill some wish or request of the counterpart.</li>
+            <li>Receive a condition or descriptor of the counterpart's choice.</li>
+            <li>Suffer PD damage equal to the counterpart's grade.</li>
+            </ul>
+      - key: acoes
+        name:
+          pt: Interações e Ações
+          en: Interactions and Actions
+        content:
+          pt: |-
+            <p>Em Babelém, os protagonistas agem através de ações. São os momentos em que um personagem faz coisas. No turno dos protagonistas, cada protagonista pode realizar até duas ações, na ordem que desejar. Protagonistas podem inclusive alternar entre si durante o uso de cada ação, podendo um protagonista realizar uma ação, outro realizar outra, e só aí então o primeiro realizar a segunda ação.</p>
+            <h2>Ataques</h2>
+            <p>Ataques brabos e ligeiros são golpes fortes ou rápidos, utilizando violência diretamente contra seu alvo. Já ataques safos representam o uso de estratégia, planos ou argumentação, com o objetivo de fazer o alvo pagar um preço como consequência de suas ações.</p>
+            <ul>
+            <li><strong>Ataque Brabo:</strong> Teste BRABO. Cause dano igual ao número de Acertos + BRABO. Se não tiver nenhum acerto, pague um preço.</li>
+            <li><strong>Ataque Ligeiro:</strong> Teste LIGEIRO. Cause dano igual ao número de Acertos.</li>
+            <li><strong>Ataque Safo:</strong> Faça uma disputa de SAFO. O lado que vencer o teste escolhe um preço a ser pago pelo perdedor.</li>
+            </ul>
+            <h2>Superar</h2>
+            <p>Use para se livrar de um efeito, estado ou condição, ou para superar um obstáculo. Faça um teste de acordo com o tipo de tarefa. Cada Acerto diminui o Grau da Tarefa em 1, e você completa a tarefa ao reduzi-lo a 0. Múltiplas tentativas se acumulam até que a tarefa seja concluída.</p>
+            <ul>
+            <li>Use BRABO quando precisar quebrar algo, empurrar algo pesado ou forçar uma porta, derrubar alguém.</li>
+            <li>Use LIGEIRO quando precisar de destreza, agilidade, malemolência, ou quando quiser ser sorrateiro ou delicado.</li>
+            <li>Use SAFO quando precisar provar sua determinação, concentração ou velocidade de pensamento.</li>
+            </ul>
+            <h2>Criar Vantagem</h2>
+            <p>Consuma uma reserva relevante para adicionar 1 dado à Pilha Comum [ +Δd ]. Gaste LIGEIRO para notar, ou SAFO para recordar:</p>
+            <ul>
+            <li>Ao notar, descreva algum elemento que acabou de notar, adicionando-o à descrição da cena, ou faça uma pergunta à Tecelã baseada em seus sentidos.</li>
+            <li>Ao recordar, descreva uma lembrança ou segredo pertinente à cena, ou faça uma pergunta à Tecelã relacionada a conhecimentos, memória ou histórias.</li>
+            </ul>
+            <h2>Outras Ações</h2>
+            <ul>
+            <li><strong>Mover-se:</strong> Movimente-se para dentro ou fora da briga, flanqueie ou procure cobertura.</li>
+            <li><strong>Canalizar:</strong> Recupere 1 de Aura e entre em estado de canalização até o começo do seu próximo turno. Alguns feitiços podem requerer o estado de canalização para conjurar ou manter seus efeitos.</li>
+            <li><strong>Levantar a Guarda:</strong> Ganhe +1d para todo teste de defesa até que use uma ação. Você pode gastar 1 de BRABO para recuperar toda sua Guarda.</li>
+            <li><strong>Aguardar:</strong> Deixe uma ação de lado, podendo usá-la durante seu próximo turno.</li>
+            <li><strong>Preparar:</strong> Escolha uma ação para realizar como uma reação condicionada a um gatilho específico.</li>
+            </ul>
+          en: |-
+            <p>In Babelém, protagonists act through actions. These are the moments when a character does things. On the protagonists' turn, each protagonist can perform up to two actions, in whatever order they wish. Protagonists can even alternate among themselves while using each action, so one protagonist can perform an action, another performs another, and only then does the first perform the second action.</p>
+            <h2>Attacks</h2>
+            <p>FIERCE and SWIFT Attacks are strong or quick blows, using violence directly against the target. SAVVY Attacks, on the other hand, represent the use of strategy, plans or argument, aiming to make the target pay a price as a consequence of their actions.</p>
+            <ul>
+            <li><strong>FIERCE Attack:</strong> Test FIERCE. Deal damage equal to the number of Hits + FIERCE. If you get no Hits, pay a price.</li>
+            <li><strong>SWIFT Attack:</strong> Test SWIFT. Deal damage equal to the number of Hits.</li>
+            <li><strong>SAVVY Attack:</strong> Make a SAVVY Contest. The side that wins the Test chooses a price to be paid by the loser.</li>
+            </ul>
+            <h2>Overcome</h2>
+            <p>Use it to get rid of an effect, condition or state, or to overcome an obstacle. Make a Test according to the type of task. Each Hit lowers the Task Degree by 1, and you complete the task by reducing it to 0. Multiple attempts accumulate until the task is completed.</p>
+            <ul>
+            <li>Use FIERCE when you need to break something, push something heavy or force a door, or knock someone down.</li>
+            <li>Use SWIFT when you need dexterity, agility, suppleness, or when you want to be sneaky or delicate.</li>
+            <li>Use SAVVY when you need to prove your determination, concentration or quickness of thought.</li>
+            </ul>
+            <h2>Create Advantage</h2>
+            <p>Consume a relevant Reserve to add 1 die to the Common Pool [ +Δd ]. Spend SWIFT to notice, or SAVVY to recall:</p>
+            <ul>
+            <li>When you notice, describe some element you just noticed, adding it to the description of the scene, or ask the Weaver a question based on your senses.</li>
+            <li>When you recall, describe a memory or secret relevant to the scene, or ask the Weaver a question related to knowledge, memory or stories.</li>
+            </ul>
+            <h2>Other Actions</h2>
+            <ul>
+            <li><strong>Move:</strong> Move into or out of the Brawl, flank, or look for cover.</li>
+            <li><strong>Channel:</strong> Recover 1 Aura and enter a state of channeling until the start of your next turn. Some Spells may require the channeling state to be cast or to maintain their effects.</li>
+            <li><strong>Raise Guard:</strong> Gain +1d on every defense Test until you use an action. You can spend 1 FIERCE to recover all of your Guard.</li>
+            <li><strong>Hold:</strong> Set an action aside, being able to use it during your next turn.</li>
+            <li><strong>Ready:</strong> Choose an action to perform as a reaction conditioned on a specific trigger.</li>
+            </ul>
+      - key: defesa-reacoes
+        name:
+          pt: Defesa e Reações
+          en: Defense and Reactions
+        content:
+          pt: |-
+            <h2>Defendendo-se</h2>
+            <p>Além das suas ações, você ainda pode precisar rolar dados quando estiver defendendo-se. Defender-se não custa ação ou reação. Danos AD atravessam defesas, e, portanto, não dão a possibilidade de testes de defesa. Quando estiver sofrendo um ataque no qual possa se defender, escolha entre:</p>
+            <ul>
+            <li><strong>Esquivar:</strong> faça um teste de LIGEIRO. Caso consiga mais acertos que o atacante, você não sofre nenhum dano.</li>
+            <li><strong>Bloquear:</strong> faça um teste de BRABO. Negue um dano para cada Acerto obtido.</li>
+            </ul>
+            <h2>Reações</h2>
+            <p>Todo personagem tem a capacidade de realizar reações, que podem ser usadas para Intervir ou Contra-atacar, ou ainda para ativar uma técnica ou feitiço. Reações podem ser realizadas contanto que seus gatilhos aconteçam, e que você tenha como pagar qualquer custo necessário. Você não pode realizar duas reações ao mesmo tempo, a não ser que seja dito explicitamente que sim em sua regra específica.</p>
+            <ul>
+            <li><strong>Contra-atacar [1 Aura]:</strong> Você pode tentar contra-atacar enquanto se defende. Provoque 1 dano AD por cada Acerto.</li>
+            <li><strong>Intervir [1 Aura]:</strong> Coloque-se na frente de um aliado próximo, se tornando o alvo de um ataque no lugar dele.</li>
+            </ul>
+          en: |-
+            <h2>Defending</h2>
+            <p>Besides your actions, you may also need to roll dice when defending. Defending costs no action or reaction. PD damage pierces defenses and therefore gives no chance for defense Tests. When you are suffering an attack that you can defend against, choose between:</p>
+            <ul>
+            <li><strong>Dodge:</strong> make a SWIFT Test. If you get more Hits than the attacker, you suffer no damage.</li>
+            <li><strong>Block:</strong> make a FIERCE Test. Negate one damage for each Hit obtained.</li>
+            </ul>
+            <h2>Reactions</h2>
+            <p>Every character has the ability to perform Reactions, which can be used to Intervene or Counterattack, or also to activate a Technique or Spell. Reactions can be performed as long as their triggers occur and you can pay any necessary cost. You cannot perform two Reactions at the same time, unless it is explicitly stated that you can in its specific rule.</p>
+            <ul>
+            <li><strong>Counterattack [1 Aura]:</strong> You can try to counterattack while defending. Inflict 1 PD damage for each Hit.</li>
+            <li><strong>Intervene [1 Aura]:</strong> Step in front of a nearby ally, becoming the target of an attack in their place.</li>
+            </ul>
+      - key: a-briga
+        name:
+          pt: A Briga
+          en: The Brawl
+        content:
+          pt: |-
+            <p>Os combates em Babelém são pensados como combates de curto a médio alcance. Dito isto, para simplificarmos medidas e movimentações, utilizamos um conceito simples: a BRIGA. Personagens estarão sempre "na Briga" a não ser que tentem sair dela.</p>
+            <p>A BRIGA nada mais é que um núcleo onde a porradaria pode acontecer, onde estão concentradas as atenções de todos os participantes de um combate. Enquanto estiver na Briga, ataques de alcance Curto e Amplo podem ocorrer sem nenhum problema. Já interações de alcance Longo podem ocorrer somente por parte de personagens Fora da Briga ou tendo esses personagens como alvo. Personagens Fora da Briga não estão fora do combate. Eles apenas estão distantes do núcleo da porradaria, no que diz respeito ao alcance, e por estarem distantes, têm oportunidades como achar cobertura, se esconder, ou tentar fugir.</p>
+            <p><strong>Acompanhamento:</strong> Um personagem pode sempre usar sua movimentação para ficar equidistante a um alvo, acompanhando seu movimento. Isso quer dizer que você poderá basicamente manter-se numa mesma distância de um personagem caso ele tente se retirar da briga ou trazer você pra dentro dela, se movendo quando ele se move. Para superar o acompanhamento, o personagem terá que ou realizar uma nova movimentação, ou se teleportar de alguma maneira, quebrando seu acompanhamento.</p>
+            <p><strong>Fugir:</strong> Personagens podem tentar fugir ao iniciar uma tarefa de Grau 3, quando já estão Fora da briga, para ficar "Em fuga". O personagem consegue escapar ao obter os 3 Acertos em testes de Superar, contanto que haja rotas de fuga pertinentes na cena.</p>
+            <h2>Movimentações</h2>
+            <ul>
+            <li><strong>Acompanhar:</strong> Você se mantém equidistante de alguém, não permitindo que o alvo saia da briga ou que ele traga você para dentro da briga, de modo a fazer com que a distância entre você e o alvo apenas mude se ele gastar mais que um movimento para isso.</li>
+            <li><strong>Sair da briga:</strong> Você se afasta do núcleo da pancadaria e fica longe de todos.</li>
+            <li><strong>Entrar na briga:</strong> Você se aproxima do núcleo da pancadaria, ficando próximo de todos.</li>
+            <li><strong>Trazer pra briga:</strong> Você leva o núcleo da pancadaria a alguém que estava fora dele.</li>
+            <li><strong>Cercar:</strong> Você impede que um personagem saia da briga, a não ser que ele lhe supere de alguma forma. Só se pode cercar alguém se estiver em maior número.</li>
+            </ul>
+            <p><strong>Medidor de movimentação/distância:</strong> Cercado ⟷ Na briga ⟷ Fora da briga ⟷ Em cobertura / Escondido ⟷ Em fuga</p>
+            <h2>Alcances</h2>
+            <ul>
+            <li><strong>Alcance Curto:</strong> alcança alvos na briga, enquanto se está na briga.</li>
+            <li><strong>Alcance Longo:</strong> alcança alvos fora da briga, ou na briga caso você esteja fora dela.</li>
+            <li><strong>Alcance Amplo:</strong> alcança alvos tanto dentro quanto fora da briga, independente de onde você esteja.</li>
+            </ul>
+          en: |-
+            <p>Combat in Babelém is designed as short- to medium-range combat. That said, to simplify measurements and movement, we use a simple concept: THE BRAWL. Characters are always "in the Brawl" unless they try to leave it.</p>
+            <p>THE BRAWL is nothing more than a core where the scrapping can happen, where the attention of all combat participants is concentrated. While in the Brawl, Short and Wide Range attacks can occur without any problem. Long Range interactions, on the other hand, can only occur from characters Out of the Brawl or targeting such characters. Characters Out of the Brawl are not out of combat. They are simply far from the core of the scrapping, as far as range is concerned, and being far away, they have opportunities such as finding cover, hiding, or trying to flee.</p>
+            <p><strong>Shadowing:</strong> A character can always use their movement to stay equidistant from a target, following its movement. This means you can basically keep the same distance from a character if they try to leave the Brawl or bring you into it, moving when they move. To overcome Shadowing, the character must either perform a new movement or teleport in some way, breaking the Shadowing.</p>
+            <p><strong>Flee:</strong> Characters can try to flee by starting a Degree 3 task, when already Out of the Brawl, to become "Fleeing". The character manages to escape upon obtaining 3 Hits on Overcome Tests, as long as there are relevant escape routes in the scene.</p>
+            <h2>Movements</h2>
+            <ul>
+            <li><strong>Shadow:</strong> You stay equidistant from someone, not allowing the target to leave the Brawl or to bring you into the Brawl, so that the distance between you and the target only changes if they spend more than one movement to do so.</li>
+            <li><strong>Leave the Brawl:</strong> You move away from the core of the scrapping and stay far from everyone.</li>
+            <li><strong>Enter the Brawl:</strong> You approach the core of the scrapping, getting close to everyone.</li>
+            <li><strong>Bring into the Brawl:</strong> You take the core of the scrapping to someone who was outside it.</li>
+            <li><strong>Surround:</strong> You prevent a character from leaving the Brawl, unless they overcome you in some way. You can only Surround someone if you outnumber them.</li>
+            </ul>
+            <p><strong>Movement/distance gauge:</strong> Surrounded ⟷ In the Brawl ⟷ Out of the Brawl ⟷ In cover / Hidden ⟷ Fleeing</p>
+            <h2>Ranges</h2>
+            <ul>
+            <li><strong>Short Range:</strong> reaches targets in the Brawl, while you are in the Brawl.</li>
+            <li><strong>Long Range:</strong> reaches targets out of the Brawl, or in the Brawl if you are out of it.</li>
+            <li><strong>Wide Range:</strong> reaches targets both inside and outside the Brawl, regardless of where you are.</li>
+            </ul>
+      - key: dano-ferimentos
+        name:
+          pt: Dano, Ferimentos, Resistência e Vulnerabilidade
+          en: Damage, Wounds, Resistance and Vulnerability
+        content:
+          pt: |-
+            <p>Ao longo do jogo, os protagonistas causarão e receberão dano. Ao causar dano, subtraia o valor da Guarda do alvo, e o mesmo vale para quando você for o alvo. Geralmente, dano recebido será reduzido por um teste de defesa do jogador ou pela Defesa da Ameaça em questão. A exceção é o dano AD: Dano AD é a classificação quando um dano específico Atravessa Defesa, causando dano diretamente à Guarda do alvo.</p>
+            <p>Caso qualquer dano reduza a sua Guarda a 0, você deverá anotar um Ferimento, voltar a sua Guarda ao máximo, e jogar o Dado do Eco. Se o resultado for menor ou igual ao número de ferimentos marcados, você cai derrotado. Um aliado pode trazer você de volta usando uma Ação para Superar com GRAU igual ao seu número de ferimentos marcados, caso você tenha caixas de ferimento desmarcadas. Cada protagonista pode receber três ferimentos: um Temporário, um Grave e um Mortal:</p>
+            <ul>
+            <li><strong>Temporário:</strong> Um ferimento temporário dura somente até o final da cena. Representa uma ferida de raspão, um roxo leve ou joelho ralado.</li>
+            <li><strong>Grave:</strong> Um ferimento sério, que precisa que você descanse ou se cuide para não se tornar mortal. Desaparece ao descansar propriamente.</li>
+            <li><strong>Mortal:</strong> Um órgão foi perfurado, uma hemorragia volumosa ou osso quebrado. Caso você não tenha cuidados médicos ou cura sobrenatural durante o próximo descanso, você morrerá. Não desaparece até tratado.</li>
+            </ul>
+            <p>Ferimentos são cumulativos: caso tenha que receber um ferimento e sua caixa de Temporário estiver marcada, receba um ferimento Grave. Caso tenha que receber um ferimento Grave e sua caixa estiver marcada, receba um ferimento Mortal. Caso você precise receber um ferimento Mortal e não tenha como marcar um, você estará derrotado ou morto. Um personagem pode evitar um ferimento Mortal ao se declarar derrotado. No caso de Ameaças, elas são consideradas derrotadas ou mortas quando um dano reduz sua Guarda a 0.</p>
+            <p><strong>Derrotado/Morto:</strong> Caso seja derrotado, a morte acontece caso uma das partes envolvidas (o assassino ou a vítima) decida que sim. Um personagem morto ainda pode agir através de flashbacks. Se for apenas derrotado, você volta a agir na cena seguinte, e deve procurar uma forma de livrar-se de seus ferimentos.</p>
+            <h2>Tipos de Dano</h2>
+            <ul>
+            <li><strong>Dano cinético:</strong> Representa cortes, empurrões, socos, chutes e perfurações. Impactos físicos de maneira geral são dano cinético.</li>
+            <li><strong>Dano vazio:</strong> Representa a perda, seja por necrose, veneno, frio ou morte. O que lhe drena geralmente será dano vazio.</li>
+            <li><strong>Dano energético:</strong> Representa energia bruta, fogo e raio. Se queima ou brilha, geralmente é dano energético.</li>
+            </ul>
+            <p>Determinados personagens poderão acabar adquirindo RESISTÊNCIA ou VULNERABILIDADE a algum dos tipos de dano. Sempre que um personagem estiver com RESISTÊNCIA, todo dano daquele tipo é reduzido pela metade após os testes de defesa aplicáveis. Se estiver com alguma VULNERABILIDADE a um dano, todo dano daquele tipo será dobrado após os testes de defesa aplicáveis.</p>
+            <h2>Dano à Memória</h2>
+            <p>Alguns ECOS podem ter mecânicas que afetam diretamente a MEMÓRIA de um alvo. Quando isso acontecer, recupere metade de toda a sua MEMÓRIA ao término de uma Cena. Caso você esteja com 0 de MEMÓRIA e tenha que perder MEMÓRIA novamente, jogue o Dado do Eco. Se tirar uma complicação, seu personagem se tornará um Eco sob o controle da Tecelã. Seus companheiros podem tentar fazer alguma coisa a respeito, mas a lenda diz que uma vez que um Desperto se torne um Eco, não há volta.</p>
+            <h2>Barreira</h2>
+            <p>Algumas interações poderão lhe prover um valor de BARREIRA. Enquanto possuí-la, subtraia o valor de BARREIRA atual de todo dano sofrido antes de comparar à sua Guarda, e então diminua o valor da barreira em 1. Dano AD ignora barreiras.</p>
+          en: |-
+            <p>Throughout the game, protagonists will deal and receive damage. When dealing damage, subtract the value from the target's Guard, and the same goes for when you are the target. Generally, damage received will be reduced by a defense Test from the player or by the Defense of the Threat in question. The exception is PD damage: PD damage is the classification for when a specific damage Pierces Defense, dealing damage directly to the target's Guard.</p>
+            <p>If any damage reduces your Guard to 0, you must mark a Wound, return your Guard to its maximum, and roll the Echo Die. If the result is less than or equal to the number of Wounds marked, you fall defeated. An ally can bring you back by using an Action to Overcome with a GRADE equal to your number of marked Wounds, provided you have unmarked Wound boxes. Each protagonist can receive three Wounds: one Temporary, one Serious and one Mortal:</p>
+            <ul>
+            <li><strong>Temporary:</strong> A Temporary Wound lasts only until the end of the scene. It represents a graze, a light bruise or a scraped knee.</li>
+            <li><strong>Serious:</strong> A serious wound that requires you to rest or take care of yourself so it does not become mortal. It disappears upon resting properly.</li>
+            <li><strong>Mortal:</strong> A pierced organ, heavy bleeding or a broken bone. If you do not receive medical care or supernatural healing during the next rest, you will die. It does not disappear until treated.</li>
+            </ul>
+            <p>Wounds are cumulative: if you must receive a Wound and your Temporary box is marked, receive a Serious Wound. If you must receive a Serious Wound and your box is marked, receive a Mortal Wound. If you must receive a Mortal Wound and have no way to mark one, you are defeated or dead. A character can avoid a Mortal Wound by declaring themselves defeated. In the case of Threats, they are considered defeated or dead when damage reduces their Guard to 0.</p>
+            <p><strong>Defeated/Dead:</strong> If you are defeated, death happens if one of the parties involved (the killer or the victim) decides so. A dead character can still act through flashbacks. If merely defeated, you return to act in the following scene, and must look for a way to rid yourself of your Wounds.</p>
+            <h2>Damage Types</h2>
+            <ul>
+            <li><strong>Kinetic damage:</strong> Represents cuts, shoves, punches, kicks and piercings. Physical impacts in general are kinetic damage.</li>
+            <li><strong>Void damage:</strong> Represents loss, whether by necrosis, poison, cold or death. What drains you will generally be void damage.</li>
+            <li><strong>Energy damage:</strong> Represents raw energy, fire and lightning. If it burns or shines, it is generally energy damage.</li>
+            </ul>
+            <p>Certain characters may end up acquiring RESISTANCE or VULNERABILITY to some of the damage types. Whenever a character has RESISTANCE, all damage of that type is halved after the applicable defense Tests. If they have some VULNERABILITY to a damage type, all damage of that type will be doubled after the applicable defense Tests.</p>
+            <h2>Memory Damage</h2>
+            <p>Some ECHOES may have mechanics that directly affect a target's MEMORY. When that happens, recover half of all your MEMORY at the end of a Scene. If you are at 0 MEMORY and have to lose MEMORY again, roll the Echo Die. If you get a complication, your character becomes an Echo under the Weaver's control. Your companions can try to do something about it, but legend says that once an Awakened becomes an Echo, there is no turning back.</p>
+            <h2>Barrier</h2>
+            <p>Some interactions may give you a BARRIER value. While you have it, subtract the current BARRIER value from all damage suffered before comparing it to your Guard, and then reduce the barrier value by 1. PD damage ignores barriers.</p>
+      - key: estados
+        name:
+          pt: Estados
+          en: Conditions
+        content:
+          pt: |-
+            <p>Estados são alguns descritores narrativos que acabam acontecendo com mais frequência durante o jogo, e ganham efeitos diferentes de apenas vantagem ou desvantagem:</p>
+            <ul>
+            <li><strong>Impedido:</strong> Enquanto estiver sob algum impedimento, você fica impossibilitado de realizar alguma ação específica.</li>
+            <li><strong>Compelido:</strong> Você deve realizar uma ação específica na próxima vez que agir, decidida por quem lhe provocou esse estado.</li>
+            <li><strong>Atordoado:</strong> Você só pode realizar outras ações após superar o que lhe deixou atordoado.</li>
+            <li><strong>Desequilibrado:</strong> Você precisa mover-se para se levantar ou retomar seu equilíbrio. Até lá, você não tem acesso a reações.</li>
+            <li><strong>Favorecido/Desfavorecido:</strong> Você recebe um descritor, que resulta em vantagem ou desvantagem para jogadas de acordo com o contexto.</li>
+            <li><strong>Escondido:</strong> Você só pode ser alvo de efeitos que afetem múltiplos alvos ou uma área inteira enquanto possuir um descritor que oculte sua posição.</li>
+            <li><strong>Canalizando:</strong> Você mantém efeitos que necessitam de canalização. Você pode entrar em canalização com uma ação.</li>
+            </ul>
+          en: |-
+            <p>Conditions are narrative descriptors that end up happening more often during the game, and gain effects different from just advantage or disadvantage:</p>
+            <ul>
+            <li><strong>Impeded:</strong> While under some impediment, you are unable to perform a specific action.</li>
+            <li><strong>Compelled:</strong> You must perform a specific action the next time you act, decided by whoever inflicted this condition on you.</li>
+            <li><strong>Stunned:</strong> You can only perform other actions after overcoming whatever left you stunned.</li>
+            <li><strong>Off-balance:</strong> You need to move to get up or regain your balance. Until then, you have no access to Reactions.</li>
+            <li><strong>Favored/Disfavored:</strong> You receive a descriptor, which results in advantage or disadvantage on rolls depending on the context.</li>
+            <li><strong>Hidden:</strong> You can only be the target of effects that affect multiple targets or an entire area while you have a descriptor that conceals your position.</li>
+            <li><strong>Channeling:</strong> You maintain effects that require channeling. You can enter channeling with an action.</li>
+            </ul>
+      - key: trama-protagonistas
+        name:
+          pt: A Trama e os Protagonistas
+          en: The Weave and the Protagonists
+        content:
+          pt: |-
+            <p>Os protagonistas são personagens dentro de uma trama, da qual eles são participantes ativos. Suas inserções, porém, têm um preço, e suas escolhas, consequências. As opções a seguir são partes chave do ato de jogar Babelém, e sempre consistem em um benefício ou negociação que no fim irá gerar um número de pontos de Trama à Tecelã. A Tecelã, por sua vez, irá utilizar esses pontos de trama para tornar as coisas interessantes, aumentando desafios ou adicionando complicações.</p>
+            <p><em>Habilidades: sempre que usarmos o termo habilidade, estamos englobando em uma palavra só técnicas e feitiços de seu personagem.</em></p>
+            <h2>Ritos e Rituais [gera 1 ponto de Trama quando for executado]</h2>
+            <p>Ao preparar-se para lançar uma habilidade, é possível incrementá-la com passos extras. Aí entram os ritos e rituais. Música, palavras de encantamento, selos de mão, gestos, movimentos corporais específicos, danças ou outros tipos de interações extras estão aí para aumentar a dedicação colocada em um feitiço ou técnica específico, aumentando assim seu poder. Cada rito ou ritual executado proverá um benefício, de acordo com a dedicação investida:</p>
+            <ul>
+            <li><strong>Rito Motor [+1 ação ao custo]:</strong> Movimentos adicionais, como danças, selos de mão ou gestos, proverão à habilidade +1 de dano por Acerto, ou +1 de dano para o caso de danos que atravessam defesa. Para isso, o personagem em questão deverá aumentar o custo de ação da habilidade em uma ação para completar os movimentos.</li>
+            <li><strong>Rito Sonoro [requer canalização prévia]:</strong> Encantamentos, explicar seu objetivo com a habilidade em questão, gritar o nome de um poder, ou outras formas de entonação, proverão o aumento de efetividade, provendo a redução de 1 no preço de Aura necessário para sua ativação, para um mínimo de 1 de preço final de Aura. Para isso, o personagem deverá CANALIZAR, obtendo o benefício para a habilidade em questão somente quando for usada no seu turno seguinte.</li>
+            <li><strong>Rituais:</strong> Quando grupos de despertos tentam conjurar em conjunto, contanto que tenham aptidão para tal, é possível conseguir uma forma maior de um feitiço, reescrevendo um ou mais verbos do mesmo, de acordo com o sacrifício realizado. Este sacrifício deve ser algo de valor para os conjuradores, e quanto mais insubstituível, mais poderosa será a interação.</li>
+            </ul>
+            <h2>Pactos de Restrição [gera 1 ponto de Trama quando for estabelecido]</h2>
+            <p>Ao se deparar com os desafios, protagonistas podem perceber a necessidade de adaptar-se. Pactos de Restrição são votos pessoais, firmados em sua própria aura, impondo uma limitação a si mesmo em troca de poder. Um poder só é tão forte quanto as limitações a ele impostas. Com isso em mente, um desperto pode tecer restrições às suas habilidades, limitando-as em troca de modificá-las. A Restrição pode ser Maior ou Menor. Uma Restrição Maior irá prover um Benefício Maior, e assim por diante:</p>
+            <ul>
+            <li><strong>Restrição Maior:</strong> envolve tornar o objeto do pacto muito mais situacional ou custoso. Uma vez feita, não poderá ser desfeita, somente se sobrescrita por uma outra Restrição Maior. Exemplos: a técnica agora só poderá ser usada sob a luz da lua; só poderá usar este feitiço uma vez por mês; a obrigatoriedade de uma combinação de ritos ou rituais para sua execução.</li>
+            <li><strong>Restrição Menor:</strong> envolve aumentar o preço de um feitiço ou técnica, especificando um preço maior seja ele entre duas reservas diferentes ou na mesma reserva de seu preço original, ou então a definição de obrigatoriedade de um rito motor ou sonoro. Restrições Menores podem ser sobrepostas tanto por restrições maiores quanto menores.</li>
+            <li><strong>Benefício Maior:</strong> permite modificar a habilidade de forma a reescrevê-la, mesmo que minimamente, tornando-a diferente do que era antes. Você pode mudar um ou dois verbos, trocar palavras de lugar, acrescentar uma ou duas palavras. A nova descrição deve ser aprovada pela Tecelã, que deverá lhe ajudar a chegar em uma versão satisfatória para ambos. Você pode ainda trocar um benefício maior por dois benefícios menores.</li>
+            <li><strong>Benefício Menor:</strong> aumentar o número de um dano, seja em +1 ao dano por Acerto ou +1 de dano AD; aumentar o número de alvos em 1; poder excluir aliados de um efeito em área; em geral, modificar números ou brincar com as mecânicas já estabelecidas, sem grandes alterações ao funcionamento básico da habilidade.</li>
+            </ul>
+            <p>Um personagem pode ter um número de restrições máximo, distribuído entre suas habilidades, equivalente ao seu valor máximo de Aura.</p>
+          en: |-
+            <p>Protagonists are characters within a weave, in which they are active participants. Their interventions, however, have a price, and their choices, consequences. The following options are key parts of playing Babelém, and always consist of a benefit or negotiation that in the end will generate a number of Weave Points for the Weaver. The Weaver, in turn, will use those Weave Points to make things interesting, raising challenges or adding complications.</p>
+            <p><em>Abilities: whenever we use the term ability, we are encompassing in a single word your character's Techniques and Spells.</em></p>
+            <h2>Rites and Rituals [generates 1 Weave Point when performed]</h2>
+            <p>When preparing to cast an Ability, it is possible to enhance it with extra steps. That is where rites and rituals come in. Music, incantation words, hand seals, gestures, specific body movements, dances or other kinds of extra interactions are there to increase the dedication put into a specific Spell or Technique, thereby increasing its power. Each rite or ritual performed will provide a benefit, according to the dedication invested:</p>
+            <ul>
+            <li><strong>Motor Rite [+1 action to the cost]:</strong> Additional movements, such as dances, hand seals or gestures, will give the Ability +1 damage per Hit, or +1 damage in the case of damage that pierces defense. To do so, the character in question must increase the Ability's action cost by one action to complete the movements.</li>
+            <li><strong>Sonic Rite [requires prior channeling]:</strong> Incantations, explaining your goal with the Ability in question, shouting the name of a power, or other forms of intonation will increase effectiveness, reducing the Aura price required for its activation by 1, down to a minimum final Aura price of 1. To do so, the character must CHANNEL, obtaining the benefit for the Ability in question only when it is used on their following turn.</li>
+            <li><strong>Rituals:</strong> When groups of Awakened try to cast together, as long as they have the aptitude for it, it is possible to achieve a greater form of a Spell, rewriting one or more of its verbs, according to the Sacrifice made. This Sacrifice must be something of value to the casters, and the more irreplaceable it is, the more powerful the interaction will be.</li>
+            </ul>
+            <h2>Restriction Pacts [generates 1 Weave Point when established]</h2>
+            <p>When facing challenges, protagonists may realize the need to adapt. Restriction Pacts are personal vows, made upon your own Aura, imposing a limitation on yourself in exchange for power. A power is only as strong as the limitations imposed upon it. With that in mind, an Awakened can weave restrictions onto their Abilities, limiting them in exchange for modifying them. The Restriction can be Major or Minor. A Major Restriction will provide a Major Benefit, and so on:</p>
+            <ul>
+            <li><strong>Major Restriction:</strong> involves making the object of the pact far more situational or costly. Once made, it cannot be undone, only overwritten by another Major Restriction. Examples: the Technique can now only be used under moonlight; you may only use this Spell once a month; the requirement of a combination of rites or rituals for its execution.</li>
+            <li><strong>Minor Restriction:</strong> involves increasing the price of a Spell or Technique, specifying a higher price whether between two different Reserves or in the same Reserve as its original price, or else setting the requirement of a Motor or Sonic Rite. Minor Restrictions can be overwritten by both Major and Minor Restrictions.</li>
+            <li><strong>Major Benefit:</strong> allows you to modify the Ability so as to rewrite it, even minimally, making it different from what it was before. You can change one or two verbs, swap words around, add one or two words. The new description must be approved by the Weaver, who should help you arrive at a version satisfactory to both. You can also trade one Major Benefit for two Minor Benefits.</li>
+            <li><strong>Minor Benefit:</strong> increase a damage number, whether +1 damage per Hit or +1 PD damage; increase the number of targets by 1; be able to exclude allies from an area effect; in general, modify numbers or play with the already established mechanics, without major changes to the basic functioning of the Ability.</li>
+            </ul>
+            <p>A character can have a maximum number of restrictions, distributed among their Abilities, equal to their maximum Aura value.</p>
+      - key: criando-protagonista
+        name:
+          pt: Criando um Protagonista
+          en: Creating a Protagonist
+        content:
+          pt: |-
+            <p>Na criação de seu protagonista:</p>
+            <ol>
+            <li>Escolha entre 4/3/2 ou 3/3/3, e distribua os números escolhidos entre os atributos BRABO, LIGEIRO e SAFO.</li>
+            <li>Escolha dois Traços.</li>
+            <li>Anote seus valores de Integridade: Guarda (2×BRABO + LIGEIRO) e Memória (SAFO + 1).</li>
+            <li>Escolha um número de habilidades (Técnicas e Feitiços) igual à sua Memória.</li>
+            <li>Escolha uma propriedade para o seu estilo de combate, ou duas caso decida condicionar suas habilidades a uma Arma Pactuada.</li>
+            <li>Defina o que carrega consigo no seu Inventário e defina brevemente o seu Passado até então.</li>
+            <li>Escolha uma Essência e então um nome.</li>
+            </ol>
+            <p>Sua Aura começa em 3. Gere um ponto de Trama para ganhar +1d em um teste relacionado ao seu Passado ou Inventário.</p>
+            <h2>Estilo de Combate</h2>
+            <p>Defina seu estilo de combate em uma frase, e então escolha seu alcance ideal e uma propriedade para usar enquanto estiver nele. Alcance ideal: defina se seu estilo é de perto ou de longe. Enquanto estiver atacando em seu alcance ideal, receba +1d.</p>
+            <h2>Avanço e Grau de Ameaça</h2>
+            <p>Todo protagonista inicia sua jornada sendo considerado um Desperto de Grau de Ameaça 1. O Grau de Ameaça é uma escala de medida do perigo que um Eco pode representar à realidade de Babelém, e Despertos são classificados da mesma maneira. Ao aprender mais sobre si mesmo e sobre os mistérios da cidade e da suprarrealidade, um Desperto avança de nível. A cada 3 avanços recebidos, seu Grau aumenta em uma categoria. Quando seu Grau aumentar, você recebe um ponto para aumentar um de seus atributos.</p>
+            <p>Sempre que o grupo chegar ao fim de uma trama, provocar uma grande mudança na cidade, ou desvendar um mistério, recebam um Avanço dentre os seguintes:</p>
+            <ul>
+            <li>+1 à sua Guarda total</li>
+            <li>+1 à sua Memória</li>
+            <li>+1 à sua Aura máxima</li>
+            </ul>
+          en: |-
+            <p>When creating your protagonist:</p>
+            <ol>
+            <li>Choose between 4/3/2 or 3/3/3, and distribute the chosen numbers among the Attributes FIERCE, SWIFT and SAVVY.</li>
+            <li>Choose two Traits.</li>
+            <li>Write down your Integrity values: Guard (2×FIERCE + SWIFT) and Memory (SAVVY + 1).</li>
+            <li>Choose a number of Abilities (Techniques and Spells) equal to your Memory.</li>
+            <li>Choose one property for your Combat Style, or two if you decide to condition your Abilities on a Pact Weapon.</li>
+            <li>Define what you carry with you in your Inventory and briefly define your Background up to now.</li>
+            <li>Choose an Essence and then a name.</li>
+            </ol>
+            <p>Your Aura starts at 3. Generate a Weave Point to gain +1d on a Test related to your Background or Inventory.</p>
+            <h2>Combat Style</h2>
+            <p>Define your Combat Style in one sentence, and then choose your Ideal Range and a property to use while in it. Ideal Range: define whether your style is close-up or from afar. While attacking at your Ideal Range, receive +1d.</p>
+            <h2>Advance and Threat Grade</h2>
+            <p>Every protagonist begins their journey as an Awakened of Threat Grade 1. Threat Grade is a scale measuring the danger an Echo can pose to the reality of Babelém, and the Awakened are classified in the same way. By learning more about themselves and about the mysteries of the city and of suprareality, an Awakened advances in level. For every 3 Advances received, your Grade increases by one category. When your Grade increases, you receive a point to increase one of your Attributes.</p>
+            <p>Whenever the group reaches the end of a weave, causes a major change in the city, or unravels a mystery, each of you receives one Advance from among the following:</p>
+            <ul>
+            <li>+1 to your total Guard</li>
+            <li>+1 to your Memory</li>
+            <li>+1 to your maximum Aura</li>
+            </ul>
+      - key: ameacas-regras
+        name:
+          pt: Regras de Ameaças (Tecelã)
+          en: Threat Rules (Weaver)
+        content:
+          pt: |-
+            <p><strong>Grau:</strong> O Grau de Ameaça pode ir de 0 a 3, e representa o quão perigosa essa Ameaça é ao mundo e a todos ao seu redor. Além do GRAU, a Tecelã pode acrescentar um arquétipo à Ameaça, entre CHEFE ou LACAIO.</p>
+            <p><strong>Testes de Ameaças:</strong> Ameaças não fazem testes como protagonistas para as suas ações e manobras. Em vez disso, para jogadas de ataques básicos, técnicas ou feitiços, consideram um número de Acertos igual ao seu GRAU + PERIGO atual, enquanto para Superar precisam gastar 1 de DEFESA para obter um Acerto. Quando uma Ameaça precisar testar algo, usará um número de dados igual ao seu PERIGO, tratando quaisquer 1, 5 ou 6 como Acerto.</p>
+            <p><strong>Vantagens e Desvantagens:</strong> Quando Ameaças recebem vantagem ou desvantagem para ataques contra um alvo, adicione dados ao teste de defesa do protagonista para o caso de desvantagem da Ameaça, ou subtraia dados do teste de defesa do protagonista no caso de vantagem da Ameaça.</p>
+            <p><strong>Gastos de Reserva:</strong> Caso uma Ameaça precise consumir uma Reserva, consumirá PERIGO para situações ofensivas ou DEFESA para situações defensivas. A escolha final cabe à Tecelã.</p>
+            <p><strong>Guarda de Ameaças:</strong> Quando uma Ameaça chega a 0 de Guarda, ela é imediatamente derrotada caso não possua pontos de DEFESA. Caso contrário, ela deve imediatamente gastar toda sua DEFESA, jogando 1d6 para cada ponto gasto, e recuperar esse valor em sua Guarda. A partir desse momento, ela se torna exposta.</p>
+            <h2>Arquétipos</h2>
+            <p><strong>Chefe:</strong> Tem turnos extras durante a rodada. Um chefe de GRAU 1 a 2 tem um turno adicional. Um de GRAU 3 tem dois turnos adicionais. Uma ameaça CHEFE grau "x" equivale a três ameaças normais do mesmo grau.</p>
+            <p><strong>Lacaio:</strong> Tem apenas 1 de Guarda e 0 de Defesa, porém eles geralmente não vêm sozinhos, e não param de vir. Além de colocá-los em cena, especifique um ponto de surgimento, de onde podem vir novos inimigos até que alguma condição seja cumprida para que cessem seus reforços. Três ameaças LACAIO grau 1 equivalem a 1 ameaça normal grau 1. Lacaios de um mesmo tipo compartilham um único turno, onde cada ação representa todos os Lacaios presentes.</p>
+            <ul>
+            <li><strong>Ataque de Grupo [Lacaios]:</strong> Faça um teste de PERIGO, com +1d para cada Lacaio além do primeiro. Cause dano igual ao número de Acertos + PERIGO a um alvo, ou 1 AD de dano por Acerto em alvos diferentes (um alvo para cada Acerto).</li>
+            <li><strong>Criar Obstáculo [Lacaios]:</strong> Faça um teste de PERIGO, com +1d para cada Lacaio além do primeiro. Caso tenha pelo menos um Acerto, provoque um estado menor em um alvo dentro do alcance.</li>
+            <li><strong>Mover Lacaios [Manobra]:</strong> Deixe todos os Lacaios Dentro ou Fora da Briga.</li>
+            <li><strong>Sacrifício [Reação]:</strong> Sacrifique um Lacaio para pagar por um gasto de Reserva de uma outra Ameaça.</li>
+            </ul>
+            <h2>Improvisando Ameaças</h2>
+            <p>Para improvisar uma ameaça, use a tabela a seguir. Você pode diminuir a categoria de um item para aumentar outro livremente.</p>
+            <table>
+            <thead><tr><th></th><th>Mundano (Grau 0)</th><th>Dissonante (Grau 1)</th><th>Ressoante (Grau 2)</th><th>Harmônico (Grau 3)</th><th>Grau Especial</th></tr></thead>
+            <tbody>
+            <tr><th>GUARDA</th><td>6</td><td>12</td><td>18</td><td>24</td><td>32</td></tr>
+            <tr><th>PERIGO</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+            <tr><th>DEFESA</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+            </tbody>
+            </table>
+            <h2>Ataques Básicos de Ameaças</h2>
+            <p>Considere PERIGO como o número de acertos de Ataques Básicos de Ameaças, para propósito de defesas dos jogadores:</p>
+            <ul>
+            <li><strong>Ataque Brabo:</strong> Dano igual a [GRAU]d6k1 + PERIGO atual.</li>
+            <li><strong>Ataque Ligeiro:</strong> Dano igual a GRAU + PERIGO. Após aplicado o dano, causa 1 de dano AD extra caso tenha obtido um Acerto ou menos ao defender-se.</li>
+            <li><strong>Ataque Safo:</strong> Faça uma disputa de SAFO. O lado que vencer o teste escolhe um preço a ser pago pelo perdedor.</li>
+            </ul>
+            <h2>Sugestões</h2>
+            <p><strong>Poderes:</strong> sequestra um alvo; consome memória de um alvo; consome Aura de um alvo; redistribuição de atributo ou reserva; infecta um alvo; se alimenta de um alvo.</p>
+            <p><strong>Fraquezas:</strong> um elemento como luz forte, fogo, sal grosso ou água corrente; os restos mortais devem ser purificados; seu nome verdadeiro.</p>
+          en: |-
+            <p><strong>Grade:</strong> The Threat Grade can range from 0 to 3, and represents how dangerous this Threat is to the world and to everyone around it. Besides the GRADE, the Weaver can add an archetype to the Threat, between BOSS or MINION.</p>
+            <p><strong>Threat Tests:</strong> Threats do not make Tests like protagonists for their actions and maneuvers. Instead, for rolls of basic attacks, Techniques or Spells, they count a number of Hits equal to their GRADE + current DANGER, while to Overcome they must spend 1 DEFENSE to obtain a Hit. When a Threat needs to test something, it will use a number of dice equal to its DANGER, treating any 1, 5 or 6 as a Hit.</p>
+            <p><strong>Advantages and Disadvantages:</strong> When Threats receive advantage or disadvantage on attacks against a target, add dice to the protagonist's defense Test in the case of the Threat's disadvantage, or subtract dice from the protagonist's defense Test in the case of the Threat's advantage.</p>
+            <p><strong>Reserve Expenditures:</strong> If a Threat needs to consume a Reserve, it will consume DANGER for offensive situations or DEFENSE for defensive situations. The final choice is up to the Weaver.</p>
+            <p><strong>Threat Guard:</strong> When a Threat reaches 0 Guard, it is immediately defeated if it has no DEFENSE points. Otherwise, it must immediately spend all of its DEFENSE, rolling 1d6 for each point spent, and recover that value in its Guard. From that moment on, it becomes exposed.</p>
+            <h2>Archetypes</h2>
+            <p><strong>Boss:</strong> Has extra turns during the round. A GRADE 1 to 2 Boss has one additional turn. A GRADE 3 one has two additional turns. A BOSS Threat of grade "x" is equivalent to three normal Threats of the same grade.</p>
+            <p><strong>Minion:</strong> Has only 1 Guard and 0 Defense, but they usually do not come alone, and they keep on coming. Besides placing them in the scene, specify a spawn point, from which new enemies can come until some condition is met for their reinforcements to cease. Three grade 1 MINION Threats are equivalent to 1 normal grade 1 Threat. Minions of the same type share a single turn, where each action represents all the Minions present.</p>
+            <ul>
+            <li><strong>Group Attack [Minions]:</strong> Make a DANGER Test, with +1d for each Minion beyond the first. Deal damage equal to the number of Hits + DANGER to one target, or 1 PD damage per Hit to different targets (one target for each Hit).</li>
+            <li><strong>Create Obstacle [Minions]:</strong> Make a DANGER Test, with +1d for each Minion beyond the first. If you have at least one Hit, inflict a minor condition on a target within range.</li>
+            <li><strong>Move Minions [Maneuver]:</strong> Place all Minions In or Out of the Brawl.</li>
+            <li><strong>Sacrifice [Reaction]:</strong> Sacrifice a Minion to pay for a Reserve expenditure of another Threat.</li>
+            </ul>
+            <h2>Improvising Threats</h2>
+            <p>To improvise a Threat, use the following table. You can lower the category of one item to raise another freely.</p>
+            <table>
+            <thead><tr><th></th><th>Mundane (Grade 0)</th><th>Dissonant (Grade 1)</th><th>Resonant (Grade 2)</th><th>Harmonic (Grade 3)</th><th>Special Grade</th></tr></thead>
+            <tbody>
+            <tr><th>GUARD</th><td>6</td><td>12</td><td>18</td><td>24</td><td>32</td></tr>
+            <tr><th>DANGER</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+            <tr><th>DEFENSE</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+            </tbody>
+            </table>
+            <h2>Basic Threat Attacks</h2>
+            <p>Consider DANGER as the number of Hits of Basic Threat Attacks, for the purpose of the players' defenses:</p>
+            <ul>
+            <li><strong>FIERCE Attack:</strong> Damage equal to [GRADE]d6k1 + current DANGER.</li>
+            <li><strong>SWIFT Attack:</strong> Damage equal to GRADE + DANGER. After the damage is applied, it deals 1 extra PD damage if you obtained one Hit or fewer when defending.</li>
+            <li><strong>SAVVY Attack:</strong> Make a SAVVY Contest. The side that wins the Test chooses a price to be paid by the loser.</li>
+            </ul>
+            <h2>Suggestions</h2>
+            <p><strong>Powers:</strong> kidnaps a target; consumes a target's memory; consumes a target's Aura; redistribution of Attribute or Reserve; infects a target; feeds on a target.</p>
+            <p><strong>Weaknesses:</strong> an element such as bright light, fire, coarse salt or running water; the remains must be purified; its true name.</p>
